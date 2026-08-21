@@ -1,8 +1,10 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Alejandro — Portfolio</title>
 
   <style>
@@ -11,6 +13,10 @@
       box-sizing: border-box;
       margin: 0;
       padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
@@ -39,40 +45,61 @@
       margin-left: 24px;
     }
 
+    nav a:hover {
+      opacity: 0.55;
+    }
+
+    /* HERO */
+
     .hero {
       min-height: 85vh;
       display: grid;
       grid-template-columns: 42% 58%;
       gap: 60px;
-      align-items: center;
+      align-items: start;
       padding: 6%;
     }
 
-   .hero-photo img {
-  width: 88%;
-  height: auto;
-  display: block;
-  border-radius: 4px;
-}
-
-    .hero-text h1 {
-      font-size: clamp(55px, 8vw, 120px);
-      line-height: 0.9;
-      font-weight: 700;
+    .hero-photo {
+      display: flex;
+      align-items: flex-start;
     }
 
-    .hero-text p {
-      margin-top: 40px;
-      max-width: 720px;
-      font-size: 21px;
+    .hero-photo img {
+      width: 88%;
+      height: auto;
+      display: block;
+      border-radius: 4px;
+    }
+
+    .hero-text {
+      padding-top: 45px;
+    }
+
+    .hero-text h1 {
+      font-size: clamp(58px, 8vw, 120px);
+      line-height: 0.88;
+      font-weight: 700;
+      letter-spacing: -3px;
     }
 
     .roles {
       margin-top: 28px;
-      font-size: 14px;
+      font-size: 16px;
+      font-weight: 500;
       text-transform: uppercase;
-      letter-spacing: 2px;
+      letter-spacing: 1.5px;
+      line-height: 1.5;
     }
+
+    .hero-text p {
+      margin-top: 30px;
+      max-width: 650px;
+      font-size: 23px;
+      line-height: 1.45;
+    }
+
+    /* GENERAL SECTIONS */
 
     section {
       padding: 100px 6%;
@@ -82,7 +109,10 @@
     section h2 {
       font-size: clamp(38px, 6vw, 80px);
       margin-bottom: 50px;
+      letter-spacing: -2px;
     }
+
+    /* PROJECTS */
 
     .project {
       display: grid;
@@ -94,34 +124,94 @@
 
     .project h3 {
       font-size: 28px;
+      line-height: 1.15;
     }
 
     .project p {
       font-size: 16px;
+      line-height: 1.5;
       max-width: 500px;
     }
+
+    /* EDUCATION / TRAINING */
+
+    .education {
+      background: #111;
+      color: #f5f3ee;
+    }
+
+    .education h2 {
+      color: #f5f3ee;
+    }
+
+    .education-item {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 50px;
+      padding: 40px 0;
+      border-top: 1px solid #444;
+    }
+
+    .education-year {
+      font-size: 16px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      opacity: 0.65;
+    }
+
+    .education-content h3 {
+      font-size: 29px;
+      margin-bottom: 8px;
+      font-weight: 500;
+      letter-spacing: -0.5px;
+    }
+
+    .education-content p {
+      font-size: 19px;
+      line-height: 1.5;
+      max-width: 800px;
+      opacity: 0.82;
+    }
+
+    /* ABOUT */
 
     .about p {
       max-width: 850px;
       font-size: 26px;
+      line-height: 1.4;
     }
+
+    /* FOOTER */
 
     footer {
       padding: 80px 6%;
       background: #111;
       color: white;
+      border-top: 1px solid #333;
     }
 
     footer h2 {
       font-size: clamp(45px, 7vw, 90px);
       margin-bottom: 30px;
+      letter-spacing: -2px;
+    }
+
+    footer p {
+      font-size: 18px;
     }
 
     footer a {
       color: white;
+      text-decoration: none;
     }
 
+    /* MOBILE */
+
     @media (max-width: 700px) {
+
+      nav {
+        padding: 22px 6%;
+      }
 
       nav .links {
         display: none;
@@ -130,31 +220,65 @@
       .hero {
         grid-template-columns: 1fr;
         gap: 35px;
+        padding-top: 40px;
+        min-height: auto;
       }
 
       .hero-photo {
         order: 1;
       }
 
+      .hero-photo img {
+        width: 100%;
+      }
+
       .hero-text {
         order: 2;
+        padding-top: 0;
       }
 
       .hero-text h1 {
-        font-size: clamp(50px, 15vw, 80px);
+        font-size: clamp(52px, 15vw, 82px);
+        letter-spacing: -2px;
+      }
+
+      .roles {
+        font-size: 12px;
+        letter-spacing: 1.2px;
       }
 
       .hero-text p {
         font-size: 18px;
+        margin-top: 24px;
+      }
+
+      section {
+        padding: 70px 6%;
       }
 
       .project {
         grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .education-item {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding: 30px 0;
+      }
+
+      .education-content h3 {
+        font-size: 23px;
+      }
+
+      .education-content p {
+        font-size: 17px;
       }
 
       .about p {
         font-size: 21px;
       }
+
     }
 
   </style>
@@ -162,127 +286,316 @@
 
 <body>
 
-<nav>
-  <div class="logo">ALEJANDRO</div>
+  <nav>
 
-  <div class="links">
-    <a href="#work">Work</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-  </div>
-</nav>
-
-<main>
-
-  <section class="hero">
-
-    <div class="hero-photo">
-      <img src="Foto profile 2.png" alt="Alejandro">
+    <div class="logo">
+      ALEJANDRO
     </div>
 
-    <div class="hero-text">
+    <div class="links">
+      <a href="#work">Work</a>
+      <a href="#education">Education</a>
+      <a href="#languages">Languages</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
 
-      <h1>
-        Ideas.<br>
-        Stories.<br>
-        Business.
-      </h1>
+  </nav>
 
-      <div class="roles">
-        Journalist · Creative Director · Copywriter · Entrepreneur · Musician
+
+  <main>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+      <div class="hero-photo">
+        <img src="Foto profile 2.png" alt="Alejandro">
       </div>
 
+      <div class="hero-text">
+
+        <h1>
+          Ideas.<br>
+          Stories.<br>
+          Business.
+        </h1>
+
+        <div class="roles">
+          Journalist · Creative Director · Copywriter · Entrepreneur · Musician
+        </div>
+
+        <p>
+          I work across journalism, creative direction, copywriting,
+          entrepreneurship, business development and music — turning ideas
+          into stories, concepts, brands and projects that connect culture,
+          people and business.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- SELECTED WORK -->
+
+    <section id="work">
+
+      <h2>Selected Work</h2>
+
+      <div class="project">
+
+        <div>01</div>
+
+        <h3>
+          Journalism
+        </h3>
+
+        <p>
+          Stories, interviews, editorial projects and journalistic work
+          focused on people, culture and contemporary ideas.
+        </p>
+
+      </div>
+
+
+      <div class="project">
+
+        <div>02</div>
+
+        <h3>
+          Creative Direction & Copywriting
+        </h3>
+
+        <p>
+          Creative concepts, campaigns, brand narratives and communication
+          strategies developed across advertising and media.
+        </p>
+
+      </div>
+
+
+      <div class="project">
+
+        <div>03</div>
+
+        <h3>
+          Entrepreneurship & Business Development
+        </h3>
+
+        <p>
+          Building brands, testing business models and transforming ideas
+          into products, experiences and scalable projects.
+        </p>
+
+      </div>
+
+
+      <div class="project">
+
+        <div>04</div>
+
+        <h3>
+          Music
+        </h3>
+
+        <p>
+          Music projects, songwriting, production and creative exploration.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- PROFESSIONAL EDUCATION -->
+
+    <section id="education" class="education">
+
+      <h2>Professional Education</h2>
+
+
+      <div class="education-item">
+
+        <div class="education-year">
+          2000 — 2006
+        </div>
+
+        <div class="education-content">
+
+          <h3>
+            Universidad Bicentenaria de Aragua
+          </h3>
+
+          <p>
+            Bachelor's Degree in Journalism — specialized in Crisis
+            Communication & Management.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="education-item">
+
+        <div class="education-year">
+          2014 — 2015
+        </div>
+
+        <div class="education-content">
+
+          <h3>
+            Brother Ad School
+          </h3>
+
+          <p>
+            Creative Advertising & Creative Direction Program.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="education-item">
+
+        <div class="education-year">
+          2018
+        </div>
+
+        <div class="education-content">
+
+          <h3>
+            IAE Business School — Universidad Austral
+          </h3>
+
+          <p>
+            NAVES — Entrepreneurship & Business Development Program.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="education-item">
+
+        <div class="education-year">
+          2018
+        </div>
+
+        <div class="education-content">
+
+          <h3>
+            Government of the City of Buenos Aires
+          </h3>
+
+          <p>
+            Vos Lo Hacés — Entrepreneurship & Business Development Program.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- LANGUAGES & ADDITIONAL TRAINING -->
+
+    <section id="languages" class="education">
+
+      <h2>Languages & Additional Training</h2>
+
+
+      <div class="education-item">
+
+        <div class="education-year">
+          2023 — 2025
+        </div>
+
+        <div class="education-content">
+
+          <h3>
+            German — Integration Course & B1
+          </h3>
+
+          <p>
+            German language integration training and B1-level certification preparation.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="education-item">
+
+        <div class="education-year">
+          2026 — 2027
+        </div>
+
+        <div class="education-content">
+
+          <h3>
+            German — Professional Language Course B2
+          </h3>
+
+          <p>
+            Berufssprachkurs B2 — professional German language training focused
+            on workplace communication and advanced language skills.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+
+    <section id="about" class="about">
+
+      <h2>
+        About
+      </h2>
+
       <p>
-        I work across journalism, creative direction, copywriting,
-        entrepreneurship, business development and music — turning ideas
-        into stories, concepts, brands and projects that connect culture,
-        people and business.
+        I am a journalist and multidisciplinary creative working across
+        storytelling, advertising, strategy, entrepreneurship and music.
+        My work combines creative thinking with a strong interest in
+        building ideas, brands and businesses.
       </p>
 
-    </div>
+    </section>
 
-  </section>
-
-
-  <section id="work">
-
-    <h2>Selected Work</h2>
-
-    <div class="project">
-      <div>01</div>
-
-      <h3>Journalism</h3>
-
-      <p>
-        Stories, interviews, editorial projects and journalistic work
-        focused on people, culture and contemporary ideas.
-      </p>
-    </div>
-
-    <div class="project">
-      <div>02</div>
-
-      <h3>Creative Direction & Copywriting</h3>
-
-      <p>
-        Creative concepts, campaigns, brand narratives and communication
-        strategies developed across advertising and media.
-      </p>
-    </div>
-
-    <div class="project">
-      <div>03</div>
-
-      <h3>Entrepreneurship & Business Development</h3>
-
-      <p>
-        Building brands, testing business models and transforming ideas
-        into products, experiences and scalable projects.
-      </p>
-    </div>
-
-    <div class="project">
-      <div>04</div>
-
-      <h3>Music</h3>
-
-      <p>
-        Music projects, songwriting, production and creative exploration.
-      </p>
-    </div>
-
-  </section>
+  </main>
 
 
-  <section id="about" class="about">
+  <!-- CONTACT -->
 
-    <h2>About</h2>
+  <footer id="contact">
+
+    <h2>
+      Let’s work together.
+    </h2>
 
     <p>
-      I am a journalist and multidisciplinary creative working across
-      storytelling, advertising, strategy, entrepreneurship and music.
-      My work combines creative thinking with a strong interest in
-      building ideas, brands and businesses.
+      Berlin, Germany
     </p>
 
-  </section>
+    <p style="margin-top:20px;">
+      Email · LinkedIn · Instagram
+    </p>
 
-</main>
+  </footer>
 
+</body>
+</html>
+```
 
-<footer id="contact">
-
-  <h2>Let’s work together.</h2>
-
-  <p>
-    Berlin, Germany
-  </p>
-
-  <p style="margin-top:20px;">
-    Email · LinkedIn · Instagram
-  </p>
-
-</footer>
 
 </body>
 </html>
