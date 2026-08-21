@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alejandro — Portfolio</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f3ee;
+      color: #111;
+      line-height: 1.4;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 28px 6%;
+      font-size: 14px;
+    }
+
+    nav .logo {
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      color: #111;
+      text-decoration: none;
+      margin-left: 24px;
+    }
+
+    .hero {
+      min-height: 85vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 6%;
+    }
+
+    .hero h1 {
+      font-size: clamp(55px, 9vw, 140px);
+      line-height: 0.9;
+      font-weight: 700;
+      max-width: 1200px;
+    }
+
+    .hero p {
+      margin-top: 40px;
+      max-width: 720px;
+      font-size: 21px;
+    }
+
+    .roles {
+      margin-top: 28px;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    section {
+      padding: 100px 6%;
+      border-top: 1px solid #ccc;
+    }
+
+    section h2 {
+      font-size: clamp(38px, 6vw, 80px);
+      margin-bottom: 50px;
+    }
+
+    .project {
+      display: grid;
+      grid-template-columns: 80px 1fr 1fr;
+      gap: 30px;
+      padding: 35px 0;
+      border-top: 1px solid #bbb;
+    }
+
+    .project h3 {
+      font-size: 28px;
+    }
+
+    .project p {
+      font-size: 16px;
+      max-width: 500px;
+    }
+
+    .about p {
+      max-width: 850px;
+      font-size: 26px;
+    }
+
+    footer {
+      padding: 80px 6%;
+      background: #111;
+      color: white;
+    }
+
+    footer h2 {
+      font-size: clamp(45px, 7vw, 90px);
+      margin-bottom: 30px;
+    }
+
+    footer a {
+      color: white;
+    }
+
+    @media (max-width: 700px) {
+      nav .links {
+        display: none;
+      }
+
+      .project {
+        grid-template-columns: 1fr;
+      }
+
+      .hero p {
+        font-size: 18px;
+      }
+
+      .about p {
+        font-size: 21px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <div class="logo">ALEJANDRO</div>
+
+  <div class="links">
+    <a href="#work">Work</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<main>
+
+  <section class="hero">
+    <h1>
+      Ideas.<br>
+      Stories.<br>
+      Business.
+    </h1>
+
+    <div class="roles">
+      Journalist · Creative Director · Copywriter · Entrepreneur · Musician
+    </div>
+
+    <p>
+      I work across journalism, creative direction, copywriting,
+      entrepreneurship, business development and music — turning ideas
+      into stories, concepts, brands and projects that connect culture,
+      people and business.
+    </p>
+  </section>
+
+
+  <section id="work">
+
+    <h2>Selected Work</h2>
+
+    <div class="project">
+      <div>01</div>
+
+      <h3>Journalism</h3>
+
+      <p>
+        Stories, interviews, editorial projects and journalistic work
+        focused on people, culture and contemporary ideas.
+      </p>
+    </div>
+
+    <div class="project">
+      <div>02</div>
+
+      <h3>Creative Direction & Copywriting</h3>
+
+      <p>
+        Creative concepts, campaigns, brand narratives and communication
+        strategies developed across advertising and media.
+      </p>
+    </div>
+
+    <div class="project">
+      <div>03</div>
+
+      <h3>Entrepreneurship & Business Development</h3>
+
+      <p>
+        Building brands, testing business models and transforming ideas
+        into products, experiences and scalable projects.
+      </p>
+    </div>
+
+    <div class="project">
+      <div>04</div>
+
+      <h3>Music</h3>
+
+      <p>
+        Music projects, songwriting, production and creative exploration.
+      </p>
+    </div>
+
+  </section>
+
+
+  <section id="about" class="about">
+
+    <h2>About</h2>
+
+    <p>
+      I am a journalist and multidisciplinary creative working across
+      storytelling, advertising, strategy, entrepreneurship and music.
+      My work combines creative thinking with a strong interest in
+      building ideas, brands and businesses.
+    </p>
+
+  </section>
+
+</main>
+
+
+<footer id="contact">
+
+  <h2>Let’s work together.</h2>
+
+  <p>
+    Berlin, Germany
+  </p>
+
+  <p style="margin-top:20px;">
+    Email · LinkedIn · Instagram
+  </p>
+
+</footer>
+
+</body>
+</html>
