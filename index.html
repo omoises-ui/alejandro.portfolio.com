@@ -112,7 +112,7 @@
       letter-spacing: -2px;
     }
 
-    /* PROJECTS */
+    /* PORTFOLIO */
 
     .project {
       display: grid;
@@ -131,6 +131,17 @@
       font-size: 16px;
       line-height: 1.5;
       max-width: 500px;
+    }
+
+    .project-link {
+      color: inherit;
+      text-decoration: none;
+      transition: opacity 0.2s ease;
+      cursor: pointer;
+    }
+
+    .project-link:hover {
+      opacity: 0.55;
     }
 
     /* EDUCATION / TRAINING */
@@ -293,7 +304,7 @@
     </div>
 
     <div class="links">
-      <a href="#work">Work</a>
+      <a href="#work">Portfolio</a>
       <a href="#education">Education</a>
       <a href="#languages">Languages</a>
       <a href="#about">About</a>
@@ -318,15 +329,17 @@
         <h1>
           Music Lover.<br>
           Strategy Fan.<br>
-         Instinct Believer.
+          Instinct Believer.
         </h1>
 
         <div class="roles">
-        Artist & Project Developer · Creative Director · Journalist · Entrepreneur
+          Artist & Project Developer · Creative Director · Journalist · Entrepreneur
         </div>
 
         <p>
-          I combine musical instinct, creative direction, journalism and business thinking to discover potential, conceptualize ideas, shape strong identities and develop artists and projects from first vision to audience.
+          I combine musical instinct, creative direction, journalism and business
+          thinking to discover potential, conceptualize ideas, shape strong identities
+          and develop artists and projects from first vision to audience.
         </p>
 
       </div>
@@ -334,13 +347,13 @@
     </section>
 
 
-    <!-- SELECTED WORK -->
+    <!-- CAREER & PORTFOLIO -->
 
     <section id="work">
 
-      <h2>Selected Work</h2>
+      <h2>Career & Portfolio</h2>
 
-      <div class="project">
+      <a href="journalism.html" class="project project-link">
 
         <div>01</div>
 
@@ -353,10 +366,10 @@
           focused on people, culture and contemporary ideas.
         </p>
 
-      </div>
+      </a>
 
 
-      <div class="project">
+      <a href="creative.html" class="project project-link">
 
         <div>02</div>
 
@@ -369,10 +382,10 @@
           strategies developed across advertising and media.
         </p>
 
-      </div>
+      </a>
 
 
-      <div class="project">
+      <a href="business.html" class="project project-link">
 
         <div>03</div>
 
@@ -385,10 +398,10 @@
           into products, experiences and scalable projects.
         </p>
 
-      </div>
+      </a>
 
 
-      <div class="project">
+      <a href="music.html" class="project project-link">
 
         <div>04</div>
 
@@ -400,7 +413,7 @@
           Music projects, songwriting, production and creative exploration.
         </p>
 
-      </div>
+      </a>
 
     </section>
 
@@ -592,3 +605,4 @@
 </body>
 </html>
 ```
+
