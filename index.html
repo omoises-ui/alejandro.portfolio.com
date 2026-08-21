@@ -6,6 +6,7 @@
   <title>Alejandro — Portfolio</title>
 
   <style>
+
     * {
       box-sizing: border-box;
       margin: 0;
@@ -40,20 +41,27 @@
 
     .hero {
       min-height: 85vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+      display: grid;
+      grid-template-columns: 42% 58%;
+      gap: 60px;
+      align-items: center;
       padding: 6%;
     }
 
-    .hero h1 {
-      font-size: clamp(55px, 9vw, 140px);
-      line-height: 0.9;
-      font-weight: 700;
-      max-width: 1200px;
+    .hero-photo img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 4px;
     }
 
-    .hero p {
+    .hero-text h1 {
+      font-size: clamp(55px, 8vw, 120px);
+      line-height: 0.9;
+      font-weight: 700;
+    }
+
+    .hero-text p {
       margin-top: 40px;
       max-width: 720px;
       font-size: 21px;
@@ -114,22 +122,41 @@
     }
 
     @media (max-width: 700px) {
+
       nav .links {
         display: none;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .hero-photo {
+        order: 1;
+      }
+
+      .hero-text {
+        order: 2;
+      }
+
+      .hero-text h1 {
+        font-size: clamp(50px, 15vw, 80px);
+      }
+
+      .hero-text p {
+        font-size: 18px;
       }
 
       .project {
         grid-template-columns: 1fr;
       }
 
-      .hero p {
-        font-size: 18px;
-      }
-
       .about p {
         font-size: 21px;
       }
     }
+
   </style>
 </head>
 
@@ -148,23 +175,32 @@
 <main>
 
   <section class="hero">
-    <img src="PHOTO profile.jpg" alt="Alejandro" style="width:100%; max-width:700px; margin-top:40px; border-radius:4px;">
-    <h1>
-      Ideas.<br>
-      Stories.<br>
-      Business.
-    </h1>
 
-    <div class="roles">
-      Journalist · Creative Director · Copywriter · Entrepreneur · Musician
+    <div class="hero-photo">
+      <img src="PHOTO profile.jpg" alt="Alejandro">
     </div>
 
-    <p>
-      I work across journalism, creative direction, copywriting,
-      entrepreneurship, business development and music — turning ideas
-      into stories, concepts, brands and projects that connect culture,
-      people and business.
-    </p>
+    <div class="hero-text">
+
+      <h1>
+        Ideas.<br>
+        Stories.<br>
+        Business.
+      </h1>
+
+      <div class="roles">
+        Journalist · Creative Director · Copywriter · Entrepreneur · Musician
+      </div>
+
+      <p>
+        I work across journalism, creative direction, copywriting,
+        entrepreneurship, business development and music — turning ideas
+        into stories, concepts, brands and projects that connect culture,
+        people and business.
+      </p>
+
+    </div>
+
   </section>
 
 
