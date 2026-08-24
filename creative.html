@@ -1,1 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>Creative Direction — Alejandro</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f3ee;
+      color: #111;
+      line-height: 1.4;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 28px 6%;
+      font-size: 14px;
+    }
+
+    nav .logo {
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      color: #111;
+      text-decoration: none;
+      margin-left: 24px;
+    }
+
+    nav a:hover {
+      opacity: 0.55;
+    }
+
+    .page-header {
+      padding: 90px 6% 100px;
+      border-top: 1px solid #ccc;
+    }
+
+    .page-header .eyebrow {
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 30px;
+    }
+
+    .page-header h1 {
+      font-size: clamp(60px, 9vw, 135px);
+      line-height: 0.88;
+      letter-spacing: -4px;
+      max-width: 1200px;
+    }
+
+    .page-header p {
+      margin-top: 40px;
+      max-width: 760px;
+      font-size: 24px;
+      line-height: 1.45;
+    }
+
+    .case {
+      padding: 100px 6%;
+      border-top: 1px solid #bbb;
+    }
+
+    .case-meta {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 40px;
+      margin-bottom: 60px;
+    }
+
+    .case-number {
+      font-size: 14px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      opacity: 0.55;
+    }
+
+    .case-title h2 {
+      font-size: clamp(42px, 6vw, 85px);
+      line-height: 0.95;
+      letter-spacing: -3px;
+      margin-bottom: 20px;
+    }
+
+    .case-tags {
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      line-height: 1.7;
+    }
+
+    .case-intro {
+      max-width: 900px;
+      margin-left: 220px;
+      font-size: 27px;
+      line-height: 1.45;
+      margin-bottom: 90px;
+    }
+
+    .media-placeholder {
+      min-height: 560px;
+      background: #ddd8cf;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 90px;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .case-section {
+      display: grid;
+      grid-template-columns: 180px minmax(0, 820px);
+      gap: 40px;
+      margin-bottom: 70px;
+    }
+
+    .case-section h3 {
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+
+    .case-section p {
+      font-size: 21px;
+      line-height: 1.55;
+    }
+
+    .highlight {
+      font-size: 31px !important;
+      line-height: 1.35 !important;
+      font-weight: 500;
+    }
+
+    .impact {
+      background: #111;
+      color: #f5f3ee;
+      padding: 100px 6%;
+    }
+
+    .impact-grid {
+      display: grid;
+      grid-template-columns: 180px minmax(0, 850px);
+      gap: 40px;
+    }
+
+    .impact h3 {
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+
+    .impact p {
+      font-size: 30px;
+      line-height: 1.4;
+    }
+
+    .back {
+      padding: 70px 6%;
+      border-top: 1px solid #ccc;
+    }
+
+    .back a {
+      color: #111;
+      text-decoration: none;
+      font-size: 20px;
+    }
+
+    .back a:hover {
+      opacity: 0.55;
+    }
+
+    footer {
+      padding: 70px 6%;
+      background: #111;
+      color: #fff;
+    }
+
+    footer h2 {
+      font-size: clamp(40px, 6vw, 80px);
+      margin-bottom: 25px;
+      letter-spacing: -2px;
+    }
+
+    @media (max-width: 700px) {
+      nav .links {
+        display: none;
+      }
+
+      .page-header {
+        padding-top: 60px;
+      }
+
+      .page-header h1 {
+        letter-spacing: -2px;
+      }
+
+      .page-header p {
+        font-size: 19px;
+      }
+
+      .case-meta,
+      .case-section,
+      .impact-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+      }
+
+      .case-intro {
+        margin-left: 0;
+        font-size: 21px;
+      }
+
+      .media-placeholder {
+        min-height: 320px;
+      }
+
+      .case-section p {
+        font-size: 18px;
+      }
+
+      .highlight {
+        font-size: 25px !important;
+      }
+
+      .impact p {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <div class="logo">ALEJANDRO</div>
+
+    <div class="links">
+      <a href="index.html">Home</a>
+      <a href="index.html#work">Portfolio</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+  </nav>
+
+  <main>
+
+    <section class="page-header">
+      <div class="eyebrow">
+        Career & Portfolio / Creative Direction
+      </div>
+
+      <h1>
+        Ideas that<br>
+        connect things.
+      </h1>
+
+      <p>
+        Creative direction, concepts and storytelling built from observation,
+        cultural insight and unexpected connections between people,
+        technology and behavior.
+      </p>
+    </section>
+
+    <article class="case">
+
+      <div class="case-meta">
+        <div class="case-number">
+          Case 01
+        </div>
+
+        <div class="case-title">
+          <h2>Missing Children Argentina</h2>
+
+          <div class="case-tags">
+            Creative Concept · Technology Insight · Creative Direction
+          </div>
+        </div>
+      </div>
+
+      <div class="case-intro">
+        Missing Children is one of Argentina’s leading NGOs dedicated to finding
+        missing children. The challenge was not simply to increase awareness,
+        but to make every published search more effective.
+      </div>
+
+      <div class="media-placeholder">
+        Campaign film / key visual
+      </div>
+
+      <div class="case-section">
+        <h3>The Insight</h3>
+
+        <p>
+          The starting point came from two observations. First, the emergence
+          of Facebook’s DeepFace facial-recognition technology opened a new
+          technological possibility. Second, there was a simple human truth:
+          no matter how many times people see the photograph of a missing child,
+          they are unlikely to accurately remember that child’s face when
+          encountering them later in real life.
+        </p>
+      </div>
+
+      <div class="case-section">
+        <h3>The Idea</h3>
+
+        <p>
+          That intersection between technology and human behavior became the
+          foundation of the idea. We transformed Facebook’s facial-recognition
+          capabilities into a new tool for searching for missing children,
+          expanding the potential reach and effectiveness of each case beyond
+          the limitations of a traditional awareness campaign.
+        </p>
+      </div>
+
+      <div class="case-section">
+        <h3>My Role</h3>
+
+        <p>
+          My involvement began at the origin of the concept: identifying the
+          potential of facial-recognition technology and connecting it with the
+          behavioral insight behind the problem. From there, I helped
+          conceptualize how an existing technology could be reinterpreted
+          creatively and turned into a meaningful solution for the organization.
+        </p>
+      </div>
+
+      <div class="case-section">
+        <h3>How I Think</h3>
+
+        <p class="highlight">
+          Seeing potential in something that already exists, making an unexpected
+          connection, and giving that connection a clear purpose.
+        </p>
+      </div>
+
+    </article>
+
+    <section class="impact">
+      <div class="impact-grid">
+
+        <h3>Impact</h3>
+
+        <p>
+          The campaign became one of Missing Children Argentina’s most recognized
+          initiatives and received multiple international advertising awards,
+          including recognition at the Cannes Lions International Festival of
+          Creativity.
+        </p>
+
+      </div>
+    </section>
+
+    <div class="back">
+      <a href="index.html#work">
+        ← Back to Career & Portfolio
+      </a>
+    </div>
+
+  </main>
+
+  <footer>
+    <h2>Let’s work together.</h2>
+    <p>Berlin, Germany</p>
+  </footer>
+
+</body>
+</html>
