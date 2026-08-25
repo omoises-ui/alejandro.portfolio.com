@@ -4,18 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Creative Direction — Alejandro</title>
+  <title>Creative Direction & Copywriting — Alejandro</title>
 
   <style>
-
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
     }
 
     body {
@@ -48,166 +43,82 @@
       opacity: 0.55;
     }
 
-    /* PAGE HEADER */
-
     .page-header {
-      padding: 90px 6% 100px;
+      padding: 90px 6% 80px;
       border-top: 1px solid #ccc;
     }
 
-    .page-header .eyebrow {
-      font-size: 14px;
+    .eyebrow {
+      font-size: 13px;
       text-transform: uppercase;
       letter-spacing: 2px;
-      margin-bottom: 30px;
+      margin-bottom: 28px;
     }
 
     .page-header h1 {
-      font-size: clamp(60px, 9vw, 135px);
-      line-height: 0.88;
+      font-size: clamp(58px, 8vw, 125px);
+      line-height: 0.9;
       letter-spacing: -4px;
       max-width: 1200px;
     }
 
     .page-header p {
-      margin-top: 40px;
+      margin-top: 35px;
       max-width: 760px;
-      font-size: 24px;
-      line-height: 1.45;
+      font-size: 22px;
+      line-height: 1.5;
     }
 
-    /* CASE */
+    .projects {
+      padding: 0 6% 100px;
+    }
 
-    .case {
-      padding: 100px 6%;
+    .project-link {
+      display: grid;
+      grid-template-columns: 90px 1fr 1fr 60px;
+      gap: 30px;
+      align-items: center;
+      padding: 40px 0;
       border-top: 1px solid #bbb;
-    }
-
-    .case-meta {
-      display: grid;
-      grid-template-columns: 180px 1fr;
-      gap: 40px;
-      margin-bottom: 60px;
-    }
-
-    .case-number {
-      font-size: 14px;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      opacity: 0.55;
-    }
-
-    .case-title h2 {
-      font-size: clamp(42px, 6vw, 85px);
-      line-height: 0.95;
-      letter-spacing: -3px;
-      margin-bottom: 20px;
-    }
-
-    .case-tags {
-      font-size: 14px;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      line-height: 1.7;
-    }
-
-    .case-intro {
-      max-width: 900px;
-      margin-left: 220px;
-      font-size: 27px;
-      line-height: 1.45;
-      margin-bottom: 70px;
-    }
-
-    /* VIDEO */
-
-    .video-wrap {
-      width: 90%;
-      margin: 0 auto 90px auto;
-    }
-
-    .video-wrap iframe {
-      width: 100%;
-      aspect-ratio: 16 / 9;
-      display: block;
-      border: 0;
-    }
-
-    /* CASE CONTENT */
-
-    .case-section {
-      display: grid;
-      grid-template-columns: 180px minmax(0, 820px);
-      gap: 40px;
-      margin-bottom: 70px;
-    }
-
-    .case-section h3 {
-      font-size: 14px;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-    }
-
-    .case-section p {
-      font-size: 21px;
-      line-height: 1.55;
-    }
-
-    .highlight {
-      font-size: 31px !important;
-      line-height: 1.35 !important;
-      font-weight: 500;
-    }
-
-    .credits p {
-      font-size: 17px;
-      line-height: 1.7;
-      opacity: 0.82;
-    }
-
-    /* IMPACT */
-
-    .impact {
-      background: #111;
-      color: #f5f3ee;
-      padding: 100px 6%;
-    }
-
-    .impact-grid {
-      display: grid;
-      grid-template-columns: 180px minmax(0, 850px);
-      gap: 40px;
-    }
-
-    .impact h3 {
-      font-size: 14px;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-    }
-
-    .impact p {
-      font-size: 30px;
-      line-height: 1.4;
-    }
-
-    /* BACK */
-
-    .back {
-      padding: 70px 6%;
-      border-top: 1px solid #ccc;
-    }
-
-    .back a {
       color: #111;
       text-decoration: none;
-      font-size: 20px;
+      transition: opacity 0.2s ease;
     }
 
-    .back a:hover {
+    .project-link:last-child {
+      border-bottom: 1px solid #bbb;
+    }
+
+    .project-link:hover {
       opacity: 0.55;
     }
 
-    /* FOOTER */
+    .project-number {
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
+
+    .project-title h2 {
+      font-size: clamp(30px, 4vw, 54px);
+      line-height: 1;
+      letter-spacing: -2px;
+    }
+
+    .project-meta {
+      font-size: 15px;
+      line-height: 1.5;
+      max-width: 420px;
+    }
+
+    .project-arrow {
+      font-size: 28px;
+      text-align: right;
+    }
+
+    .coming-soon {
+      opacity: 0.35;
+      pointer-events: none;
+    }
 
     footer {
       padding: 70px 6%;
@@ -221,10 +132,7 @@
       letter-spacing: -2px;
     }
 
-    /* MOBILE */
-
     @media (max-width: 700px) {
-
       nav .links {
         display: none;
       }
@@ -238,54 +146,32 @@
       }
 
       .page-header p {
-        font-size: 19px;
-      }
-
-      .case-meta,
-      .case-section,
-      .impact-grid {
-        grid-template-columns: 1fr;
-        gap: 15px;
-      }
-
-      .case-intro {
-        margin-left: 0;
-        font-size: 21px;
-      }
-
-      .video-wrap {
-        width: 100%;
-        margin-bottom: 60px;
-      }
-
-      .case-section p {
         font-size: 18px;
       }
 
-      .highlight {
-        font-size: 25px !important;
+      .project-link {
+        grid-template-columns: 45px 1fr 30px;
+        gap: 15px;
       }
 
-      .credits p {
-        font-size: 16px;
+      .project-meta {
+        grid-column: 2 / 3;
+        font-size: 14px;
       }
 
-      .impact p {
-        font-size: 24px;
+      .project-arrow {
+        grid-column: 3;
+        grid-row: 1 / 3;
+        align-self: center;
       }
-
     }
-
   </style>
 </head>
 
 <body>
 
   <nav>
-
-    <div class="logo">
-      ALEJANDRO
-    </div>
+    <div class="logo">ALEJANDRO</div>
 
     <div class="links">
       <a href="index.html">Home</a>
@@ -293,224 +179,101 @@
       <a href="index.html#about">About</a>
       <a href="index.html#contact">Contact</a>
     </div>
-
   </nav>
 
   <main>
 
-    <!-- PAGE INTRO -->
-
     <section class="page-header">
 
       <div class="eyebrow">
-        Career & Portfolio / Creative Direction
+        Career & Portfolio
       </div>
 
       <h1>
-        Ideas that<br>
-        connect things.
+        Creative Direction<br>
+        & Copywriting
       </h1>
 
       <p>
-        Creative direction, concepts and storytelling built from observation,
-        cultural insight and unexpected connections between people,
-        technology and behavior.
+        Selected work across creative concepts, storytelling, campaigns,
+        technology, brand strategy and cultural insight.
       </p>
 
     </section>
 
 
-    <!-- CASE 01 -->
+    <section class="projects">
 
-    <article class="case">
+      <!-- PROJECT 01 -->
 
-      <div class="case-meta">
+      <a href="missing-children.html" class="project-link">
 
-        <div class="case-number">
-          Case 01
+        <div class="project-number">
+          01
         </div>
 
-        <div class="case-title">
+        <div class="project-title">
+          <h2>Missing Children Argentina</h2>
+        </div>
 
-          <h2>
-            Missing Children Argentina
-          </h2>
+        <div class="project-meta">
+          Technology · Human Insight · Social Impact<br>
+          RAPP Worldwide
+        </div>
 
-          <div class="case-tags">
-            Creative Concept · Copywriting · Technology Insight · Creative Direction
-          </div>
+        <div class="project-arrow">
+          →
+        </div>
 
+      </a>
+
+
+      <!-- PROJECT 02 -->
+
+      <div class="project-link coming-soon">
+
+        <div class="project-number">
+          02
+        </div>
+
+        <div class="project-title">
+          <h2>Next Project</h2>
+        </div>
+
+        <div class="project-meta">
+          Coming soon
+        </div>
+
+        <div class="project-arrow">
+          →
         </div>
 
       </div>
 
 
-      <!-- INTRO -->
+      <!-- PROJECT 03 -->
 
-      <div class="case-intro">
+      <div class="project-link coming-soon">
 
-        Developed at Rapp Collins International for the Latin American market,
-        this campaign for Missing Children Argentina set out to do more than
-        increase awareness — the goal was to make every published search more
-        effective.
+        <div class="project-number">
+          03
+        </div>
 
-        By connecting Facebook’s emerging facial-recognition technology with
-        a simple human insight, the campaign transformed the way social media
-        could be used in the search for missing children.
+        <div class="project-title">
+          <h2>Next Project</h2>
+        </div>
 
-        My role in the project was as Copywriter, contributing from the
-        conceptual stage of the campaign through the development of the idea
-        and its creative narrative.
+        <div class="project-meta">
+          Coming soon
+        </div>
 
-        The work received multiple international awards, including recognition
-        at the Cannes Lions International Festival of Creativity.
-
-      </div>
-
-
-      <!-- CAMPAIGN VIDEO -->
-
-      <div class="video-wrap">
-
-        <iframe
-          src="https://player.vimeo.com/video/233053861?h=48cd8d772d"
-          title="Missing Children Argentina — Campaign Film"
-          frameborder="0"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-          allowfullscreen>
-        </iframe>
-
-      </div>
-
-
-      <!-- THE INSIGHT -->
-
-      <div class="case-section">
-
-        <h3>
-          The Insight
-        </h3>
-
-        <p>
-          The starting point came from two observations. First, the emergence
-          of Facebook’s DeepFace facial-recognition technology opened a new
-          technological possibility. Second, there was a simple human truth:
-          no matter how many times people see the photograph of a missing child,
-          they are unlikely to accurately remember that child’s face when
-          encountering them later in real life.
-        </p>
-
-      </div>
-
-
-      <!-- THE IDEA -->
-
-      <div class="case-section">
-
-        <h3>
-          The Idea
-        </h3>
-
-        <p>
-          That intersection between technology and human behavior became the
-          foundation of the idea. We transformed Facebook’s facial-recognition
-          capabilities into a new tool for searching for missing children,
-          expanding the potential reach and effectiveness of each case beyond
-          the limitations of a traditional awareness campaign.
-        </p>
-
-      </div>
-
-
-      <!-- MY ROLE -->
-
-      <div class="case-section">
-
-        <h3>
-          My Role
-        </h3>
-
-        <p>
-          I worked on the project as Copywriter, contributing from the
-          conceptual stage of the campaign. My role included connecting the
-          technological observation around facial recognition with the
-          behavioral insight behind the problem, and helping shape the idea
-          and its creative narrative.
-        </p>
-
-      </div>
-
-
-      <!-- HOW I THINK -->
-
-      <div class="case-section">
-
-        <h3>
-          How I Think
-        </h3>
-
-        <p class="highlight">
-          Seeing potential in something that already exists, making an
-          unexpected connection, and giving that connection a clear purpose.
-        </p>
-
-      </div>
-
-
-      <!-- CREDITS -->
-
-      <div class="case-section credits">
-
-        <h3>
-          Credits
-        </h3>
-
-        <p>
-          <strong>Client:</strong> Missing Children Argentina<br><br>
-
-          <strong>Executive Creative Director:</strong> Beto Cosito<br>
-          <strong>Creative Direction:</strong> Francisco Arrigoni / Agustín Salaberry<br>
-          <strong>Art Direction:</strong> Milagros Marozzini / David Carrillo<br>
-          <strong>Copywriting:</strong> Sergio Alzate / Moisés Ojeda
-        </p>
-
-      </div>
-
-    </article>
-
-
-    <!-- IMPACT -->
-
-    <section class="impact">
-
-      <div class="impact-grid">
-
-        <h3>
-          Impact
-        </h3>
-
-        <p>
-          The campaign became one of Missing Children Argentina’s most
-          recognized initiatives and received multiple international
-          advertising awards, including recognition at the Cannes Lions
-          International Festival of Creativity.
-        </p>
+        <div class="project-arrow">
+          →
+        </div>
 
       </div>
 
     </section>
-
-
-    <!-- BACK -->
-
-    <div class="back">
-
-      <a href="index.html#work">
-        ← Back to Career & Portfolio
-      </a>
-
-    </div>
 
   </main>
 
