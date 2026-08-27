@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,7 +11,6 @@
   >
 
   <title>Alejandro — Portfolio</title>
-
 
   <style>
 
@@ -32,7 +30,6 @@
       color: #111;
       line-height: 1.4;
     }
-
 
     /* NAVIGATION */
 
@@ -63,7 +60,6 @@
     nav a:hover {
       opacity: 0.5;
     }
-
 
     /* HERO */
 
@@ -104,7 +100,6 @@
       line-height: 1.5;
     }
 
-
     /* GENERAL SECTIONS */
 
     section {
@@ -114,27 +109,105 @@
 
     section h2 {
       font-size: clamp(38px, 6vw, 80px);
-      margin-bottom: 50px;
+      margin-bottom: 35px;
       letter-spacing: -3px;
       line-height: 1;
     }
 
+    /* CAREER INTRO */
 
-    /* PROFESSIONAL JOURNEY */
-
-    .career-timeline {
-      width: 78%;
-      margin: 10px auto 110px auto;
+    .career-intro {
+      max-width: 760px;
+      font-size: 20px;
+      line-height: 1.5;
+      margin-bottom: 55px;
     }
 
-    .career-timeline img {
-      width: 100%;
-      height: auto;
-      display: block;
+    /* CAREER PATHS */
+
+    .career-paths {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-top: 1px solid #bbb;
+      border-bottom: 1px solid #bbb;
+      margin-bottom: 45px;
     }
 
+    .career-path {
+      position: relative;
+      min-height: 310px;
+      padding: 34px 30px;
+      color: #111;
+      text-decoration: none;
+      border-right: 1px solid #bbb;
+      transition: opacity 0.2s ease;
+    }
+
+    .career-path:last-child {
+      border-right: none;
+    }
+
+    .career-path:hover {
+      opacity: 0.5;
+    }
+
+    .career-path-number {
+      font-size: 13px;
+      letter-spacing: 1px;
+      opacity: 0.5;
+      margin-bottom: 55px;
+    }
+
+    .career-path h3 {
+      font-size: clamp(29px, 3vw, 46px);
+      line-height: 1;
+      letter-spacing: -2px;
+      margin-bottom: 20px;
+    }
+
+    .career-path p {
+      font-size: 15px;
+      line-height: 1.5;
+      max-width: 260px;
+    }
+
+    .career-path-period {
+      position: absolute;
+      left: 30px;
+      bottom: 30px;
+      font-size: 14px;
+      opacity: 0.6;
+    }
+
+    .career-path-arrow {
+      position: absolute;
+      right: 30px;
+      bottom: 24px;
+      font-size: 28px;
+    }
+
+    .full-journey-link {
+      display: inline-block;
+      margin-bottom: 100px;
+      color: #111;
+      text-decoration: none;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+
+    .full-journey-link:hover {
+      opacity: 0.5;
+    }
 
     /* PORTFOLIO */
+
+    .portfolio-title {
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 30px;
+    }
 
     .project {
       display: grid;
@@ -179,7 +252,6 @@
       text-align: right;
     }
 
-
     /* EDUCATION */
 
     .education-item {
@@ -211,7 +283,6 @@
       max-width: 760px;
     }
 
-
     /* LANGUAGES */
 
     .language-item {
@@ -242,7 +313,6 @@
       font-size: 17px;
     }
 
-
     /* ABOUT */
 
     .about p {
@@ -250,7 +320,6 @@
       font-size: 26px;
       line-height: 1.5;
     }
-
 
     /* FOOTER */
 
@@ -271,7 +340,6 @@
       text-decoration: none;
     }
 
-
     /* MOBILE */
 
     @media (max-width: 800px) {
@@ -288,10 +356,6 @@
         padding-bottom: 80px;
       }
 
-      .hero-photo {
-        width: 100%;
-      }
-
       .hero-text h1 {
         letter-spacing: -2px;
       }
@@ -305,14 +369,18 @@
         padding-bottom: 70px;
       }
 
-      .career-timeline {
-        width: 100%;
-        margin-bottom: 70px;
-        overflow-x: auto;
+      .career-paths {
+        grid-template-columns: 1fr;
       }
 
-      .career-timeline img {
-        min-width: 720px;
+      .career-path {
+        min-height: 240px;
+        border-right: none;
+        border-bottom: 1px solid #bbb;
+      }
+
+      .career-path:last-child {
+        border-bottom: none;
       }
 
       .project {
@@ -350,7 +418,6 @@
 
 <body>
 
-
   <!-- NAVIGATION -->
 
   <nav>
@@ -382,14 +449,11 @@
   </nav>
 
 
-
   <main>
-
 
     <!-- HERO -->
 
     <section class="hero">
-
 
       <div class="hero-photo">
 
@@ -400,34 +464,23 @@
 
       </div>
 
-
       <div class="hero-text">
 
         <h1>
-
           Music Lover.<br>
-
           Strategy Fan.<br>
-
           Instinct<br>
-
           Believer.
-
         </h1>
 
-
         <div class="roles">
-
           Artist & Project Developer ·
           Creative Director ·
           Journalist ·
           Entrepreneur
-
         </div>
 
-
         <p>
-
           Music has been part of my life for as long as I can remember.
           I have released two albums in Latin America and I am currently
           developing a new music project.
@@ -436,7 +489,6 @@
           at the creative core, but also responsible for turning ideas
           into narratives, strategies and audiences — often achieving
           significant results with limited resources.
-
         </p>
 
       </div>
@@ -444,28 +496,129 @@
     </section>
 
 
-
     <!-- CAREER & PORTFOLIO -->
 
     <section id="work">
-
 
       <h2>
         Career & Portfolio
       </h2>
 
+      <p class="career-intro">
+        My professional journey has developed across three connected worlds:
+        audiovisual storytelling, creative direction and independent music
+        project development.
+      </p>
 
-      <!-- PROFESSIONAL JOURNEY -->
 
-      <div class="career-timeline">
+      <!-- CAREER PATH 01 -->
 
-        <img
-          src="professional-journey.png"
-          alt="Alejandro Professional Journey"
+      <div class="career-paths">
+
+        <a
+          href="professional-journey.html#journalism"
+          class="career-path"
         >
+
+          <div class="career-path-number">
+            01
+          </div>
+
+          <h3>
+            Audiovisual Journalism
+          </h3>
+
+          <p>
+            Stories · Production · Media
+          </p>
+
+          <div class="career-path-period">
+            2000 — 2008
+          </div>
+
+          <div class="career-path-arrow">
+            →
+          </div>
+
+        </a>
+
+
+        <!-- CAREER PATH 02 -->
+
+        <a
+          href="professional-journey.html#creative"
+          class="career-path"
+        >
+
+          <div class="career-path-number">
+            02
+          </div>
+
+          <h3>
+            Creative Direction
+          </h3>
+
+          <p>
+            Ideas · Brands · Campaigns · Strategy
+          </p>
+
+          <div class="career-path-period">
+            2008 — Today
+          </div>
+
+          <div class="career-path-arrow">
+            →
+          </div>
+
+        </a>
+
+
+        <!-- CAREER PATH 03 -->
+
+        <a
+          href="professional-journey.html#music"
+          class="career-path"
+        >
+
+          <div class="career-path-number">
+            03
+          </div>
+
+          <h3>
+            Music
+          </h3>
+
+          <p>
+            Independent Project Development ·
+            Artist Identity · Releases
+          </p>
+
+          <div class="career-path-period">
+            2007 — Today
+          </div>
+
+          <div class="career-path-arrow">
+            →
+          </div>
+
+        </a>
 
       </div>
 
+
+      <a
+        href="professional-journey.html"
+        class="full-journey-link"
+      >
+        View Full Professional Journey →
+      </a>
+
+
+      <!-- PORTFOLIO -->
+
+      <div class="portfolio-title">
+        Selected Portfolio
+      </div>
 
 
       <!-- JOURNALISM -->
@@ -495,7 +648,6 @@
       </a>
 
 
-
       <!-- CREATIVE -->
 
       <a
@@ -521,7 +673,6 @@
         </div>
 
       </a>
-
 
 
       <!-- BUSINESS -->
@@ -551,7 +702,6 @@
       </a>
 
 
-
       <!-- MUSIC -->
 
       <a
@@ -579,15 +729,12 @@
 
       </a>
 
-
     </section>
-
 
 
     <!-- PROFESSIONAL EDUCATION -->
 
     <section id="education">
-
 
       <h2>
         Professional Education
@@ -678,15 +825,12 @@
 
       </div>
 
-
     </section>
-
 
 
     <!-- LANGUAGES -->
 
     <section id="languages">
-
 
       <h2>
         Languages & Additional Training
@@ -734,9 +878,7 @@
 
       </div>
 
-
     </section>
-
 
 
     <!-- ABOUT -->
@@ -746,14 +888,11 @@
       class="about"
     >
 
-
       <h2>
         About
       </h2>
 
-
       <p>
-
         I am a journalist, creative director,
         entrepreneur and independent music project developer.
 
@@ -763,36 +902,28 @@
         by the same instinct: identifying potential,
         developing ideas and finding the audience
         that can make them grow.
-
       </p>
-
 
     </section>
 
-
   </main>
-
 
 
   <!-- FOOTER -->
 
   <footer id="contact">
 
-
     <h2>
       Let’s work together.
     </h2>
-
 
     <p>
       Berlin, Germany
     </p>
 
-
     <p style="margin-top:20px;">
       Email · LinkedIn · Instagram
     </p>
-
 
   </footer>
 
@@ -800,4 +931,3 @@
 </body>
 
 </html>
-```
