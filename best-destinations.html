@@ -1,1 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Best Destinations — UNICEF Argentina — Alejandro</title>
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f3ee;
+      color: #111;
+      line-height: 1.4;
+    }
+
+    /* NAVIGATION */
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 28px 6%;
+      font-size: 14px;
+    }
+
+    nav .logo {
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      color: #111;
+      text-decoration: none;
+      margin-left: 24px;
+    }
+
+    nav a:hover {
+      opacity: 0.55;
+    }
+
+    /* PAGE HEADER */
+
+    .page-header {
+      padding: 90px 6% 100px;
+      border-top: 1px solid #ccc;
+    }
+
+    .page-header .eyebrow {
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 30px;
+    }
+
+    .page-header h1 {
+      font-size: clamp(60px, 9vw, 135px);
+      line-height: 0.88;
+      letter-spacing: -4px;
+      max-width: 1200px;
+    }
+
+    .page-header p {
+      margin-top: 40px;
+      max-width: 760px;
+      font-size: 24px;
+      line-height: 1.45;
+    }
+
+    /* CASE */
+
+    .case {
+      padding: 100px 6%;
+      border-top: 1px solid #bbb;
+    }
+
+    .case-meta {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 40px;
+      margin-bottom: 60px;
+    }
+
+    .case-number {
+      font-size: 14px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      opacity: 0.55;
+    }
+
+    .case-title h2 {
+      font-size: clamp(42px, 6vw, 85px);
+      line-height: 0.95;
+      letter-spacing: -3px;
+      margin-bottom: 20px;
+    }
+
+    .case-tags {
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      line-height: 1.7;
+    }
+
+    .case-intro {
+      max-width: 900px;
+      margin-left: 220px;
+      font-size: 27px;
+      line-height: 1.45;
+      margin-bottom: 70px;
+    }
+
+    .case-intro p {
+      margin-bottom: 28px;
+    }
+
+    /* VIDEO */
+
+    .video-wrap {
+      width: 90%;
+      margin: 0 auto 100px auto;
+    }
+
+    .video-wrap iframe {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      display: block;
+      border: 0;
+    }
+
+    /* CASE CONTENT */
+
+    .case-section {
+      display: grid;
+      grid-template-columns: 180px minmax(0, 820px);
+      gap: 40px;
+      margin-bottom: 70px;
+    }
+
+    .case-section h3 {
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+
+    .case-section p {
+      font-size: 21px;
+      line-height: 1.55;
+    }
+
+    .highlight {
+      font-size: 31px !important;
+      line-height: 1.35 !important;
+      font-weight: 500;
+    }
+
+    /* CREDITS */
+
+    .credits p {
+      font-size: 17px;
+      line-height: 1.7;
+      opacity: 0.82;
+    }
+
+    /* IMPACT */
+
+    .impact {
+      background: #111;
+      color: #f5f3ee;
+      padding: 100px 6%;
+    }
+
+    .impact-grid {
+      display: grid;
+      grid-template-columns: 180px minmax(0, 850px);
+      gap: 40px;
+    }
+
+    .impact h3 {
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+
+    .impact p {
+      font-size: 28px;
+      line-height: 1.45;
+      margin-bottom: 35px;
+    }
+
+    .awards {
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    .awards strong {
+      font-weight: 700;
+    }
+
+    /* BACK */
+
+    .back {
+      padding: 70px 6%;
+      border-top: 1px solid #ccc;
+    }
+
+    .back a {
+      color: #111;
+      text-decoration: none;
+      font-size: 20px;
+    }
+
+    .back a:hover {
+      opacity: 0.55;
+    }
+
+    /* FOOTER */
+
+    footer {
+      padding: 70px 6%;
+      background: #111;
+      color: #fff;
+    }
+
+    footer h2 {
+      font-size: clamp(40px, 6vw, 80px);
+      margin-bottom: 25px;
+      letter-spacing: -2px;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 700px) {
+
+      nav .links {
+        display: none;
+      }
+
+      .page-header {
+        padding-top: 60px;
+      }
+
+      .page-header h1 {
+        letter-spacing: -2px;
+      }
+
+      .page-header p {
+        font-size: 19px;
+      }
+
+      .case-meta,
+      .case-section,
+      .impact-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+      }
+
+      .case-intro {
+        margin-left: 0;
+        font-size: 21px;
+      }
+
+      .video-wrap {
+        width: 100%;
+        margin-bottom: 70px;
+      }
+
+      .case-section p {
+        font-size: 18px;
+      }
+
+      .highlight {
+        font-size: 25px !important;
+      }
+
+      .credits p {
+        font-size: 16px;
+      }
+
+      .impact p {
+        font-size: 24px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- NAVIGATION -->
+
+  <nav>
+
+    <div class="logo">
+      ALEJANDRO
+    </div>
+
+    <div class="links">
+
+      <a href="index.html">
+        Home
+      </a>
+
+      <a href="creative.html">
+        Creative Portfolio
+      </a>
+
+      <a href="index.html#about">
+        About
+      </a>
+
+      <a href="index.html#contact">
+        Contact
+      </a>
+
+    </div>
+
+  </nav>
+
+
+
+  <main>
+
+
+    <!-- PAGE INTRO -->
+
+    <section class="page-header">
+
+      <div class="eyebrow">
+        Career & Portfolio / Creative Direction
+      </div>
+
+      <h1>
+        Ideas that<br>
+        connect things.
+      </h1>
+
+      <p>
+        Creative direction, concepts and storytelling built from observation,
+        cultural insight and unexpected connections between people,
+        technology, data and behavior.
+      </p>
+
+    </section>
+
+
+
+    <!-- CASE 02 -->
+
+    <article class="case">
+
+
+      <div class="case-meta">
+
+        <div class="case-number">
+          Case 02
+        </div>
+
+        <div class="case-title">
+
+          <h2>
+            Best Destinations
+          </h2>
+
+          <div class="case-tags">
+            Big Data · Creative Concept · Guerrilla Marketing · Social Impact
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- INTRO -->
+
+      <div class="case-intro">
+
+        <p>
+          Developed at <strong>Rapp Collins Worldwide for the Argentine market</strong>,
+          this campaign for UNICEF Argentina set out to improve the effectiveness
+          of its digital content in attracting new donors.
+        </p>
+
+        <p>
+          The challenge was significant: the available media budget was extremely
+          limited, restricting the campaign mainly to simple web banners and
+          Facebook click-to-web formats. At first, the project seemed to offer
+          very little room for creativity.
+        </p>
+
+        <p>
+          Through Big Data analysis, we identified and combined two behavioral
+          statistics that revealed an unexpected opportunity. That intersection
+          allowed us to leverage Argentina’s spectacular natural beauty as a hook
+          and transform a media limitation into the starting point of a high-impact
+          guerrilla marketing campaign developed with a budget close to zero.
+        </p>
+
+      </div>
+
+
+
+      <!-- VIDEO -->
+
+      <div class="video-wrap">
+
+        <iframe
+          src="https://player.vimeo.com/video/847632237?h=cc7bbf2e5e"
+          title="Best Destinations — UNICEF Argentina"
+          frameborder="0"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+          allowfullscreen>
+        </iframe>
+
+      </div>
+
+
+
+      <!-- THE INSIGHT -->
+
+      <div class="case-section">
+
+        <h3>
+          The Insight
+        </h3>
+
+        <p>
+          The starting point came from the intersection of two behavioral
+          statistics. We discovered that <strong>7 out of 10 Argentinians click
+          on travel-related content, while only 3 out of 10 click on
+          donation-related content.</strong>
+          <br><br>
+          That contrast revealed an opportunity: instead of asking people to
+          pay attention directly to a fundraising message, we could first
+          attract them through something they were already naturally interested
+          in — travel and Argentina’s spectacular landscapes.
+          <br><br>
+          The gap between what people wanted to click on and what UNICEF needed
+          them to engage with became the strategic foundation of the idea.
+        </p>
+
+      </div>
+
+
+
+      <!-- THE IDEA -->
+
+      <div class="case-section">
+
+        <h3>
+          The Idea
+        </h3>
+
+        <p>
+          That intersection between data, behavior and cultural interest became
+          the foundation of <strong>Best Destinations</strong>.
+          <br><br>
+          We used Argentina’s natural beauty and the visual language associated
+          with travel content as the campaign’s attention mechanism. Instead of
+          competing directly for attention with a conventional donation message,
+          the campaign leveraged a type of content that already generated
+          spontaneous interest among users.
+          <br><br>
+          In this way, we transformed a highly constrained digital brief into
+          a guerrilla marketing idea capable of generating impact by using
+          audience behavior itself as a media advantage.
+        </p>
+
+      </div>
+
+
+
+      <!-- MY ROLE -->
+
+      <div class="case-section">
+
+        <h3>
+          My Role
+        </h3>
+
+        <p>
+          I worked on the project as
+          <strong>Creative Copywriter & Creative Project Manager</strong>.
+          <br><br>
+          My role combined creative concept development with project execution.
+          I contributed to shaping the strategic connection between the data,
+          audience behavior and the creative idea, while also developing the
+          narrative and copy and coordinating the creative process through
+          implementation.
+        </p>
+
+      </div>
+
+
+
+      <!-- HOW I THINK -->
+
+      <div class="case-section">
+
+        <h3>
+          How I Think
+        </h3>
+
+        <p class="highlight">
+          Using data not just to understand behavior, but to discover an
+          unexpected creative opportunity — and turning a media limitation
+          into the core of the idea.
+        </p>
+
+      </div>
+
+
+
+      <!-- CREDITS -->
+
+      <div class="case-section credits">
+
+        <h3>
+          Credits
+        </h3>
+
+        <p>
+
+          <strong>Client:</strong>
+          UNICEF Argentina
+          <br><br>
+
+          <strong>Agency:</strong>
+          Rapp Collins Worldwide
+          <br><br>
+
+          <strong>Executive Creative Director:</strong>
+          Quino Oneto Gaona
+          <br>
+
+          <strong>Copywriting:</strong>
+          Moisés Ojeda / Renzo Tapia
+          <br>
+
+          <strong>Art Direction:</strong>
+          Ricky
+          <br>
+
+          <strong>Design:</strong>
+          Agostina Gamboa
+
+        </p>
+
+      </div>
+
+
+    </article>
+
+
+
+    <!-- IMPACT -->
+
+    <section class="impact">
+
+      <div class="impact-grid">
+
+        <h3>
+          Impact
+        </h3>
+
+        <div>
+
+          <p>
+            Best Destinations demonstrated how data, cultural relevance and
+            creative strategy could compensate for an extremely limited media
+            budget and transform an operational restriction into an
+            award-winning campaign.
+          </p>
+
+          <div class="awards">
+
+            <strong>Echo Latam</strong>
+            <br><br>
+
+            Gold — Social
+            <br>
+
+            Gold — Lead Generation
+            <br>
+
+            Gold — Campaigns and Sales Programs
+            <br>
+
+            Gold — Acquisition Campaigns
+            <br>
+
+            Silver — Special Prize for Creativity
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- BACK -->
+
+    <div class="back">
+
+      <a href="creative.html">
+        ← Back to Creative Direction & Copywriting
+      </a>
+
+    </div>
+
+
+  </main>
+
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <h2>
+      Let’s work together.
+    </h2>
+
+    <p>
+      Berlin, Germany
+    </p>
+
+  </footer>
+
+
+</body>
+
+</html>
