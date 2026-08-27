@@ -1,1 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>El éxito es que lo estás intentando — Acindar — Alejandro</title>
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f3ee;
+      color: #111;
+      line-height: 1.4;
+    }
+
+    /* NAVIGATION */
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 28px 6%;
+      font-size: 14px;
+    }
+
+    nav .logo {
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      color: #111;
+      text-decoration: none;
+      margin-left: 24px;
+    }
+
+    nav a:hover {
+      opacity: 0.55;
+    }
+
+    /* PAGE HEADER */
+
+    .page-header {
+      padding: 90px 6% 100px;
+      border-top: 1px solid #ccc;
+    }
+
+    .page-header .eyebrow {
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 30px;
+    }
+
+    .page-header h1 {
+      font-size: clamp(58px, 8vw, 125px);
+      line-height: 0.9;
+      letter-spacing: -4px;
+      max-width: 1200px;
+    }
+
+    .page-header p {
+      margin-top: 40px;
+      max-width: 760px;
+      font-size: 24px;
+      line-height: 1.45;
+    }
+
+    /* CASE */
+
+    .case {
+      padding: 100px 6%;
+      border-top: 1px solid #bbb;
+    }
+
+    .case-meta {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 40px;
+      margin-bottom: 60px;
+    }
+
+    .case-number {
+      font-size: 14px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      opacity: 0.55;
+    }
+
+    .case-title h2 {
+      font-size: clamp(42px, 6vw, 82px);
+      line-height: 0.95;
+      letter-spacing: -3px;
+      margin-bottom: 20px;
+      max-width: 1000px;
+    }
+
+    .case-tags {
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      line-height: 1.7;
+    }
+
+    .case-intro {
+      max-width: 900px;
+      margin-left: 220px;
+      font-size: 27px;
+      line-height: 1.45;
+      margin-bottom: 80px;
+    }
+
+    .case-intro p {
+      margin-bottom: 28px;
+    }
+
+    /* VIDEOS */
+
+    .video-section {
+      width: 90%;
+      margin: 0 auto 100px auto;
+    }
+
+    .video-label {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 18px;
+      opacity: 0.6;
+    }
+
+    .video-wrap {
+      width: 100%;
+      margin-bottom: 55px;
+    }
+
+    .video-wrap iframe {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      display: block;
+      border: 0;
+    }
+
+    /* CONTENT */
+
+    .case-section {
+      display: grid;
+      grid-template-columns: 180px minmax(0, 820px);
+      gap: 40px;
+      margin-bottom: 70px;
+    }
+
+    .case-section h3 {
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+
+    .case-section p {
+      font-size: 21px;
+      line-height: 1.55;
+    }
+
+    .highlight {
+      font-size: 31px !important;
+      line-height: 1.35 !important;
+      font-weight: 500;
+    }
+
+    /* CREDITS */
+
+    .credits p {
+      font-size: 17px;
+      line-height: 1.7;
+      opacity: 0.82;
+    }
+
+    /* IMPACT */
+
+    .impact {
+      background: #111;
+      color: #f5f3ee;
+      padding: 100px 6%;
+    }
+
+    .impact-grid {
+      display: grid;
+      grid-template-columns: 180px minmax(0, 850px);
+      gap: 40px;
+    }
+
+    .impact h3 {
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+
+    .impact p {
+      font-size: 30px;
+      line-height: 1.4;
+    }
+
+    /* BACK */
+
+    .back {
+      padding: 70px 6%;
+      border-top: 1px solid #ccc;
+    }
+
+    .back a {
+      color: #111;
+      text-decoration: none;
+      font-size: 20px;
+    }
+
+    .back a:hover {
+      opacity: 0.55;
+    }
+
+    /* FOOTER */
+
+    footer {
+      padding: 70px 6%;
+      background: #111;
+      color: #fff;
+    }
+
+    footer h2 {
+      font-size: clamp(40px, 6vw, 80px);
+      margin-bottom: 25px;
+      letter-spacing: -2px;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 700px) {
+
+      nav .links {
+        display: none;
+      }
+
+      .page-header {
+        padding-top: 60px;
+      }
+
+      .page-header h1 {
+        letter-spacing: -2px;
+      }
+
+      .page-header p {
+        font-size: 19px;
+      }
+
+      .case-meta,
+      .case-section,
+      .impact-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+      }
+
+      .case-intro {
+        margin-left: 0;
+        font-size: 21px;
+      }
+
+      .video-section {
+        width: 100%;
+        margin-bottom: 70px;
+      }
+
+      .case-section p {
+        font-size: 18px;
+      }
+
+      .highlight {
+        font-size: 25px !important;
+      }
+
+      .credits p {
+        font-size: 16px;
+      }
+
+      .impact p {
+        font-size: 24px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+  <!-- NAVIGATION -->
+
+  <nav>
+
+    <div class="logo">
+      ALEJANDRO
+    </div>
+
+    <div class="links">
+
+      <a href="index.html">
+        Home
+      </a>
+
+      <a href="creative.html">
+        Creative Portfolio
+      </a>
+
+      <a href="index.html#about">
+        About
+      </a>
+
+      <a href="index.html#contact">
+        Contact
+      </a>
+
+    </div>
+
+  </nav>
+
+
+  <main>
+
+    <!-- PAGE INTRO -->
+
+    <section class="page-header">
+
+      <div class="eyebrow">
+        Career & Portfolio / Creative Direction
+      </div>
+
+      <h1>
+        Ideas that<br>
+        connect things.
+      </h1>
+
+      <p>
+        Creative direction, concepts and storytelling built from observation,
+        cultural insight and unexpected connections between people,
+        brands and behavior.
+      </p>
+
+    </section>
+
+
+    <!-- CASE 03 -->
+
+    <article class="case">
+
+      <div class="case-meta">
+
+        <div class="case-number">
+          Case 03
+        </div>
+
+        <div class="case-title">
+
+          <h2>
+            El éxito es que lo estás intentando
+          </h2>
+
+          <div class="case-tags">
+            Creative Direction · Copywriting · Storytelling · Brand Strategy
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- INTRO -->
+
+      <div class="case-intro">
+
+        <p>
+          Developed at <strong>Wiper Agency for the Argentine market</strong>,
+          this campaign for Acindar set out to launch a new business division
+          designed to facilitate access to credit for small and medium-sized
+          enterprises.
+        </p>
+
+        <p>
+          The challenge was significant: how could we motivate entrepreneurs
+          in the middle of a financial crisis, with high interest rates,
+          inflation and an environment in which conventional messages about
+          business growth felt increasingly disconnected from reality?
+        </p>
+
+        <p>
+          Rather than speaking about success in the usual aspirational way,
+          we decided to question the concept itself and rebuild it from a
+          more human and relevant perspective.
+        </p>
+
+      </div>
+
+
+      <!-- SPOT 01 -->
+
+      <div class="video-section">
+
+        <div class="video-label">
+          Campaign Film 01
+        </div>
+
+        <div class="video-wrap">
+
+          <iframe
+            src="https://player.vimeo.com/video/309756987"
+            title="Acindar — El éxito es que lo estás intentando — Film 01"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+
+        </div>
+
+
+        <!-- SPOT 02 -->
+
+        <div class="video-label">
+          Campaign Film 02
+        </div>
+
+        <div class="video-wrap">
+
+          <iframe
+            src="https://player.vimeo.com/video/309757345"
+            title="Acindar — El éxito es que lo estás intentando — Film 02"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+
+        </div>
+
+
+        <!-- SPOT 03 -->
+
+        <div class="video-label">
+          Campaign Film 03
+        </div>
+
+        <div class="video-wrap">
+
+          <iframe
+            src="https://player.vimeo.com/video/309756299"
+            title="Acindar — El éxito es que lo estás intentando — Film 03"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+
+        </div>
+
+
+        <!-- SPOT 04 -->
+
+        <div class="video-label">
+          Campaign Film 04
+        </div>
+
+        <div class="video-wrap">
+
+          <iframe
+            src="https://player.vimeo.com/video/309757203"
+            title="Acindar — El éxito es que lo estás intentando — Film 04"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+
+        </div>
+
+      </div>
+
+
+      <!-- THE INSIGHT -->
+
+      <div class="case-section">
+
+        <h3>
+          The Insight
+        </h3>
+
+        <p>
+          “Success” is one of the most repeated ideas in the business world,
+          but it is often represented as something distant, external and
+          almost unattainable.
+          <br><br>
+          In a context where entrepreneurs were facing uncertainty,
+          financial pressure and difficult conditions, that traditional
+          definition no longer felt relevant.
+          <br><br>
+          The real insight was that, for many people, success was not
+          necessarily reaching the finish line. Sometimes, success was simply
+          having the courage to keep trying despite the odds.
+        </p>
+
+      </div>
+
+
+      <!-- THE IDEA -->
+
+      <div class="case-section">
+
+        <h3>
+          The Idea
+        </h3>
+
+        <p>
+          That observation became the foundation of
+          <strong>El éxito es que lo estás intentando</strong>.
+          <br><br>
+          We redefined success from an external measure of achievement into
+          a personal feeling of pride, courage and resilience.
+          <br><br>
+          Instead of presenting success as the unreachable carrot everyone
+          is expected to chase, the campaign celebrated those who continue
+          moving forward even when circumstances are against them.
+          <br><br>
+          <strong>
+            It’s not about what other people’s success looks like.
+            It’s about what your success looks like.
+          </strong>
+          <br><br>
+          Through storytelling, the campaign gave Acindar a more human and
+          emotionally relevant role in the entrepreneurial ecosystem.
+        </p>
+
+      </div>
+
+
+      <!-- MY ROLE -->
+
+      <div class="case-section">
+
+        <h3>
+          My Role
+        </h3>
+
+        <p>
+          I worked on the project as
+          <strong>Creative Director & Creative Copywriter</strong>.
+          <br><br>
+          My role included developing the strategic and creative direction
+          of the campaign, shaping the central storytelling concept,
+          defining the tone and narrative, and writing the creative content
+          across the different campaign pieces.
+        </p>
+
+      </div>
+
+
+      <!-- HOW I THINK -->
+
+      <div class="case-section">
+
+        <h3>
+          How I Think
+        </h3>
+
+        <p class="highlight">
+          Sometimes the strongest idea does not come from creating a new
+          insight, but from challenging an old one and redefining it for
+          the reality people are actually living.
+        </p>
+
+      </div>
+
+
+      <!-- CREDITS -->
+
+      <div class="case-section credits">
+
+        <h3>
+          Credits
+        </h3>
+
+        <p>
+
+          <strong>Client:</strong>
+          Acindar
+          <br><br>
+
+          <strong>Agency:</strong>
+          Wiper Agency
+          <br>
+
+          <strong>Market:</strong>
+          Argentina
+          <br><br>
+
+          <strong>Executive Creative Director:</strong>
+          Martín de Grazzia
+          <br>
+
+          <strong>Head of Art:</strong>
+          Marian Moderigo
+          <br>
+
+          <strong>Creative Director & Creative Copywriter:</strong>
+          Moisés Ojeda
+
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <!-- IMPACT -->
+
+    <section class="impact">
+
+      <div class="impact-grid">
+
+        <h3>
+          Impact
+        </h3>
+
+        <p>
+          The campaign generated strong media visibility and helped create
+          a new public perception around Acindar’s role in supporting small
+          and medium-sized enterprises.
+          <br><br>
+          By moving away from a conventional financial message and focusing
+          instead on the emotional reality of entrepreneurs, the campaign
+          positioned the new business division within a broader narrative
+          of resilience, courage and support for those trying to move their
+          businesses forward.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- BACK -->
+
+    <div class="back">
+
+      <a href="creative.html">
+        ← Back to Creative Direction & Copywriting
+      </a>
+
+    </div>
+
+  </main>
+
+
+  <footer>
+
+    <h2>
+      Let’s work together.
+    </h2>
+
+    <p>
+      Berlin, Germany
+    </p>
+
+  </footer>
+
+
+</body>
+
+</html>
