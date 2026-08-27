@@ -1,1 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Professional Journey — Alejandro</title>
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f3ee;
+      color: #111;
+      line-height: 1.4;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 28px 6%;
+      font-size: 14px;
+    }
+
+    nav .logo {
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      color: #111;
+      text-decoration: none;
+      margin-left: 24px;
+    }
+
+    nav a:hover {
+      opacity: 0.55;
+    }
+
+    .page-header {
+      padding: 90px 6% 80px;
+      border-top: 1px solid #ccc;
+    }
+
+    .eyebrow {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 28px;
+    }
+
+    .page-header h1 {
+      font-size: clamp(58px, 8vw, 120px);
+      line-height: 0.9;
+      letter-spacing: -4px;
+      max-width: 1200px;
+    }
+
+    .page-header p {
+      margin-top: 35px;
+      max-width: 760px;
+      font-size: 22px;
+      line-height: 1.5;
+    }
+
+    .journey {
+      padding: 0 6% 100px;
+    }
+
+    .journey-row {
+      display: grid;
+      grid-template-columns: 80px 1.2fr 1.4fr 220px;
+      gap: 30px;
+      align-items: center;
+      padding: 30px 0;
+      border-top: 1px solid #bbb;
+    }
+
+    .journey-row:last-child {
+      border-bottom: 1px solid #bbb;
+    }
+
+    .journey-number {
+      font-size: 14px;
+      opacity: 0.55;
+    }
+
+    .journey-role {
+      font-size: 22px;
+      font-weight: 600;
+      line-height: 1.15;
+    }
+
+    .journey-company {
+      font-size: 17px;
+      line-height: 1.35;
+    }
+
+    .journey-period {
+      font-size: 15px;
+      text-align: right;
+      opacity: 0.7;
+    }
+
+    .music {
+      font-weight: 700;
+    }
+
+    .back {
+      padding: 70px 6%;
+      border-top: 1px solid #ccc;
+    }
+
+    .back a {
+      color: #111;
+      text-decoration: none;
+      font-size: 20px;
+    }
+
+    .back a:hover {
+      opacity: 0.55;
+    }
+
+    footer {
+      padding: 70px 6%;
+      background: #111;
+      color: #fff;
+    }
+
+    footer h2 {
+      font-size: clamp(40px, 6vw, 80px);
+      margin-bottom: 25px;
+      letter-spacing: -2px;
+    }
+
+    @media (max-width: 800px) {
+
+      nav .links {
+        display: none;
+      }
+
+      .page-header {
+        padding-top: 60px;
+      }
+
+      .page-header h1 {
+        letter-spacing: -2px;
+      }
+
+      .page-header p {
+        font-size: 18px;
+      }
+
+      .journey-row {
+        grid-template-columns: 40px 1fr;
+        gap: 12px 18px;
+      }
+
+      .journey-role {
+        font-size: 20px;
+      }
+
+      .journey-company {
+        grid-column: 2;
+        font-size: 15px;
+      }
+
+      .journey-period {
+        grid-column: 2;
+        text-align: left;
+        font-size: 14px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+  <nav>
+
+    <div class="logo">
+      ALEJANDRO
+    </div>
+
+    <div class="links">
+
+      <a href="index.html">
+        Home
+      </a>
+
+      <a href="index.html#work">
+        Portfolio
+      </a>
+
+      <a href="index.html#about">
+        About
+      </a>
+
+      <a href="index.html#contact">
+        Contact
+      </a>
+
+    </div>
+
+  </nav>
+
+
+  <main>
+
+    <section class="page-header">
+
+      <div class="eyebrow">
+        Career & Portfolio
+      </div>
+
+      <h1>
+        Professional<br>
+        Journey
+      </h1>
+
+      <p>
+        A career developed across journalism, creative direction,
+        independent project development, entrepreneurship and music.
+      </p>
+
+    </section>
+
+
+    <section class="journey">
+
+      <div class="journey-row music">
+        <div class="journey-number">01</div>
+        <div class="journey-role">Music Project Development</div>
+        <div class="journey-company">Independent Music Projects</div>
+        <div class="journey-period">2007 — Today</div>
+      </div>
+
+      <div class="journey-row">
+        <div class="journey-number">02</div>
+        <div class="journey-role">Independent Creative Strategist & Project Developer</div>
+        <div class="journey-company">Music, Brand & Entrepreneurial Projects</div>
+        <div class="journey-period">Jan 2023 — Sep 2025</div>
+      </div>
+
+      <div class="journey-row">
+        <div class="journey-number">03</div>
+        <div class="journey-role">Creative Project Manager</div>
+        <div class="journey-company">Kombinacion Miami</div>
+        <div class="journey-period">Jul 2021 — Dec 2022</div>
+      </div>
+
+      <div class="journey-row">
+        <div class="journey-number">04</div>
+        <div class="journey-role">Founder & Creative Director</div>
+        <div class="journey-company">PortalRural.com</div>
+        <div class="journey-period">Feb 2017 — Dec 2020</div>
+      </div>
+
+      <div class="journey-row">
+        <div class="journey-number">05</div>
+        <div class="journey-role">Creative Sr. / Creative Project Manager</div>
+        <div class="journey-company">+Castro Innovation House</div>
+        <div class="journey-period">Mar 2019 — Dec 2019</div>
+      </div>
+
+      <div class="journey-row">
+        <div class="journey-number">06</div>
+        <div class="journey-role">Creative Sr. — Copywriter</div>
+        <div class="journey-company">RAPP Worldwide</div>
+        <div class="journey-period">Feb 2016 — Jul 2018</div>
+      </div>
+
+      <div class="journey-row">
+        <div class="journey-number">07</div>
+        <div class="journey-role">Creative Sr. — Copywriter / Creative Director (Deputy)</div>
+        <div class="journey-company">Publicis Worldwide</div>
+        <div class="journey-period">Nov 2011 — Dec 2013</div>
+      </div>
+
+      <div class="journey-row">
+        <div class="journey-number">08</div>
+        <div class="journey-role">Creative Sr. — Copywriter</div>
+        <div class="journey-company">McCann Worldgroup</div>
+        <div class="journey-period">Jul 2010 — Sep 2011</div>
+      </div>
+
+      <div class="journey-row">
+        <div class="journey-number">09</div>
+        <div class="journey-role">Creative — Copywriter Jr.</div>
+        <div class="journey-company">Saatchi & Saatchi Worldwide</div>
+        <div class="journey-period">May 2008 — Jun 2010</div>
+      </div>
+
+      <div class="journey-row">
+        <div class="journey-number">10</div>
+        <div class="journey-role">Journalist / Producer</div>
+        <div class="journey-company">Venevision</div>
+        <div class="journey-period">May 2006 — Apr 2008</div>
+      </div>
+
+      <div class="journey-row">
+        <div class="journey-number">11</div>
+        <div class="journey-role">Creative Copywriter</div>
+        <div class="journey-company">The History Channel</div>
+        <div class="journey-period">2004 — 2005</div>
+      </div>
+
+      <div class="journey-row">
+        <div class="journey-number">12</div>
+        <div class="journey-role">Broadcast Journalist</div>
+        <div class="journey-company">Student Media</div>
+        <div class="journey-period">2000 — 2004</div>
+      </div>
+
+    </section>
+
+
+    <div class="back">
+
+      <a href="index.html#work">
+        ← Back to Career & Portfolio
+      </a>
+
+    </div>
+
+  </main>
+
+
+  <footer>
+
+    <h2>
+      Let’s work together.
+    </h2>
+
+    <p>
+      Berlin, Germany
+    </p>
+
+  </footer>
+
+
+</body>
+
+</html>
