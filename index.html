@@ -4,11 +4,7 @@
 <head>
 
   <meta charset="UTF-8">
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Alejandro — Portfolio</title>
 
@@ -123,24 +119,26 @@
       margin-bottom: 55px;
     }
 
-    /* CAREER PATHS */
+    /* CAREER / PORTFOLIO BLOCKS */
 
     .career-paths {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       border-top: 1px solid #bbb;
       border-bottom: 1px solid #bbb;
-      margin-bottom: 45px;
+      margin-bottom: 42px;
     }
 
     .career-path {
       position: relative;
-      min-height: 310px;
+      min-height: 340px;
       padding: 34px 30px;
       color: #111;
       text-decoration: none;
       border-right: 1px solid #bbb;
-      transition: opacity 0.2s ease;
+      transition:
+        opacity 0.2s ease,
+        background 0.2s ease;
     }
 
     .career-path:last-child {
@@ -148,27 +146,28 @@
     }
 
     .career-path:hover {
-      opacity: 0.5;
+      background: #ebe8e1;
     }
 
     .career-path-number {
       font-size: 13px;
       letter-spacing: 1px;
       opacity: 0.5;
-      margin-bottom: 55px;
+      margin-bottom: 60px;
     }
 
     .career-path h3 {
-      font-size: clamp(29px, 3vw, 46px);
+      font-size: clamp(28px, 3vw, 45px);
       line-height: 1;
       letter-spacing: -2px;
-      margin-bottom: 20px;
+      margin-bottom: 22px;
+      max-width: 330px;
     }
 
     .career-path p {
       font-size: 15px;
       line-height: 1.5;
-      max-width: 260px;
+      max-width: 280px;
     }
 
     .career-path-period {
@@ -186,9 +185,9 @@
       font-size: 28px;
     }
 
-    .full-journey-link {
+    .journey-link {
       display: inline-block;
-      margin-bottom: 100px;
+      margin-top: 10px;
       color: #111;
       text-decoration: none;
       font-size: 14px;
@@ -196,60 +195,8 @@
       letter-spacing: 1.5px;
     }
 
-    .full-journey-link:hover {
+    .journey-link:hover {
       opacity: 0.5;
-    }
-
-    /* PORTFOLIO */
-
-    .portfolio-title {
-      font-size: 14px;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      margin-bottom: 30px;
-    }
-
-    .project {
-      display: grid;
-      grid-template-columns: 80px minmax(250px, 1fr) 1fr 40px;
-      gap: 30px;
-      align-items: center;
-      padding: 38px 0;
-      border-top: 1px solid #bbb;
-    }
-
-    .project:last-child {
-      border-bottom: 1px solid #bbb;
-    }
-
-    .project-link {
-      color: #111;
-      text-decoration: none;
-      transition: opacity 0.2s ease;
-    }
-
-    .project-link:hover {
-      opacity: 0.5;
-    }
-
-    .project-number {
-      font-size: 14px;
-      opacity: 0.65;
-    }
-
-    .project h3 {
-      font-size: 28px;
-      line-height: 1.1;
-    }
-
-    .project p {
-      font-size: 16px;
-      max-width: 500px;
-    }
-
-    .project-arrow {
-      font-size: 26px;
-      text-align: right;
     }
 
     /* EDUCATION */
@@ -335,11 +282,6 @@
       letter-spacing: -3px;
     }
 
-    footer a {
-      color: white;
-      text-decoration: none;
-    }
-
     /* MOBILE */
 
     @media (max-width: 800px) {
@@ -374,29 +316,13 @@
       }
 
       .career-path {
-        min-height: 240px;
+        min-height: 260px;
         border-right: none;
         border-bottom: 1px solid #bbb;
       }
 
       .career-path:last-child {
         border-bottom: none;
-      }
-
-      .project {
-        grid-template-columns: 45px 1fr 30px;
-        gap: 15px;
-      }
-
-      .project p {
-        grid-column: 2 / 3;
-        font-size: 14px;
-      }
-
-      .project-arrow {
-        grid-column: 3;
-        grid-row: 1 / 3;
-        align-self: center;
       }
 
       .education-item,
@@ -418,8 +344,6 @@
 
 <body>
 
-  <!-- NAVIGATION -->
-
   <nav>
 
     <div class="logo">
@@ -427,23 +351,10 @@
     </div>
 
     <div class="links">
-
-      <a href="#work">
-        Portfolio
-      </a>
-
-      <a href="#education">
-        Education
-      </a>
-
-      <a href="#about">
-        About
-      </a>
-
-      <a href="#contact">
-        Contact
-      </a>
-
+      <a href="#work">Portfolio</a>
+      <a href="#education">Education</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
     </div>
 
   </nav>
@@ -506,17 +417,17 @@
 
       <p class="career-intro">
         My professional journey has developed across three connected worlds:
-        audiovisual storytelling, creative direction and independent music
-        project development.
+        audiovisual storytelling, creative direction and entrepreneurship,
+        and independent music project development.
       </p>
 
 
-      <!-- CAREER PATH 01 -->
-
       <div class="career-paths">
 
+        <!-- AUDIOVISUAL JOURNALISM -->
+
         <a
-          href="professional-journey.html#journalism"
+          href="journalism.html"
           class="career-path"
         >
 
@@ -543,10 +454,10 @@
         </a>
 
 
-        <!-- CAREER PATH 02 -->
+        <!-- CREATIVE DIRECTION -->
 
         <a
-          href="professional-journey.html#creative"
+          href="creative.html"
           class="career-path"
         >
 
@@ -555,11 +466,11 @@
           </div>
 
           <h3>
-            Creative Direction
+            Creative Direction & Entrepreneurship
           </h3>
 
           <p>
-            Ideas · Brands · Campaigns · Strategy
+            Ideas · Brands · Copywriting · Strategy
           </p>
 
           <div class="career-path-period">
@@ -573,10 +484,10 @@
         </a>
 
 
-        <!-- CAREER PATH 03 -->
+        <!-- MUSIC -->
 
         <a
-          href="professional-journey.html#music"
+          href="music.html"
           class="career-path"
         >
 
@@ -608,138 +519,21 @@
 
       <a
         href="professional-journey.html"
-        class="full-journey-link"
+        class="journey-link"
       >
         View Full Professional Journey →
-      </a>
-
-
-      <!-- PORTFOLIO -->
-
-      <div class="portfolio-title">
-        Selected Portfolio
-      </div>
-
-
-      <!-- JOURNALISM -->
-
-      <a
-        href="journalism.html"
-        class="project project-link"
-      >
-
-        <div class="project-number">
-          01
-        </div>
-
-        <h3>
-          Journalism
-        </h3>
-
-        <p>
-          Stories, interviews, editorial projects and journalistic work
-          focused on people, culture and contemporary ideas.
-        </p>
-
-        <div class="project-arrow">
-          →
-        </div>
-
-      </a>
-
-
-      <!-- CREATIVE -->
-
-      <a
-        href="creative.html"
-        class="project project-link"
-      >
-
-        <div class="project-number">
-          02
-        </div>
-
-        <h3>
-          Creative Direction & Copywriting
-        </h3>
-
-        <p>
-          Creative concepts, campaigns, brand narratives and communication
-          strategies developed across advertising, technology and media.
-        </p>
-
-        <div class="project-arrow">
-          →
-        </div>
-
-      </a>
-
-
-      <!-- BUSINESS -->
-
-      <a
-        href="business.html"
-        class="project project-link"
-      >
-
-        <div class="project-number">
-          03
-        </div>
-
-        <h3>
-          Entrepreneurship & Business Development
-        </h3>
-
-        <p>
-          Building brands, testing business models and transforming ideas
-          into products, experiences and scalable projects.
-        </p>
-
-        <div class="project-arrow">
-          →
-        </div>
-
-      </a>
-
-
-      <!-- MUSIC -->
-
-      <a
-        href="music.html"
-        class="project project-link"
-      >
-
-        <div class="project-number">
-          04
-        </div>
-
-        <h3>
-          Music & Artist Development
-        </h3>
-
-        <p>
-          Independent music projects spanning songwriting, concept
-          development, identity, production, release strategy and
-          self-promotion.
-        </p>
-
-        <div class="project-arrow">
-          →
-        </div>
-
       </a>
 
     </section>
 
 
-    <!-- PROFESSIONAL EDUCATION -->
+    <!-- EDUCATION -->
 
     <section id="education">
 
       <h2>
         Professional Education
       </h2>
-
 
       <div class="education-item">
 
@@ -836,7 +630,6 @@
         Languages & Additional Training
       </h2>
 
-
       <div class="language-item">
 
         <div class="language-date">
@@ -909,8 +702,6 @@
   </main>
 
 
-  <!-- FOOTER -->
-
   <footer id="contact">
 
     <h2>
@@ -926,7 +717,6 @@
     </p>
 
   </footer>
-
 
 </body>
 
