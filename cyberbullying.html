@@ -1,1 +1,632 @@
-cyberbullying.html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Cyberbullying — Alejandro</title>
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f3ee;
+      color: #111;
+      line-height: 1.4;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 28px 6%;
+      font-size: 14px;
+    }
+
+    nav .logo {
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      color: #111;
+      text-decoration: none;
+      margin-left: 24px;
+    }
+
+    nav a:hover {
+      opacity: 0.55;
+    }
+
+    .page-header {
+      padding: 90px 6% 100px;
+      border-top: 1px solid #ccc;
+    }
+
+    .page-header .eyebrow {
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 30px;
+    }
+
+    .page-header h1 {
+      font-size: clamp(60px, 9vw, 135px);
+      line-height: 0.88;
+      letter-spacing: -4px;
+      max-width: 1200px;
+    }
+
+    .page-header p {
+      margin-top: 40px;
+      max-width: 760px;
+      font-size: 24px;
+      line-height: 1.45;
+    }
+
+    .case {
+      padding: 100px 6%;
+      border-top: 1px solid #bbb;
+    }
+
+    .case-meta {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 40px;
+      margin-bottom: 60px;
+    }
+
+    .case-number {
+      font-size: 14px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      opacity: 0.55;
+    }
+
+    .case-title h2 {
+      font-size: clamp(42px, 6vw, 85px);
+      line-height: 0.95;
+      letter-spacing: -3px;
+      margin-bottom: 20px;
+    }
+
+    .case-tags {
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      line-height: 1.7;
+    }
+
+    .case-intro {
+      max-width: 900px;
+      margin-left: 220px;
+      font-size: 27px;
+      line-height: 1.45;
+      margin-bottom: 70px;
+    }
+
+    .case-intro p {
+      margin-bottom: 28px;
+    }
+
+    .video-wrap {
+      width: 90%;
+      margin: 0 auto 50px auto;
+    }
+
+    .video-wrap iframe {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      display: block;
+      border: 0;
+    }
+
+    .campaign-images {
+      width: 90%;
+      margin: 0 auto 100px auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .campaign-images img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .case-section {
+      display: grid;
+      grid-template-columns: 180px minmax(0, 820px);
+      gap: 40px;
+      margin-bottom: 70px;
+    }
+
+    .case-section h3 {
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+
+    .case-section p {
+      font-size: 21px;
+      line-height: 1.55;
+    }
+
+    .highlight {
+      font-size: 31px !important;
+      line-height: 1.35 !important;
+      font-weight: 500;
+    }
+
+    .credits p {
+      font-size: 17px;
+      line-height: 1.7;
+      opacity: 0.82;
+    }
+
+    .impact {
+      background: #111;
+      color: #f5f3ee;
+      padding: 100px 6%;
+    }
+
+    .impact-grid {
+      display: grid;
+      grid-template-columns: 180px minmax(0, 850px);
+      gap: 40px;
+    }
+
+    .impact h3 {
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+
+    .impact p {
+      font-size: 28px;
+      line-height: 1.45;
+      margin-bottom: 35px;
+    }
+
+    .awards {
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    .back {
+      padding: 70px 6%;
+      border-top: 1px solid #ccc;
+    }
+
+    .back a {
+      color: #111;
+      text-decoration: none;
+      font-size: 20px;
+    }
+
+    .back a:hover {
+      opacity: 0.55;
+    }
+
+    footer {
+      padding: 70px 6%;
+      background: #111;
+      color: #fff;
+    }
+
+    footer h2 {
+      font-size: clamp(40px, 6vw, 80px);
+      margin-bottom: 25px;
+      letter-spacing: -2px;
+    }
+
+    @media (max-width: 700px) {
+
+      nav .links {
+        display: none;
+      }
+
+      .page-header {
+        padding-top: 60px;
+      }
+
+      .page-header h1 {
+        letter-spacing: -2px;
+      }
+
+      .page-header p {
+        font-size: 19px;
+      }
+
+      .case-meta,
+      .case-section,
+      .impact-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+      }
+
+      .case-intro {
+        margin-left: 0;
+        font-size: 21px;
+      }
+
+      .video-wrap {
+        width: 100%;
+      }
+
+      .campaign-images {
+        width: 100%;
+        grid-template-columns: 1fr;
+      }
+
+      .case-section p {
+        font-size: 18px;
+      }
+
+      .highlight {
+        font-size: 25px !important;
+      }
+
+      .credits p {
+        font-size: 16px;
+      }
+
+      .impact p {
+        font-size: 24px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+  <nav>
+
+    <div class="logo">
+      ALEJANDRO
+    </div>
+
+    <div class="links">
+      <a href="index.html">Home</a>
+      <a href="creative.html">Creative Portfolio</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+
+  </nav>
+
+
+  <main>
+
+    <section class="page-header">
+
+      <div class="eyebrow">
+        Career & Portfolio / Creative Direction
+      </div>
+
+      <h1>
+        Ideas that<br>
+        connect things.
+      </h1>
+
+      <p>
+        Creative direction, concepts and storytelling built from observation,
+        cultural insight and unexpected connections between people,
+        technology and behavior.
+      </p>
+
+    </section>
+
+
+    <article class="case">
+
+      <div class="case-meta">
+
+        <div class="case-number">
+          Case 03
+        </div>
+
+        <div class="case-title">
+
+          <h2>
+            Cyberbullying
+          </h2>
+
+          <div class="case-tags">
+            Creative Direction · Copywriting · Social Impact · Film · Print
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="case-intro">
+
+        <p>
+          Developed at <strong>Brother Escuela de Creativos</strong> for the
+          Government of the City of Buenos Aires, this campaign addressed the
+          growing problem of cyberbullying by focusing on one of the main barriers
+          to confronting it: many parents still dismissed online harassment as
+          simply “kids being kids on the internet.”
+        </p>
+
+        <p>
+          But digital aggression can be persistent, massive and extremely damaging.
+          Its intensity, reach and constant presence can have devastating
+          consequences for victims.
+        </p>
+
+        <p>
+          The campaign set out to challenge that perception through a direct concept
+          and an impactful execution built around the visual language of social
+          media and digital notifications.
+        </p>
+
+        <p>
+          I worked on the project as <strong>Creative Director & Copywriter</strong>,
+          contributing to the development of the concept, narrative and execution
+          across both the audiovisual spot and the print campaign.
+        </p>
+
+      </div>
+
+
+      <div class="video-wrap">
+
+        <iframe
+          src="https://player.vimeo.com/video/309763381"
+          title="Cyberbullying Campaign — Government of the City of Buenos Aires"
+          frameborder="0"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+          allowfullscreen>
+        </iframe>
+
+      </div>
+
+
+      <div class="campaign-images">
+
+        <img
+          src="cyberbullying-01.jpg"
+          alt="Cyberbullying campaign print 01"
+        >
+
+        <img
+          src="cyberbullying-02.jpg"
+          alt="Cyberbullying campaign print 02"
+        >
+
+        <img
+          src="cyberbullying-03.jpg"
+          alt="Cyberbullying campaign print 03"
+        >
+
+      </div>
+
+
+      <div class="case-section">
+
+        <h3>
+          The Insight
+        </h3>
+
+        <p>
+          The starting point came from a simple but dangerous perception:
+          many parents still saw cyberbullying as something less serious
+          than physical bullying because it happened “on the internet.”
+          <br><br>
+          But digital aggression does not disappear when the screen is turned off.
+          Its persistence, scale and intensity can follow victims throughout
+          their daily lives, making the emotional impact constant and difficult
+          to escape.
+          <br><br>
+          The real challenge was therefore not only to talk about cyberbullying,
+          but to make adults understand that online aggression can be as serious
+          — or even more serious — than physical bullying.
+        </p>
+
+      </div>
+
+
+      <div class="case-section">
+
+        <h3>
+          The Idea
+        </h3>
+
+        <p>
+          We transformed digital aggression into something physical.
+          <br><br>
+          The campaign imagined Facebook, Instagram and video-game notifications
+          as if they were actual blows delivered by an invisible aggressor.
+          <br><br>
+          In the audiovisual execution, the victim is physically attacked by
+          an unseen force while going through everyday situations: alone in their
+          bedroom, spending time with family, or coming back from football.
+          <br><br>
+          The metaphor made the impact of cyberbullying visible by turning
+          something apparently intangible into something physical, immediate
+          and impossible to ignore.
+          <br><br>
+          The print campaign extended the same idea through graphic executions
+          based on the visual language of digital platforms.
+        </p>
+
+      </div>
+
+
+      <div class="case-section">
+
+        <h3>
+          My Role
+        </h3>
+
+        <p>
+          I worked on the project as
+          <strong>Creative Director & Copywriter</strong>.
+          <br><br>
+          My role included developing the central creative concept, shaping the
+          campaign narrative and copy, and helping direct the creative execution
+          across both the audiovisual spot and the print pieces.
+          <br><br>
+          The project required translating a complex social issue into a simple
+          visual metaphor that could communicate the persistence and intensity
+          of digital aggression without relying on long explanations.
+        </p>
+
+      </div>
+
+
+      <div class="case-section">
+
+        <h3>
+          How I Think
+        </h3>
+
+        <p class="highlight">
+          Turning an invisible form of aggression into something physical and
+          immediate — using the language of the medium itself to make its
+          consequences impossible to dismiss.
+        </p>
+
+      </div>
+
+
+      <div class="case-section credits">
+
+        <h3>
+          Credits
+        </h3>
+
+        <p>
+
+          <strong>Client:</strong>
+          Government of the City of Buenos Aires
+          <br><br>
+
+          <strong>Institution:</strong>
+          Brother Escuela de Creativos
+          <br><br>
+
+          <strong>Executive Creative Director:</strong>
+          Juan Martín Rezonico
+          <br>
+
+          <strong>Creative Direction:</strong>
+          David Carrillo / Moisés Ojeda
+          <br>
+
+          <strong>Art Direction:</strong>
+          David Carrillo
+          <br>
+
+          <strong>Copywriting:</strong>
+          Moisés Ojeda
+          <br>
+
+          <strong>Director of Photography / Photography:</strong>
+          Cristo Oviedo
+
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <section class="impact">
+
+      <div class="impact-grid">
+
+        <h3>
+          Impact
+        </h3>
+
+        <div>
+
+          <p>
+            The campaign received recognition across both its audiovisual
+            and print executions.
+          </p>
+
+          <div class="awards">
+
+            <strong>Cyberbullying Spot</strong>
+            <br><br>
+
+            <strong>El Diente — Círculo de Creativos Argentinos</strong>
+            <br>
+            Silver — TV
+            <br><br>
+
+            <strong>Brother Ad School</strong>
+            <br>
+            Silver — Push The Power
+            <br><br><br>
+
+            <strong>Cyberbullying Prints</strong>
+            <br><br>
+
+            <strong>La Oreja Festival Argentina</strong>
+            <br>
+            Shortlist — Print
+            <br><br>
+
+            <strong>Brother Ad School</strong>
+            <br>
+            Winner — Brother Plus Competition
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <div class="back">
+
+      <a href="creative.html">
+        ← Back to Creative Direction & Copywriting
+      </a>
+
+    </div>
+
+  </main>
+
+
+  <footer>
+
+    <h2>
+      Let’s work together.
+    </h2>
+
+    <p>
+      Berlin, Germany
+    </p>
+
+  </footer>
+
+</body>
+
+</html>
