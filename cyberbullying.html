@@ -50,6 +50,8 @@
       opacity: 0.55;
     }
 
+    /* PAGE HEADER */
+
     .page-header {
       padding: 90px 6% 100px;
       border-top: 1px solid #ccc;
@@ -75,6 +77,8 @@
       font-size: 24px;
       line-height: 1.45;
     }
+
+    /* CASE */
 
     .case {
       padding: 100px 6%;
@@ -114,17 +118,35 @@
       margin-left: 220px;
       font-size: 27px;
       line-height: 1.45;
-      margin-bottom: 70px;
+      margin-bottom: 80px;
     }
 
     .case-intro p {
       margin-bottom: 28px;
     }
 
-    .video-wrap {
+    /* MEDIA SECTIONS */
+
+    .media-section {
       width: 90%;
-      margin: 0 auto 50px auto;
+      margin: 0 auto 100px auto;
     }
+
+    .media-label {
+      margin-bottom: 24px;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .media-title {
+      font-size: clamp(28px, 4vw, 48px);
+      line-height: 1;
+      letter-spacing: -2px;
+      margin-bottom: 28px;
+    }
+
+    /* VIDEO */
 
     .video-wrap iframe {
       width: 100%;
@@ -133,19 +155,42 @@
       border: 0;
     }
 
+    /* PRINT CAMPAIGN */
+
     .campaign-images {
-      width: 90%;
-      margin: 0 auto 100px auto;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 18px;
     }
 
-    .campaign-images img {
+    .campaign-image-button {
+      border: 0;
+      padding: 0;
+      background: none;
+      cursor: zoom-in;
+      text-align: left;
+    }
+
+    .campaign-image-button img {
       width: 100%;
       height: auto;
       display: block;
+      transition: opacity 0.2s ease;
     }
+
+    .campaign-image-button:hover img {
+      opacity: 0.72;
+    }
+
+    .image-hint {
+      margin-top: 14px;
+      font-size: 13px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      opacity: 0.55;
+    }
+
+    /* CASE CONTENT */
 
     .case-section {
       display: grid;
@@ -177,6 +222,8 @@
       opacity: 0.82;
     }
 
+    /* IMPACT */
+
     .impact {
       background: #111;
       color: #f5f3ee;
@@ -206,6 +253,8 @@
       line-height: 1.8;
     }
 
+    /* BACK */
+
     .back {
       padding: 70px 6%;
       border-top: 1px solid #ccc;
@@ -221,6 +270,8 @@
       opacity: 0.55;
     }
 
+    /* FOOTER */
+
     footer {
       padding: 70px 6%;
       background: #111;
@@ -232,6 +283,45 @@
       margin-bottom: 25px;
       letter-spacing: -2px;
     }
+
+    /* IMAGE VIEWER */
+
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.92);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+      z-index: 9999;
+    }
+
+    .lightbox.active {
+      display: flex;
+    }
+
+    .lightbox img {
+      max-width: 94vw;
+      max-height: 90vh;
+      width: auto;
+      height: auto;
+      display: block;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 22px;
+      right: 28px;
+      border: 0;
+      background: none;
+      color: white;
+      font-size: 38px;
+      line-height: 1;
+      cursor: pointer;
+    }
+
+    /* MOBILE */
 
     @media (max-width: 700px) {
 
@@ -263,12 +353,11 @@
         font-size: 21px;
       }
 
-      .video-wrap {
+      .media-section {
         width: 100%;
       }
 
       .campaign-images {
-        width: 100%;
         grid-template-columns: 1fr;
       }
 
@@ -389,39 +478,91 @@
       </div>
 
 
-      <div class="video-wrap">
+      <!-- TV SPOT -->
 
-        <iframe
-          src="https://player.vimeo.com/video/309763381"
-          title="Cyberbullying Campaign — Government of the City of Buenos Aires"
-          frameborder="0"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-          allowfullscreen>
-        </iframe>
+      <section class="media-section">
 
-      </div>
+        <div class="media-label">
+          Audiovisual Campaign
+        </div>
+
+        <h3 class="media-title">
+          TV Spot
+        </h3>
+
+        <div class="video-wrap">
+
+          <iframe
+            src="https://player.vimeo.com/video/309763381"
+            title="Cyberbullying TV Spot — Government of the City of Buenos Aires"
+            frameborder="0"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+            allowfullscreen>
+          </iframe>
+
+        </div>
+
+      </section>
 
 
-      <div class="campaign-images">
+      <!-- PRINT CAMPAIGN -->
 
-        <img
-          src="cyberbullying-01.jpg"
-          alt="Cyberbullying campaign print 01"
-        >
+      <section class="media-section">
 
-        <img
-          src="cyberbullying-02.jpg"
-          alt="Cyberbullying campaign print 02"
-        >
+        <div class="media-label">
+          Graphic Campaign
+        </div>
 
-        <img
-          src="cyberbullying-03.jpg"
-          alt="Cyberbullying campaign print 03"
-        >
+        <h3 class="media-title">
+          Print Campaign
+        </h3>
 
-      </div>
+        <div class="campaign-images">
 
+          <button
+            class="campaign-image-button"
+            type="button"
+            data-image="cyberbullying-01.jpg"
+          >
+            <img
+              src="cyberbullying-01.jpg"
+              alt="Cyberbullying print campaign 01"
+            >
+          </button>
+
+          <button
+            class="campaign-image-button"
+            type="button"
+            data-image="cyberbullying-02.jpg"
+          >
+            <img
+              src="cyberbullying-02.jpg"
+              alt="Cyberbullying print campaign 02"
+            >
+          </button>
+
+          <button
+            class="campaign-image-button"
+            type="button"
+            data-image="cyberbullying-03.jpg"
+          >
+            <img
+              src="cyberbullying-03.jpg"
+              alt="Cyberbullying print campaign 03"
+            >
+          </button>
+
+        </div>
+
+        <div class="image-hint">
+          Click each image to enlarge
+        </div>
+
+      </section>
+
+
+      <!-- THE INSIGHT -->
 
       <div class="case-section">
 
@@ -446,6 +587,8 @@
 
       </div>
 
+
+      <!-- THE IDEA -->
 
       <div class="case-section">
 
@@ -474,6 +617,8 @@
       </div>
 
 
+      <!-- MY ROLE -->
+
       <div class="case-section">
 
         <h3>
@@ -496,6 +641,8 @@
       </div>
 
 
+      <!-- HOW I THINK -->
+
       <div class="case-section">
 
         <h3>
@@ -510,6 +657,8 @@
 
       </div>
 
+
+      <!-- CREDITS -->
 
       <div class="case-section credits">
 
@@ -552,6 +701,8 @@
 
     </article>
 
+
+    <!-- IMPACT -->
 
     <section class="impact">
 
@@ -626,6 +777,86 @@
     </p>
 
   </footer>
+
+
+  <!-- IMAGE VIEWER -->
+
+  <div
+    class="lightbox"
+    id="lightbox"
+    aria-hidden="true"
+  >
+
+    <button
+      class="lightbox-close"
+      id="lightbox-close"
+      type="button"
+      aria-label="Close image"
+    >
+      ×
+    </button>
+
+    <img
+      id="lightbox-image"
+      src=""
+      alt="Enlarged Cyberbullying campaign print"
+    >
+
+  </div>
+
+
+  <script>
+
+    const imageButtons = document.querySelectorAll(".campaign-image-button");
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImage = document.getElementById("lightbox-image");
+    const lightboxClose = document.getElementById("lightbox-close");
+
+    imageButtons.forEach(function(button) {
+
+      button.addEventListener("click", function() {
+
+        const imageSource = button.getAttribute("data-image");
+
+        lightboxImage.src = imageSource;
+        lightbox.classList.add("active");
+        lightbox.setAttribute("aria-hidden", "false");
+
+      });
+
+    });
+
+
+    function closeLightbox() {
+
+      lightbox.classList.remove("active");
+      lightbox.setAttribute("aria-hidden", "true");
+      lightboxImage.src = "";
+
+    }
+
+
+    lightboxClose.addEventListener("click", closeLightbox);
+
+
+    lightbox.addEventListener("click", function(event) {
+
+      if (event.target === lightbox) {
+        closeLightbox();
+      }
+
+    });
+
+
+    document.addEventListener("keydown", function(event) {
+
+      if (event.key === "Escape") {
+        closeLightbox();
+      }
+
+    });
+
+  </script>
 
 </body>
 
