@@ -1,1 +1,945 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Graphic Campaigns — Music Industry — Alejandro</title>
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f3ee;
+      color: #111;
+      line-height: 1.4;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 28px 6%;
+      font-size: 14px;
+    }
+
+    nav .logo {
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      color: #111;
+      text-decoration: none;
+      margin-left: 24px;
+    }
+
+    nav a:hover {
+      opacity: .55;
+    }
+
+
+    /* PAGE HEADER */
+
+    .page-header {
+      padding: 90px 6% 90px;
+      border-top: 1px solid #ccc;
+    }
+
+    .eyebrow {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 28px;
+    }
+
+    .page-header h1 {
+      font-size: clamp(55px, 8vw, 120px);
+      line-height: .9;
+      letter-spacing: -4px;
+      max-width: 1200px;
+    }
+
+    .page-header p {
+      margin-top: 35px;
+      max-width: 800px;
+      font-size: 22px;
+      line-height: 1.5;
+    }
+
+
+    /* CLIENT */
+
+    .client {
+      padding: 100px 6%;
+      border-top: 1px solid #bbb;
+    }
+
+    .client-header {
+      display: grid;
+      grid-template-columns: 150px 1fr;
+      gap: 40px;
+      margin-bottom: 65px;
+    }
+
+    .client-number {
+      font-size: 14px;
+      opacity: .55;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .client-title h2 {
+      font-size: clamp(48px, 7vw, 90px);
+      line-height: .95;
+      letter-spacing: -3px;
+      margin-bottom: 20px;
+    }
+
+    .client-meta {
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1.4px;
+      line-height: 1.8;
+    }
+
+
+    /* INTRO */
+
+    .case-intro {
+      max-width: 900px;
+      margin-left: 190px;
+      font-size: 26px;
+      line-height: 1.5;
+      margin-bottom: 90px;
+    }
+
+    .case-intro p {
+      margin-bottom: 26px;
+    }
+
+
+    /* MEDIA */
+
+    .media-section {
+      width: 90%;
+      margin: 0 auto 100px;
+    }
+
+    .media-label {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 17px;
+    }
+
+    .media-title {
+      font-size: clamp(30px, 4vw, 52px);
+      letter-spacing: -2px;
+      line-height: 1;
+      margin-bottom: 22px;
+    }
+
+    .media-description {
+      max-width: 720px;
+      font-size: 18px;
+      line-height: 1.55;
+      margin-bottom: 40px;
+    }
+
+
+    /* MAGAZINE MOCKUP */
+
+    .magazine-mockup {
+      width: 100%;
+    }
+
+    .magazine-mockup img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+
+    /* ORIGINAL CAMPAIGN */
+
+    .art-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .art-button {
+      background: none;
+      border: 0;
+      padding: 0;
+      cursor: zoom-in;
+      text-align: left;
+    }
+
+    .art-button img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: opacity .2s ease;
+    }
+
+    .art-button:hover img {
+      opacity: .7;
+    }
+
+    .image-hint {
+      margin-top: 18px;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1.4px;
+      opacity: .5;
+    }
+
+
+    /* TEXT SECTIONS */
+
+    .case-section {
+      display: grid;
+      grid-template-columns: 150px minmax(0, 820px);
+      gap: 40px;
+      margin-bottom: 75px;
+    }
+
+    .case-section h3 {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 1.6px;
+    }
+
+    .case-section p {
+      font-size: 21px;
+      line-height: 1.6;
+    }
+
+    .highlight {
+      font-size: 31px !important;
+      line-height: 1.35 !important;
+      font-weight: 500;
+    }
+
+
+    /* CREDITS */
+
+    .credits p {
+      font-size: 17px;
+      line-height: 1.8;
+      opacity: .82;
+    }
+
+
+    /* IMPACT */
+
+    .impact {
+      background: #111;
+      color: #f5f3ee;
+      padding: 100px 6%;
+    }
+
+    .impact-grid {
+      display: grid;
+      grid-template-columns: 150px minmax(0, 850px);
+      gap: 40px;
+    }
+
+    .impact h3 {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 1.6px;
+    }
+
+    .impact p {
+      font-size: 28px;
+      line-height: 1.45;
+    }
+
+
+    /* BACK */
+
+    .back {
+      padding: 70px 6%;
+      border-top: 1px solid #ccc;
+    }
+
+    .back a {
+      color: #111;
+      text-decoration: none;
+      font-size: 20px;
+    }
+
+    .back a:hover {
+      opacity: .55;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+      padding: 70px 6%;
+      background: #111;
+      color: #fff;
+    }
+
+    footer h2 {
+      font-size: clamp(40px, 6vw, 80px);
+      margin-bottom: 25px;
+      letter-spacing: -2px;
+    }
+
+
+    /* LIGHTBOX */
+
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,.94);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      padding: 30px;
+      z-index: 9999;
+    }
+
+    .lightbox.active {
+      display: flex;
+    }
+
+    .lightbox img {
+      max-width: 94vw;
+      max-height: 90vh;
+      width: auto;
+      height: auto;
+      display: block;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      right: 28px;
+      top: 20px;
+      border: 0;
+      background: none;
+      color: #fff;
+      font-size: 40px;
+      cursor: pointer;
+    }
+
+
+    /* MOBILE */
+
+    @media (max-width: 700px) {
+
+      nav .links {
+        display: none;
+      }
+
+      .page-header h1 {
+        letter-spacing: -2px;
+      }
+
+      .client-header,
+      .case-section,
+      .impact-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+      }
+
+      .case-intro {
+        margin-left: 0;
+        font-size: 21px;
+      }
+
+      .media-section {
+        width: 100%;
+      }
+
+      .art-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .case-section p {
+        font-size: 18px;
+      }
+
+      .highlight {
+        font-size: 25px !important;
+      }
+
+      .impact p {
+        font-size: 23px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <nav>
+
+    <div class="logo">
+      ALEJANDRO
+    </div>
+
+    <div class="links">
+      <a href="index.html">Home</a>
+      <a href="creative.html">Creative Portfolio</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+
+  </nav>
+
+
+  <main>
+
+
+    <!-- COLLECTION HEADER -->
+
+    <section class="page-header">
+
+      <div class="eyebrow">
+        Creative Direction / Music
+      </div>
+
+      <h1>
+        Graphic Campaigns<br>
+        — Music Industry
+      </h1>
+
+      <p>
+        Selected graphic campaigns and headline-driven work created
+        for music brands and music audiences — combining cultural insight,
+        copywriting, strategy and creative direction.
+      </p>
+
+    </section>
+
+
+
+    <!-- CLIENT 01 -->
+
+    <article class="client">
+
+
+      <div class="client-header">
+
+        <div class="client-number">
+          Client 01
+        </div>
+
+        <div class="client-title">
+
+          <h2>
+            Skullcandy
+          </h2>
+
+          <div class="client-meta">
+            Music Culture · Copywriting · Audience Insight · Premium Audio
+            <br>
+            Skullcandy Latin America
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- INTRO -->
+
+      <div class="case-intro">
+
+        <p>
+          Developed directly with <strong>Skullcandy Latin America</strong>,
+          this campaign set out to reconnect the brand with an adult audience
+          of music lovers — particularly people aged 35 and over.
+        </p>
+
+        <p>
+          This segment represented an attractive audience with purchasing power,
+          a strong interest in technology and a deep emotional connection to music.
+          However, the brand felt it was gradually losing relevance with them as
+          most of its communication had increasingly focused on a much younger target.
+        </p>
+
+        <p>
+          The launch of a new line of premium noise-cancelling headphones became
+          an opportunity to regain their attention and speak to them through a
+          language they immediately understood: the music they had grown up with
+          and still loved.
+        </p>
+
+        <p>
+          There was one important limitation:
+          <strong>there was almost no production budget.</strong>
+        </p>
+
+        <p>
+          So we solved the problem the old-fashioned way — with one of advertising’s
+          most enduring tools:
+          <strong>a strong idea expressed through a strong headline.</strong>
+        </p>
+
+      </div>
+
+
+
+      <!-- MAGAZINE MOCKUP -->
+
+      <section class="media-section">
+
+        <div class="media-label">
+          Campaign in Context
+        </div>
+
+        <h3 class="media-title">
+          Specialized Music Magazines
+        </h3>
+
+        <p class="media-description">
+          The campaign was conceived to live naturally inside music editorial
+          environments, where the audience already shared the cultural references
+          behind each execution.
+        </p>
+
+        <div class="magazine-mockup">
+
+          <img
+            src="skullcandy-magazine-mockup.jpg"
+            alt="Skullcandy campaign presented in a music magazine"
+          >
+
+        </div>
+
+      </section>
+
+
+
+      <!-- ORIGINAL GRAPHICS -->
+
+      <section class="media-section">
+
+        <div class="media-label">
+          Graphic Campaign
+        </div>
+
+        <h3 class="media-title">
+          Don’t let noise affect your music.
+        </h3>
+
+        <p class="media-description">
+          A headline-driven campaign using iconic music references to turn
+          everyday noise into the unwanted interruption of a favorite song.
+        </p>
+
+
+        <div class="art-grid">
+
+
+          <button
+            class="art-button"
+            type="button"
+            data-image="skullcandy-01.jpg"
+          >
+
+            <img
+              src="skullcandy-01.jpg"
+              alt="Skullcandy Guns N Buses campaign execution"
+            >
+
+          </button>
+
+
+          <button
+            class="art-button"
+            type="button"
+            data-image="skullcandy-02.jpg"
+          >
+
+            <img
+              src="skullcandy-02.jpg"
+              alt="Skullcandy Bob Marley and the Rottweiler campaign execution"
+            >
+
+          </button>
+
+
+          <button
+            class="art-button"
+            type="button"
+            data-image="skullcandy-03.jpg"
+          >
+
+            <img
+              src="skullcandy-03.jpg"
+              alt="Skullcandy Red Hot Chili's Blenders campaign execution"
+            >
+
+          </button>
+
+
+        </div>
+
+
+        <div class="image-hint">
+          Click each piece to enlarge
+        </div>
+
+      </section>
+
+
+
+      <!-- INSIGHT -->
+
+      <div class="case-section">
+
+        <h3>
+          The Insight
+        </h3>
+
+        <p>
+          As this audience gets older, their relationship with music often
+          becomes more demanding, not less.
+          <br><br>
+
+          Many of them evolve from casual listeners into true music enthusiasts:
+          people who know what they like, care about sound quality and are willing
+          to invest in better technology because they can afford it.
+          <br><br>
+
+          They want to hear the music they love with the best possible quality —
+          and they do not want anything interfering with that experience.
+          <br><br>
+
+          That led us to a simple insight:
+          <strong>
+            The more you care about music, the less willing you are to let
+            anything interrupt it.
+          </strong>
+        </p>
+
+      </div>
+
+
+
+      <!-- IDEA -->
+
+      <div class="case-section">
+
+        <h3>
+          The Idea
+        </h3>
+
+        <p>
+          We created a
+          <strong>
+            headline-driven graphic campaign built around iconic music references.
+          </strong>
+          <br><br>
+
+          Instead of explaining noise cancellation through technical specifications,
+          we dramatized what happens when everyday noise gets between you and
+          the music you love.
+          <br><br>
+
+          We turned unwanted sounds into unexpected members of familiar bands.
+          <br><br>
+
+          Each execution altered a recognizable band name and visual identity
+          by introducing the very noises the product was designed to eliminate.
+          <br><br>
+
+          The humor came from the collision between something the audience knew
+          intimately and an interruption they immediately understood.
+          <br><br>
+
+          The message was simple:
+          <strong>Don’t let noise affect your music.</strong>
+        </p>
+
+      </div>
+
+
+
+      <!-- MY ROLE -->
+
+      <div class="case-section">
+
+        <h3>
+          My Role
+        </h3>
+
+        <p>
+          I worked on the project as
+          <strong>Creative Director, Copywriter & Project Manager</strong>,
+          also handling the account relationship directly with the client.
+          <br><br>
+
+          My role included developing the creative concept, identifying the
+          musical and cultural references behind the campaign, shaping the
+          headlines and copy, and helping direct the overall creative execution.
+          <br><br>
+
+          In parallel, I managed the project directly with Skullcandy Latin America,
+          coordinating communication, feedback and the development of the campaign
+          from the client side through execution.
+          <br><br>
+
+          The work connected Skullcandy’s premium noise-cancelling benefit with
+          the audience’s increasingly demanding relationship with music and
+          sound quality.
+        </p>
+
+      </div>
+
+
+
+      <!-- HOW I THINK -->
+
+      <div class="case-section">
+
+        <h3>
+          How I Think
+        </h3>
+
+        <p class="highlight">
+          Find a real audience truth, connect it with culture, and express it
+          simply enough that the idea can work even when the budget cannot.
+        </p>
+
+      </div>
+
+
+
+      <!-- CREDITS -->
+
+      <div class="case-section credits">
+
+        <h3>
+          Credits
+        </h3>
+
+        <p>
+
+          <strong>Client:</strong>
+          Skullcandy Latin America
+          <br><br>
+
+          <strong>Project:</strong>
+          Developed directly with the client
+          <br><br>
+
+          <strong>Creative Direction:</strong>
+          David Carrillo / Moisés Ojeda
+          <br>
+
+          <strong>Art Direction:</strong>
+          David Carrillo
+          <br>
+
+          <strong>Copywriting:</strong>
+          Moisés Ojeda
+          <br>
+
+          <strong>Account & Project Management:</strong>
+          Moisés Ojeda
+
+        </p>
+
+      </div>
+
+
+    </article>
+
+
+
+    <!-- IMPACT -->
+
+    <section class="impact">
+
+      <div class="impact-grid">
+
+        <h3>
+          Impact
+        </h3>
+
+        <p>
+          With almost no production budget, the campaign transformed a limitation
+          into part of the creative strategy.
+          <br><br>
+
+          By relying on music culture, audience insight, copywriting and a simple
+          graphic system instead of expensive production, the work created a
+          series of executions designed to reconnect Skullcandy with an older,
+          more demanding music audience while communicating the benefit of premium
+          noise cancellation in a direct and memorable way.
+        </p>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- BACK -->
+
+    <div class="back">
+
+      <a href="creative.html">
+        ← Back to Creative Direction
+      </a>
+
+    </div>
+
+
+  </main>
+
+
+
+  <footer>
+
+    <h2>
+      Let’s work together.
+    </h2>
+
+    <p>
+      Berlin, Germany
+    </p>
+
+  </footer>
+
+
+
+  <!-- IMAGE LIGHTBOX -->
+
+  <div
+    class="lightbox"
+    id="lightbox"
+    aria-hidden="true"
+  >
+
+    <button
+      class="lightbox-close"
+      id="lightbox-close"
+      type="button"
+      aria-label="Close image"
+    >
+      ×
+    </button>
+
+    <img
+      id="lightbox-image"
+      src=""
+      alt="Enlarged Skullcandy campaign execution"
+    >
+
+  </div>
+
+
+
+  <script>
+
+    const artButtons =
+      document.querySelectorAll(".art-button");
+
+    const lightbox =
+      document.getElementById("lightbox");
+
+    const lightboxImage =
+      document.getElementById("lightbox-image");
+
+    const closeButton =
+      document.getElementById("lightbox-close");
+
+
+    artButtons.forEach(function(button) {
+
+      button.addEventListener("click", function() {
+
+        const image =
+          button.getAttribute("data-image");
+
+        lightboxImage.src = image;
+
+        lightbox.classList.add("active");
+
+        lightbox.setAttribute(
+          "aria-hidden",
+          "false"
+        );
+
+      });
+
+    });
+
+
+    function closeLightbox() {
+
+      lightbox.classList.remove("active");
+
+      lightbox.setAttribute(
+        "aria-hidden",
+        "true"
+      );
+
+      lightboxImage.src = "";
+
+    }
+
+
+    closeButton.addEventListener(
+      "click",
+      closeLightbox
+    );
+
+
+    lightbox.addEventListener(
+      "click",
+      function(event) {
+
+        if (event.target === lightbox) {
+          closeLightbox();
+        }
+
+      }
+    );
+
+
+    document.addEventListener(
+      "keydown",
+      function(event) {
+
+        if (event.key === "Escape") {
+          closeLightbox();
+        }
+
+      }
+    );
+
+  </script>
+
+
+</body>
+
+</html>
