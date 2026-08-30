@@ -51,7 +51,7 @@
     }
 
 
-    /* PAGE HEADER */
+    /* HEADER */
 
     .page-header {
       padding: 90px 6% 90px;
@@ -142,7 +142,7 @@
       font-size: 13px;
       text-transform: uppercase;
       letter-spacing: 2px;
-      margin-bottom: 17px;
+      margin-bottom: 18px;
     }
 
     .media-title {
@@ -163,7 +163,8 @@
     /* MAGAZINE MOCKUP */
 
     .magazine-mockup {
-      width: 100%;
+      width: 82%;
+      margin: 0 auto;
     }
 
     .magazine-mockup img {
@@ -173,35 +174,55 @@
     }
 
 
-    /* ORIGINAL CAMPAIGN */
+    /* CAMPAIGN ART */
 
-    .art-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
+    .main-art {
+      width: 72%;
+      margin: 0 auto 22px;
     }
 
-    .art-button {
-      background: none;
+    .main-art button,
+    .small-art button {
       border: 0;
+      background: none;
       padding: 0;
+      width: 100%;
       cursor: zoom-in;
-      text-align: left;
     }
 
-    .art-button img {
+    .main-art img {
       width: 100%;
       height: auto;
       display: block;
+    }
+
+    .small-art {
+      width: 72%;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .small-art img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .main-art img,
+    .small-art img {
       transition: opacity .2s ease;
     }
 
-    .art-button:hover img {
-      opacity: .7;
+    .main-art button:hover img,
+    .small-art button:hover img {
+      opacity: .72;
     }
 
     .image-hint {
-      margin-top: 18px;
+      width: 72%;
+      margin: 18px auto 0;
       font-size: 12px;
       text-transform: uppercase;
       letter-spacing: 1.4px;
@@ -331,8 +352,8 @@
 
     .lightbox-close {
       position: absolute;
-      right: 28px;
       top: 20px;
+      right: 28px;
       border: 0;
       background: none;
       color: #fff;
@@ -369,7 +390,14 @@
         width: 100%;
       }
 
-      .art-grid {
+      .magazine-mockup,
+      .main-art,
+      .small-art,
+      .image-hint {
+        width: 100%;
+      }
+
+      .small-art {
         grid-template-columns: 1fr;
       }
 
@@ -491,8 +519,10 @@
         </p>
 
         <p>
-          There was one important limitation:
-          <strong>there was almost no production budget.</strong>
+          Skullcandy already had media placements secured in
+          <strong>specialized music magazines</strong> and wanted to make use
+          of that space. The challenge was that there was almost no budget
+          available for graphic production.
         </p>
 
         <p>
@@ -518,16 +548,17 @@
         </h3>
 
         <p class="media-description">
-          The campaign was conceived to live naturally inside music editorial
-          environments, where the audience already shared the cultural references
-          behind each execution.
+          Skullcandy already had placements available in specialized music
+          magazines. The campaign was designed to make those existing media
+          spaces work harder through a simple idea, strong copywriting and
+          recognizable music culture.
         </p>
 
         <div class="magazine-mockup">
 
           <img
             src="skullcandy-magazine-mockup.jpg"
-            alt="Skullcandy campaign presented in a music magazine"
+            alt="Skullcandy campaign in specialized music magazine"
           >
 
         </div>
@@ -536,7 +567,7 @@
 
 
 
-      <!-- ORIGINAL GRAPHICS -->
+      <!-- GRAPHIC CAMPAIGN -->
 
       <section class="media-section">
 
@@ -549,17 +580,19 @@
         </h3>
 
         <p class="media-description">
-          A headline-driven campaign using iconic music references to turn
-          everyday noise into the unwanted interruption of a favorite song.
+          A headline-driven campaign created for specialized music magazines
+          and Instagram Stories, using iconic music references to turn everyday
+          noise into the unwanted interruption of a favorite song.
         </p>
 
 
-        <div class="art-grid">
+        <!-- MAIN IMAGE -->
 
+        <div class="main-art">
 
           <button
-            class="art-button"
             type="button"
+            class="art-button"
             data-image="skullcandy-01.jpg"
           >
 
@@ -570,10 +603,16 @@
 
           </button>
 
+        </div>
+
+
+        <!-- TWO SMALL IMAGES -->
+
+        <div class="small-art">
 
           <button
-            class="art-button"
             type="button"
+            class="art-button"
             data-image="skullcandy-02.jpg"
           >
 
@@ -586,8 +625,8 @@
 
 
           <button
-            class="art-button"
             type="button"
+            class="art-button"
             data-image="skullcandy-03.jpg"
           >
 
@@ -597,7 +636,6 @@
             >
 
           </button>
-
 
         </div>
 
@@ -658,8 +696,13 @@
           </strong>
           <br><br>
 
-          Instead of explaining noise cancellation through technical specifications,
-          we dramatized what happens when everyday noise gets between you and
+          Instead of depending on expensive production or explaining noise
+          cancellation through technical specifications, we designed a creative
+          system that could work inside the magazine placements Skullcandy
+          already had available.
+          <br><br>
+
+          We dramatized what happens when everyday noise gets between you and
           the music you love.
           <br><br>
 
@@ -696,19 +739,19 @@
           also handling the account relationship directly with the client.
           <br><br>
 
-          My role included developing the creative concept, identifying the
-          musical and cultural references behind the campaign, shaping the
-          headlines and copy, and helping direct the overall creative execution.
+          My role included developing a creative solution that could respond
+          to the brand’s existing media opportunity while working within an
+          extremely limited production budget.
+          <br><br>
+
+          I contributed to the central concept, identified the musical and
+          cultural references behind the campaign, shaped the headlines and copy,
+          and helped direct the overall graphic execution.
           <br><br>
 
           In parallel, I managed the project directly with Skullcandy Latin America,
-          coordinating communication, feedback and the development of the campaign
-          from the client side through execution.
-          <br><br>
-
-          The work connected Skullcandy’s premium noise-cancelling benefit with
-          the audience’s increasingly demanding relationship with music and
-          sound quality.
+          coordinating communication, feedback and campaign development through
+          execution.
         </p>
 
       </div>
@@ -785,15 +828,21 @@
         </h3>
 
         <p>
-          With almost no production budget, the campaign transformed a limitation
-          into part of the creative strategy.
+          With Skullcandy already committed to specialized music magazine
+          placements but with almost no production budget, the campaign turned
+          a practical limitation into the foundation of the creative strategy.
           <br><br>
 
           By relying on music culture, audience insight, copywriting and a simple
-          graphic system instead of expensive production, the work created a
-          series of executions designed to reconnect Skullcandy with an older,
-          more demanding music audience while communicating the benefit of premium
-          noise cancellation in a direct and memorable way.
+          graphic system instead of expensive production, the work allowed the
+          brand to make meaningful use of its existing media investment while
+          reconnecting with an older, more demanding music audience.
+          <br><br>
+
+          <strong>
+            The media space already existed. The production budget did not.
+            The idea had to do the heavy lifting.
+          </strong>
         </p>
 
       </div>
@@ -831,7 +880,7 @@
 
 
 
-  <!-- IMAGE LIGHTBOX -->
+  <!-- LIGHTBOX -->
 
   <div
     class="lightbox"
@@ -851,7 +900,7 @@
     <img
       id="lightbox-image"
       src=""
-      alt="Enlarged Skullcandy campaign execution"
+      alt="Enlarged Skullcandy campaign artwork"
     >
 
   </div>
@@ -860,7 +909,7 @@
 
   <script>
 
-    const artButtons =
+    const buttons =
       document.querySelectorAll(".art-button");
 
     const lightbox =
@@ -873,14 +922,14 @@
       document.getElementById("lightbox-close");
 
 
-    artButtons.forEach(function(button) {
+    buttons.forEach(function(button) {
 
       button.addEventListener("click", function() {
 
-        const image =
+        const source =
           button.getAttribute("data-image");
 
-        lightboxImage.src = image;
+        lightboxImage.src = source;
 
         lightbox.classList.add("active");
 
