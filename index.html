@@ -199,65 +199,41 @@
       opacity: 0.5;
     }
 
-    /* EDUCATION */
+    /* EDUCATION & TRAINING */
 
-    .education-item {
+    .education-grid {
       display: grid;
-      grid-template-columns: 180px 1fr;
-      gap: 40px;
-      padding: 32px 0;
+      grid-template-columns: repeat(3, 1fr);
       border-top: 1px solid #bbb;
+      border-left: 1px solid #bbb;
     }
 
-    .education-item:last-child {
+    .education-card {
+      min-height: 255px;
+      padding: 30px;
+      border-right: 1px solid #bbb;
       border-bottom: 1px solid #bbb;
     }
 
     .education-date {
-      font-size: 14px;
+      font-size: 13px;
       text-transform: uppercase;
       letter-spacing: 1px;
-      opacity: 0.6;
+      opacity: 0.55;
+      margin-bottom: 45px;
     }
 
-    .education-info h3 {
-      font-size: 23px;
-      margin-bottom: 7px;
+    .education-card h3 {
+      font-size: clamp(22px, 2.2vw, 32px);
+      line-height: 1.08;
+      letter-spacing: -1px;
+      margin-bottom: 14px;
     }
 
-    .education-info p {
-      font-size: 17px;
-      max-width: 760px;
-    }
-
-    /* LANGUAGES */
-
-    .language-item {
-      display: grid;
-      grid-template-columns: 180px 1fr;
-      gap: 40px;
-      padding: 32px 0;
-      border-top: 1px solid #bbb;
-    }
-
-    .language-item:last-child {
-      border-bottom: 1px solid #bbb;
-    }
-
-    .language-date {
-      font-size: 14px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      opacity: 0.6;
-    }
-
-    .language-info h3 {
-      font-size: 23px;
-      margin-bottom: 7px;
-    }
-
-    .language-info p {
-      font-size: 17px;
+    .education-card p {
+      font-size: 15px;
+      line-height: 1.55;
+      max-width: 360px;
     }
 
     /* ABOUT */
@@ -316,7 +292,8 @@
         padding-bottom: 70px;
       }
 
-      .career-paths {
+      .career-paths,
+      .education-grid {
         grid-template-columns: 1fr;
       }
 
@@ -330,10 +307,12 @@
         border-bottom: none;
       }
 
-      .education-item,
-      .language-item {
-        grid-template-columns: 1fr;
-        gap: 10px;
+      .education-card {
+        min-height: auto;
+      }
+
+      .education-date {
+        margin-bottom: 25px;
       }
 
       .about p {
@@ -427,8 +406,6 @@
 
       <div class="career-paths">
 
-        <!-- 01 JOURNALISM -->
-
         <a
           href="journalism.html"
           class="career-path"
@@ -456,8 +433,6 @@
 
         </a>
 
-        <!-- 02 CREATIVE -->
-
         <a
           href="creative.html"
           class="career-path"
@@ -484,8 +459,6 @@
           </div>
 
         </a>
-
-        <!-- 03 MUSIC -->
 
         <a
           href="music.html"
@@ -526,141 +499,63 @@
 
     </section>
 
-    <!-- PROFESSIONAL EDUCATION -->
+    <!-- EDUCATION & TRAINING -->
 
     <section id="education">
 
       <h2>
-        Professional Education
+        Education & Training
       </h2>
 
-      <div class="education-item">
+      <div class="education-grid">
 
-        <div class="education-date">
-          2000 — 2006
-        </div>
-
-        <div class="education-info">
-
-          <h3>
-            Universidad Bicentenaria de Aragua
-          </h3>
-
+        <div class="education-card">
+          <div class="education-date">2000 — 2006</div>
+          <h3>Universidad Bicentenaria de Aragua</h3>
           <p>
             Bachelor's Degree in Journalism.
             Specialization in communication and crisis management.
           </p>
-
         </div>
 
-      </div>
-
-      <div class="education-item">
-
-        <div class="education-date">
-          2014 — 2015
-        </div>
-
-        <div class="education-info">
-
-          <h3>
-            Brother Ad School
-          </h3>
-
+        <div class="education-card">
+          <div class="education-date">2014 — 2015</div>
+          <h3>Brother Ad School</h3>
           <p>
             Creative Advertising & Creative Direction Program.
           </p>
-
         </div>
 
-      </div>
-
-      <div class="education-item">
-
-        <div class="education-date">
-          2018
-        </div>
-
-        <div class="education-info">
-
-          <h3>
-            IAE Business School — Universidad Austral
-          </h3>
-
+        <div class="education-card">
+          <div class="education-date">2018</div>
+          <h3>IAE Business School — Universidad Austral</h3>
           <p>
             NAVES: Entrepreneurship & Business Development Program.
           </p>
-
         </div>
 
-      </div>
-
-      <div class="education-item">
-
-        <div class="education-date">
-          2018
-        </div>
-
-        <div class="education-info">
-
-          <h3>
-            Government of the City of Buenos Aires
-          </h3>
-
+        <div class="education-card">
+          <div class="education-date">2018</div>
+          <h3>Government of the City of Buenos Aires</h3>
           <p>
             Vos Lo Hacés: Entrepreneurship & Business Development Program.
           </p>
-
         </div>
 
-      </div>
-
-    </section>
-
-    <!-- LANGUAGES -->
-
-    <section id="languages">
-
-      <h2>
-        Languages & Additional Training
-      </h2>
-
-      <div class="language-item">
-
-        <div class="language-date">
-          2023 — 2025
-        </div>
-
-        <div class="language-info">
-
-          <h3>
-            German — Integration Course & B1
-          </h3>
-
+        <div class="education-card">
+          <div class="education-date">2023 — 2025</div>
+          <h3>German — Integration Course & B1</h3>
           <p>
             German language and official integration training.
           </p>
-
         </div>
 
-      </div>
-
-      <div class="language-item">
-
-        <div class="language-date">
-          2026 — 2027
-        </div>
-
-        <div class="language-info">
-
-          <h3>
-            Professional German — B2
-          </h3>
-
+        <div class="education-card">
+          <div class="education-date">2026 — 2027</div>
+          <h3>Professional German — B2</h3>
           <p>
             Professional German language training.
           </p>
-
         </div>
 
       </div>
