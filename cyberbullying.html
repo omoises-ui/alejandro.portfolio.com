@@ -47,36 +47,37 @@
     }
 
     nav a:hover {
-      opacity: 0.55;
+      opacity: .55;
     }
 
-    /* PAGE HEADER */
+
+    /* HEADER */
 
     .page-header {
-      padding: 90px 6% 100px;
+      padding: 90px 6% 90px;
       border-top: 1px solid #ccc;
     }
 
-    .page-header .eyebrow {
-      font-size: 14px;
+    .eyebrow {
+      font-size: 13px;
       text-transform: uppercase;
       letter-spacing: 2px;
-      margin-bottom: 30px;
+      margin-bottom: 28px;
     }
 
     .page-header h1 {
-      font-size: clamp(60px, 9vw, 135px);
-      line-height: 0.88;
+      font-size: clamp(60px, 9vw, 130px);
+      line-height: .9;
       letter-spacing: -4px;
-      max-width: 1200px;
     }
 
     .page-header p {
-      margin-top: 40px;
-      max-width: 760px;
-      font-size: 24px;
-      line-height: 1.45;
+      margin-top: 35px;
+      max-width: 800px;
+      font-size: 22px;
+      line-height: 1.5;
     }
+
 
     /* CASE */
 
@@ -87,127 +88,172 @@
 
     .case-meta {
       display: grid;
-      grid-template-columns: 180px 1fr;
-      gap: 40px;
-      margin-bottom: 60px;
-    }
-
-    .case-number {
-      font-size: 14px;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      opacity: 0.55;
-    }
-
-    .case-title h2 {
-      font-size: clamp(42px, 6vw, 85px);
-      line-height: 0.95;
-      letter-spacing: -3px;
-      margin-bottom: 20px;
-    }
-
-    .case-tags {
-      font-size: 14px;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      line-height: 1.7;
-    }
-
-    .case-intro {
-      max-width: 900px;
-      margin-left: 220px;
-      font-size: 27px;
-      line-height: 1.45;
-      margin-bottom: 80px;
-    }
-
-    .case-intro p {
-      margin-bottom: 28px;
-    }
-
-    /* MEDIA SECTIONS */
-
-    .media-section {
-      width: 90%;
-      margin: 0 auto 100px auto;
-    }
-
-    .media-label {
-      margin-bottom: 24px;
-      font-size: 13px;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-    }
-
-    .media-title {
-      font-size: clamp(28px, 4vw, 48px);
-      line-height: 1;
-      letter-spacing: -2px;
-      margin-bottom: 28px;
-    }
-
-    /* VIDEO */
-
-    .video-wrap iframe {
-      width: 100%;
-      aspect-ratio: 16 / 9;
-      display: block;
-      border: 0;
-    }
-
-    /* PRINT CAMPAIGN */
-
-    .campaign-images {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-    }
-
-    .campaign-image-button {
-      border: 0;
-      padding: 0;
-      background: none;
-      cursor: zoom-in;
-      text-align: left;
-    }
-
-    .campaign-image-button img {
-      width: 100%;
-      height: auto;
-      display: block;
-      transition: opacity 0.2s ease;
-    }
-
-    .campaign-image-button:hover img {
-      opacity: 0.72;
-    }
-
-    .image-hint {
-      margin-top: 14px;
-      font-size: 13px;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      opacity: 0.55;
-    }
-
-    /* CASE CONTENT */
-
-    .case-section {
-      display: grid;
-      grid-template-columns: 180px minmax(0, 820px);
+      grid-template-columns: 150px 1fr;
       gap: 40px;
       margin-bottom: 70px;
     }
 
-    .case-section h3 {
-      font-size: 14px;
+    .case-label {
+      font-size: 13px;
       text-transform: uppercase;
       letter-spacing: 1.5px;
+      opacity: .55;
+    }
+
+    .case-meta p {
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+
+    /* MEDIA SECTION */
+
+    .media-section {
+      width: 90%;
+      margin: 0 auto 100px;
+    }
+
+    .media-label {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 18px;
+    }
+
+    .media-title {
+      font-size: clamp(32px, 4vw, 52px);
+      letter-spacing: -2px;
+      margin-bottom: 26px;
+    }
+
+    .media-description {
+      max-width: 760px;
+      font-size: 18px;
+      line-height: 1.55;
+      margin-bottom: 40px;
+    }
+
+
+    /* VIDEO */
+
+    .video-wrapper {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+    }
+
+    .video-wrapper iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+
+    /* PRINTS */
+
+    .print-main {
+      width: 72%;
+      margin: 0 auto 22px;
+    }
+
+    .print-main button,
+    .print-small button {
+      border: 0;
+      background: none;
+      padding: 0;
+      width: 100%;
+      cursor: zoom-in;
+    }
+
+    .print-main img,
+    .print-small img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .print-small {
+      width: 72%;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .print-main img,
+    .print-small img {
+      transition: opacity .2s ease;
+    }
+
+    .print-main button:hover img,
+    .print-small button:hover img {
+      opacity: .72;
+    }
+
+    .image-hint {
+      width: 72%;
+      margin: 18px auto 0;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1.4px;
+      opacity: .5;
+    }
+
+
+    /* AWARDS UNDER GRAPHICS */
+
+    .campaign-awards {
+      width: 72%;
+      margin: 28px auto 0;
+      padding-top: 18px;
+      border-top: 1px solid #ccc;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+
+    .award-block {
+      font-size: 10px;
+      line-height: 1.55;
+      letter-spacing: .3px;
+      opacity: .68;
+    }
+
+    .award-block strong {
+      font-size: 10px;
+      font-weight: 700;
+    }
+
+    .award-title {
+      margin-bottom: 7px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      opacity: .9;
+    }
+
+
+    /* CONTENT */
+
+    .case-section {
+      display: grid;
+      grid-template-columns: 150px minmax(0, 820px);
+      gap: 40px;
+      margin-bottom: 75px;
+    }
+
+    .case-section h3 {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 1.6px;
     }
 
     .case-section p {
       font-size: 21px;
-      line-height: 1.55;
+      line-height: 1.6;
     }
 
     .highlight {
@@ -216,11 +262,15 @@
       font-weight: 500;
     }
 
+
+    /* CREDITS */
+
     .credits p {
       font-size: 17px;
-      line-height: 1.7;
-      opacity: 0.82;
+      line-height: 1.8;
+      opacity: .82;
     }
+
 
     /* IMPACT */
 
@@ -232,26 +282,21 @@
 
     .impact-grid {
       display: grid;
-      grid-template-columns: 180px minmax(0, 850px);
+      grid-template-columns: 150px minmax(0, 850px);
       gap: 40px;
     }
 
     .impact h3 {
-      font-size: 14px;
+      font-size: 13px;
       text-transform: uppercase;
-      letter-spacing: 1.5px;
+      letter-spacing: 1.6px;
     }
 
     .impact p {
       font-size: 28px;
       line-height: 1.45;
-      margin-bottom: 35px;
     }
 
-    .awards {
-      font-size: 18px;
-      line-height: 1.8;
-    }
 
     /* BACK */
 
@@ -267,8 +312,9 @@
     }
 
     .back a:hover {
-      opacity: 0.55;
+      opacity: .55;
     }
+
 
     /* FOOTER */
 
@@ -284,15 +330,16 @@
       letter-spacing: -2px;
     }
 
-    /* IMAGE VIEWER */
+
+    /* LIGHTBOX */
 
     .lightbox {
       position: fixed;
       inset: 0;
-      background: rgba(0, 0, 0, 0.92);
+      background: rgba(0,0,0,.94);
       display: none;
-      align-items: center;
       justify-content: center;
+      align-items: center;
       padding: 30px;
       z-index: 9999;
     }
@@ -311,15 +358,15 @@
 
     .lightbox-close {
       position: absolute;
-      top: 22px;
+      top: 20px;
       right: 28px;
       border: 0;
       background: none;
-      color: white;
-      font-size: 38px;
-      line-height: 1;
+      color: #fff;
+      font-size: 40px;
       cursor: pointer;
     }
+
 
     /* MOBILE */
 
@@ -329,16 +376,8 @@
         display: none;
       }
 
-      .page-header {
-        padding-top: 60px;
-      }
-
       .page-header h1 {
         letter-spacing: -2px;
-      }
-
-      .page-header p {
-        font-size: 19px;
       }
 
       .case-meta,
@@ -348,16 +387,22 @@
         gap: 15px;
       }
 
-      .case-intro {
-        margin-left: 0;
-        font-size: 21px;
-      }
-
       .media-section {
         width: 100%;
       }
 
-      .campaign-images {
+      .print-main,
+      .print-small,
+      .image-hint,
+      .campaign-awards {
+        width: 100%;
+      }
+
+      .print-small {
+        grid-template-columns: 1fr;
+      }
+
+      .campaign-awards {
         grid-template-columns: 1fr;
       }
 
@@ -369,12 +414,8 @@
         font-size: 25px !important;
       }
 
-      .credits p {
-        font-size: 16px;
-      }
-
       .impact p {
-        font-size: 24px;
+        font-size: 23px;
       }
 
     }
@@ -385,6 +426,7 @@
 
 
 <body>
+
 
   <nav>
 
@@ -402,83 +444,57 @@
   </nav>
 
 
+
   <main>
+
+
+    <!-- HEADER -->
 
     <section class="page-header">
 
       <div class="eyebrow">
-        Career & Portfolio / Creative Direction
+        Creative Direction · Copywriting · Social Impact
       </div>
 
       <h1>
-        Ideas that<br>
-        connect things.
+        Cyberbullying
       </h1>
 
       <p>
-        Creative direction, concepts and storytelling built from observation,
-        cultural insight and unexpected connections between people,
-        technology and behavior.
+        A campaign that transformed invisible digital aggression into
+        something physical, immediate and impossible to ignore.
       </p>
 
     </section>
 
 
+
     <article class="case">
+
+
+      <!-- PROJECT META -->
 
       <div class="case-meta">
 
-        <div class="case-number">
-          Case 03
+        <div class="case-label">
+          Project
         </div>
 
-        <div class="case-title">
-
-          <h2>
-            Cyberbullying
-          </h2>
-
-          <div class="case-tags">
-            Creative Direction · Copywriting · Social Impact · Film · Print
-          </div>
-
-        </div>
-
-      </div>
-
-
-      <div class="case-intro">
-
         <p>
-          Developed at <strong>Brother Escuela de Creativos</strong> for the
-          Government of the City of Buenos Aires, this campaign addressed the
-          growing problem of cyberbullying by focusing on one of the main barriers
-          to confronting it: many parents still dismissed online harassment as
-          simply “kids being kids on the internet.”
-        </p>
-
-        <p>
-          But digital aggression can be persistent, massive and extremely damaging.
-          Its intensity, reach and constant presence can have devastating
-          consequences for victims.
-        </p>
-
-        <p>
-          The campaign set out to challenge that perception through a direct concept
-          and an impactful execution built around the visual language of social
-          media and digital notifications.
-        </p>
-
-        <p>
-          I worked on the project as <strong>Creative Director & Copywriter</strong>,
-          contributing to the development of the concept, narrative and execution
-          across both the audiovisual spot and the print campaign.
+          <strong>Client:</strong> Government of the City of Buenos Aires
+          <br>
+          <strong>Institution:</strong> Brother Ad School
+          <br>
+          <strong>Market:</strong> Argentina
+          <br>
+          <strong>Role:</strong> Creative Director & Copywriter
         </p>
 
       </div>
 
 
-      <!-- TV SPOT -->
+
+      <!-- AUDIOVISUAL CAMPAIGN -->
 
       <section class="media-section">
 
@@ -486,24 +502,22 @@
           Audiovisual Campaign
         </div>
 
-        <h3 class="media-title">
+        <h2 class="media-title">
           TV Spot
-        </h3>
+        </h2>
 
-        <div class="video-wrap">
+        <div class="video-wrapper">
 
           <iframe
             src="https://player.vimeo.com/video/309763381"
-            title="Cyberbullying TV Spot — Government of the City of Buenos Aires"
-            frameborder="0"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+            allow="autoplay; fullscreen; picture-in-picture"
             allowfullscreen>
           </iframe>
 
         </div>
 
       </section>
+
 
 
       <!-- PRINT CAMPAIGN -->
@@ -514,55 +528,121 @@
           Graphic Campaign
         </div>
 
-        <h3 class="media-title">
+        <h2 class="media-title">
           Print Campaign
-        </h3>
+        </h2>
 
-        <div class="campaign-images">
+
+        <!-- MAIN PRINT -->
+
+        <div class="print-main">
 
           <button
-            class="campaign-image-button"
             type="button"
+            class="art-button"
             data-image="cyberbullying-01.jpg"
           >
+
             <img
               src="cyberbullying-01.jpg"
-              alt="Cyberbullying print campaign 01"
+              alt="Cyberbullying print campaign execution"
             >
-          </button>
 
-          <button
-            class="campaign-image-button"
-            type="button"
-            data-image="cyberbullying-02.jpg"
-          >
-            <img
-              src="cyberbullying-02.jpg"
-              alt="Cyberbullying print campaign 02"
-            >
-          </button>
-
-          <button
-            class="campaign-image-button"
-            type="button"
-            data-image="cyberbullying-03.jpg"
-          >
-            <img
-              src="cyberbullying-03.jpg"
-              alt="Cyberbullying print campaign 03"
-            >
           </button>
 
         </div>
 
+
+        <!-- TWO SMALL PRINTS -->
+
+        <div class="print-small">
+
+
+          <button
+            type="button"
+            class="art-button"
+            data-image="cyberbullying-02.jpg"
+          >
+
+            <img
+              src="cyberbullying-02.jpg"
+              alt="Cyberbullying print campaign execution"
+            >
+
+          </button>
+
+
+          <button
+            type="button"
+            class="art-button"
+            data-image="cyberbullying-03.jpg"
+          >
+
+            <img
+              src="cyberbullying-03.jpg"
+              alt="Cyberbullying print campaign execution"
+            >
+
+          </button>
+
+
+        </div>
+
+
         <div class="image-hint">
-          Click each image to enlarge
+          Click each piece to enlarge
+        </div>
+
+
+
+        <!-- AWARDS / RECOGNITION -->
+
+        <div class="campaign-awards">
+
+
+          <div class="award-block">
+
+            <div class="award-title">
+              <strong>Cyberbullying Spot</strong>
+            </div>
+
+            <strong>El Diente — Argentine Creative Circle</strong>
+            <br>
+            Silver — TV
+            <br><br>
+
+            <strong>Brother Ad School</strong>
+            <br>
+            Silver — Push The Power
+
+          </div>
+
+
+          <div class="award-block">
+
+            <div class="award-title">
+              <strong>Cyberbullying Prints</strong>
+            </div>
+
+            <strong>La Oreja Festival Argentina</strong>
+            <br>
+            Shortlist — Print
+            <br><br>
+
+            <strong>Brother Ad School</strong>
+            <br>
+            Winner — Brother Plus Competition
+
+          </div>
+
+
         </div>
 
       </section>
 
 
-      <!-- THE INSIGHT -->
+
+      <!-- INSIGHT -->
 
       <div class="case-section">
 
@@ -571,24 +651,24 @@
         </h3>
 
         <p>
-          The starting point came from a simple but dangerous perception:
-          many parents still saw cyberbullying as something less serious
-          than physical bullying because it happened “on the internet.”
+          Cyberbullying was often dismissed by adults as
+          “kids being kids on the internet.”
           <br><br>
-          But digital aggression does not disappear when the screen is turned off.
-          Its persistence, scale and intensity can follow victims throughout
-          their daily lives, making the emotional impact constant and difficult
-          to escape.
+
+          But unlike traditional bullying, digital aggression can be
+          persistent, large-scale and constant.
           <br><br>
-          The real challenge was therefore not only to talk about cyberbullying,
-          but to make adults understand that online aggression can be as serious
-          — or even more serious — than physical bullying.
+
+          It does not necessarily stop when a child leaves school.
+          It can follow them into their bedroom, their family life
+          and the moments when they are supposed to feel safe.
         </p>
 
       </div>
 
 
-      <!-- THE IDEA -->
+
+      <!-- IDEA -->
 
       <div class="case-section">
 
@@ -597,24 +677,26 @@
         </h3>
 
         <p>
-          We transformed digital aggression into something physical.
+          We made digital aggression physical.
           <br><br>
-          The campaign imagined Facebook, Instagram and video-game notifications
-          as if they were actual blows delivered by an invisible aggressor.
+
+          Facebook notifications, Instagram interactions and video-game
+          messages were represented as actual blows coming from an
+          invisible attacker.
           <br><br>
-          In the audiovisual execution, the victim is physically attacked by
-          an unseen force while going through everyday situations: alone in their
-          bedroom, spending time with family, or coming back from football.
+
+          The campaign placed these attacks inside ordinary situations:
+          in a bedroom, during a family outing or while returning home
+          after football.
           <br><br>
-          The metaphor made the impact of cyberbullying visible by turning
-          something apparently intangible into something physical, immediate
-          and impossible to ignore.
-          <br><br>
-          The print campaign extended the same idea through graphic executions
-          based on the visual language of digital platforms.
+
+          By translating an invisible online experience into something
+          physically recognizable, the campaign aimed to make the
+          seriousness of cyberbullying impossible to dismiss.
         </p>
 
       </div>
+
 
 
       <!-- MY ROLE -->
@@ -626,19 +708,13 @@
         </h3>
 
         <p>
-          I worked on the project as
-          <strong>Creative Director & Copywriter</strong>.
-          <br><br>
-          My role included developing the central creative concept, shaping the
-          campaign narrative and copy, and helping direct the creative execution
-          across both the audiovisual spot and the print pieces.
-          <br><br>
-          The project required translating a complex social issue into a simple
-          visual metaphor that could communicate the persistence and intensity
-          of digital aggression without relying on long explanations.
+          I worked as <strong>Creative Director & Copywriter</strong>,
+          contributing to the concept, narrative and development of
+          both the audiovisual and graphic campaign.
         </p>
 
       </div>
+
 
 
       <!-- HOW I THINK -->
@@ -650,15 +726,15 @@
         </h3>
 
         <p class="highlight">
-          Turning an invisible form of aggression into something physical and
-          immediate — using the language of the medium itself to make its
-          consequences impossible to dismiss.
+          When a problem is difficult to see, make people feel its
+          consequences in a language they cannot ignore.
         </p>
 
       </div>
 
 
-      <!-- CREDITS -->
+
+      <!-- PRODUCTION CREDITS -->
 
       <div class="case-section credits">
 
@@ -667,15 +743,6 @@
         </h3>
 
         <p>
-
-          <strong>Client:</strong>
-          Government of the City of Buenos Aires
-          <br><br>
-
-          <strong>Institution:</strong>
-          Brother Escuela de Creativos
-          <br><br>
-
           <strong>Executive Creative Director:</strong>
           Juan Martín Rezonico
           <br>
@@ -694,12 +761,13 @@
 
           <strong>Director of Photography / Photography:</strong>
           Cristo Oviedo
-
         </p>
 
       </div>
 
+
     </article>
+
 
 
     <!-- IMPACT -->
@@ -712,58 +780,31 @@
           Impact
         </h3>
 
-        <div>
-
-          <p>
-            The campaign received recognition across both its audiovisual
-            and print executions.
-          </p>
-
-          <div class="awards">
-
-            <strong>Cyberbullying Spot</strong>
-            <br><br>
-
-            <strong>El Diente — Círculo de Creativos Argentinos</strong>
-            <br>
-            Silver — TV
-            <br><br>
-
-            <strong>Brother Ad School</strong>
-            <br>
-            Silver — Push The Power
-            <br><br><br>
-
-            <strong>Cyberbullying Prints</strong>
-            <br><br>
-
-            <strong>La Oreja Festival Argentina</strong>
-            <br>
-            Shortlist — Print
-            <br><br>
-
-            <strong>Brother Ad School</strong>
-            <br>
-            Winner — Brother Plus Competition
-
-          </div>
-
-        </div>
+        <p>
+          The campaign was recognized across audiovisual and print
+          categories, including Silver at El Diente, recognition at
+          Brother Ad School and a shortlist at La Oreja Festival Argentina.
+        </p>
 
       </div>
 
     </section>
 
 
+
+    <!-- BACK -->
+
     <div class="back">
 
       <a href="creative.html">
-        ← Back to Creative Direction & Copywriting
+        ← Back to Creative Direction
       </a>
 
     </div>
 
+
   </main>
+
 
 
   <footer>
@@ -779,7 +820,8 @@
   </footer>
 
 
-  <!-- IMAGE VIEWER -->
+
+  <!-- LIGHTBOX -->
 
   <div
     class="lightbox"
@@ -799,28 +841,43 @@
     <img
       id="lightbox-image"
       src=""
-      alt="Enlarged Cyberbullying campaign print"
+      alt="Enlarged Cyberbullying campaign artwork"
     >
 
   </div>
 
 
+
   <script>
 
-    const imageButtons = document.querySelectorAll(".campaign-image-button");
-    const lightbox = document.getElementById("lightbox");
-    const lightboxImage = document.getElementById("lightbox-image");
-    const lightboxClose = document.getElementById("lightbox-close");
+    const buttons =
+      document.querySelectorAll(".art-button");
 
-    imageButtons.forEach(function(button) {
+    const lightbox =
+      document.getElementById("lightbox");
+
+    const lightboxImage =
+      document.getElementById("lightbox-image");
+
+    const closeButton =
+      document.getElementById("lightbox-close");
+
+
+    buttons.forEach(function(button) {
 
       button.addEventListener("click", function() {
 
-        const imageSource = button.getAttribute("data-image");
+        const source =
+          button.getAttribute("data-image");
 
-        lightboxImage.src = imageSource;
+        lightboxImage.src = source;
+
         lightbox.classList.add("active");
-        lightbox.setAttribute("aria-hidden", "false");
+
+        lightbox.setAttribute(
+          "aria-hidden",
+          "false"
+        );
 
       });
 
@@ -830,33 +887,48 @@
     function closeLightbox() {
 
       lightbox.classList.remove("active");
-      lightbox.setAttribute("aria-hidden", "true");
+
+      lightbox.setAttribute(
+        "aria-hidden",
+        "true"
+      );
+
       lightboxImage.src = "";
 
     }
 
 
-    lightboxClose.addEventListener("click", closeLightbox);
+    closeButton.addEventListener(
+      "click",
+      closeLightbox
+    );
 
 
-    lightbox.addEventListener("click", function(event) {
+    lightbox.addEventListener(
+      "click",
+      function(event) {
 
-      if (event.target === lightbox) {
-        closeLightbox();
+        if (event.target === lightbox) {
+          closeLightbox();
+        }
+
       }
+    );
 
-    });
 
+    document.addEventListener(
+      "keydown",
+      function(event) {
 
-    document.addEventListener("keydown", function(event) {
+        if (event.key === "Escape") {
+          closeLightbox();
+        }
 
-      if (event.key === "Escape") {
-        closeLightbox();
       }
-
-    });
+    );
 
   </script>
+
 
 </body>
 
