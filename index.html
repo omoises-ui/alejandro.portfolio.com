@@ -6,7 +6,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Alejandro — Portfolio</title>
+  <title>Alejandro — Creative Strategy, Music & Project Development</title>
 
   <style>
 
@@ -27,7 +27,14 @@
       line-height: 1.4;
     }
 
-    /* NAVIGATION */
+    a {
+      color: inherit;
+    }
+
+
+    /* =========================
+       NAVIGATION
+    ========================= */
 
     nav {
       display: flex;
@@ -35,6 +42,7 @@
       align-items: center;
       padding: 28px 6%;
       font-size: 14px;
+      border-bottom: 1px solid #ccc;
     }
 
     nav .logo {
@@ -45,294 +53,477 @@
     nav .links {
       display: flex;
       align-items: center;
+      gap: 24px;
     }
 
     nav a {
-      color: #111;
       text-decoration: none;
-      margin-left: 24px;
     }
 
     nav a:hover {
-      opacity: 0.5;
+      opacity: .55;
     }
 
-    /* HERO */
+
+    /* =========================
+       HERO
+    ========================= */
 
     .hero {
-      min-height: 85vh;
+      padding: 80px 6% 110px;
+    }
+
+    .hero-grid {
       display: grid;
-      grid-template-columns: 42% 58%;
-      gap: 60px;
-      align-items: center;
-      padding: 6%;
+      grid-template-columns: minmax(0, 1.4fr) minmax(280px, .6fr);
+      gap: 70px;
+      align-items: end;
     }
 
-    .hero-photo img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    .hero-text h1 {
-      font-size: clamp(55px, 8vw, 120px);
-      line-height: 0.88;
-      font-weight: 700;
-      letter-spacing: -4px;
-    }
-
-    .roles {
-      margin-top: 30px;
-      font-size: 14px;
+    .hero-eyebrow {
+      font-size: 13px;
       text-transform: uppercase;
       letter-spacing: 2px;
-      line-height: 1.8;
+      margin-bottom: 28px;
     }
 
-    .hero-text p {
-      margin-top: 35px;
-      max-width: 720px;
-      font-size: 21px;
-      line-height: 1.5;
+    .hero h1 {
+      font-size: clamp(58px, 9vw, 130px);
+      line-height: .87;
+      letter-spacing: -5px;
+      max-width: 1100px;
     }
 
-    /* GENERAL SECTIONS */
+    .hero-tagline {
+      margin-top: 40px;
+      font-size: clamp(25px, 3vw, 42px);
+      line-height: 1.15;
+      max-width: 850px;
+      letter-spacing: -1px;
+    }
 
-    section {
+    .hero-role {
+      margin-top: 32px;
+      font-size: 16px;
+      line-height: 1.7;
+      max-width: 700px;
+    }
+
+    .hero-image {
+      width: 100%;
+    }
+
+    .hero-image img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+
+    /* =========================
+       INTRO / ABOUT SUMMARY
+    ========================= */
+
+    .intro {
       padding: 100px 6%;
-      border-top: 1px solid #ccc;
-    }
-
-    section h2 {
-      font-size: clamp(38px, 6vw, 80px);
-      margin-bottom: 35px;
-      letter-spacing: -3px;
-      line-height: 1;
-    }
-
-    /* CAREER INTRO */
-
-    .career-intro {
-      max-width: 760px;
-      font-size: 20px;
-      line-height: 1.5;
-      margin-bottom: 55px;
-    }
-
-    /* CAREER / PORTFOLIO BLOCKS */
-
-    .career-paths {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
       border-top: 1px solid #bbb;
-      border-bottom: 1px solid #bbb;
-      margin-bottom: 42px;
     }
 
-    .career-path {
-      position: relative;
-      min-height: 340px;
-      padding: 34px 30px;
-      color: #111;
-      text-decoration: none;
-      border-right: 1px solid #bbb;
-      transition:
-        opacity 0.2s ease,
-        background 0.2s ease;
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 150px minmax(0, 900px);
+      gap: 40px;
     }
 
-    .career-path:last-child {
-      border-right: none;
-    }
-
-    .career-path:hover {
-      background: #ebe8e1;
-    }
-
-    .career-path-number {
+    .section-label {
       font-size: 13px;
-      letter-spacing: 1px;
-      opacity: 0.5;
-      margin-bottom: 60px;
+      text-transform: uppercase;
+      letter-spacing: 1.7px;
     }
 
-    .career-path h3 {
-      font-size: clamp(28px, 3vw, 45px);
-      line-height: 1;
-      letter-spacing: -2px;
-      margin-bottom: 22px;
-      max-width: 330px;
+    .intro p {
+      font-size: clamp(24px, 3vw, 36px);
+      line-height: 1.4;
+      letter-spacing: -.6px;
     }
 
-    .career-path p {
-      font-size: 15px;
-      line-height: 1.5;
-      max-width: 280px;
+
+    /* =========================
+       CAREER & PORTFOLIO
+    ========================= */
+
+    .career {
+      padding: 110px 6%;
+      border-top: 1px solid #bbb;
     }
 
-    .career-path-period {
-      position: absolute;
-      left: 30px;
-      bottom: 30px;
+    .section-header {
+      margin-bottom: 70px;
+      max-width: 950px;
+    }
+
+    .section-eyebrow {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+
+    .section-header h2 {
+      font-size: clamp(50px, 7vw, 96px);
+      line-height: .92;
+      letter-spacing: -4px;
+      margin-bottom: 30px;
+    }
+
+    .section-header p {
+      max-width: 780px;
+      font-size: 20px;
+      line-height: 1.55;
+    }
+
+    .career-list {
+      border-top: 1px solid #bbb;
+    }
+
+    .career-item {
+      display: grid;
+      grid-template-columns: 90px minmax(280px, 1fr) minmax(220px, .8fr) 150px;
+      gap: 35px;
+      padding: 45px 0;
+      border-bottom: 1px solid #bbb;
+      text-decoration: none;
+      align-items: start;
+    }
+
+    .career-item:hover {
+      opacity: .58;
+    }
+
+    .career-number {
+      font-size: 13px;
+      opacity: .45;
+      letter-spacing: 1.4px;
+    }
+
+    .career-title h3 {
+      font-size: clamp(27px, 3vw, 42px);
+      line-height: 1.05;
+      letter-spacing: -1.2px;
+      margin-bottom: 12px;
+    }
+
+    .career-title p {
       font-size: 14px;
-      opacity: 0.6;
+      line-height: 1.55;
+      opacity: .58;
     }
 
-    .career-path-arrow {
-      position: absolute;
-      right: 30px;
-      bottom: 24px;
-      font-size: 28px;
+    .career-description {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .career-year {
+      font-size: 14px;
+      text-align: right;
+      opacity: .55;
     }
 
     .journey-link {
-      display: inline-block;
-      margin-top: 10px;
-      color: #111;
+      margin-top: 45px;
+    }
+
+    .journey-link a {
       text-decoration: none;
-      font-size: 14px;
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    .journey-link a:hover {
+      opacity: .55;
+    }
+
+
+    /* =========================
+       AWARDS
+    ========================= */
+
+    .awards-section {
+      padding: 110px 6%;
+      border-top: 1px solid #bbb;
+    }
+
+    .awards-header {
+      margin-bottom: 70px;
+      max-width: 950px;
+    }
+
+    .awards-eyebrow {
+      font-size: 13px;
       text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+
+    .awards-header h2 {
+      font-size: clamp(50px, 7vw, 96px);
+      line-height: .92;
+      letter-spacing: -4px;
+      margin-bottom: 30px;
+    }
+
+    .awards-header p {
+      max-width: 780px;
+      font-size: 20px;
+      line-height: 1.55;
+    }
+
+    .awards-list {
+      border-top: 1px solid #bbb;
+    }
+
+    .award-project {
+      display: grid;
+      grid-template-columns: 90px minmax(250px, 330px) 1fr;
+      gap: 40px;
+      padding: 45px 0;
+      border-bottom: 1px solid #bbb;
+    }
+
+    .award-number {
+      font-size: 13px;
       letter-spacing: 1.5px;
+      opacity: .45;
     }
 
-    .journey-link:hover {
-      opacity: 0.5;
-    }
-
-    /* EDUCATION */
-
-    .education-item {
-      display: grid;
-      grid-template-columns: 180px 1fr;
-      gap: 40px;
-      padding: 32px 0;
-      border-top: 1px solid #bbb;
-    }
-
-    .education-item:last-child {
-      border-bottom: 1px solid #bbb;
-    }
-
-    .education-date {
-      font-size: 14px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      opacity: 0.6;
-    }
-
-    .education-info h3 {
-      font-size: 23px;
-      margin-bottom: 7px;
-    }
-
-    .education-info p {
-      font-size: 17px;
-      max-width: 760px;
-    }
-
-    /* LANGUAGES */
-
-    .language-item {
-      display: grid;
-      grid-template-columns: 180px 1fr;
-      gap: 40px;
-      padding: 32px 0;
-      border-top: 1px solid #bbb;
-    }
-
-    .language-item:last-child {
-      border-bottom: 1px solid #bbb;
-    }
-
-    .language-date {
-      font-size: 14px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      opacity: 0.6;
-    }
-
-    .language-info h3 {
-      font-size: 23px;
-      margin-bottom: 7px;
-    }
-
-    .language-info p {
-      font-size: 17px;
-    }
-
-    /* ABOUT */
-
-    .about p {
-      max-width: 900px;
+    .award-project-title h3 {
       font-size: 26px;
+      line-height: 1.1;
+      margin-bottom: 10px;
+      letter-spacing: -.5px;
+    }
+
+    .award-project-title p {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1.4px;
+      opacity: .5;
       line-height: 1.5;
     }
 
-    /* FOOTER */
+    .award-details {
+      display: grid;
+      gap: 30px;
+    }
+
+    .award-festival h4 {
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    .award-festival ul {
+      list-style: none;
+    }
+
+    .award-festival li {
+      font-size: 15px;
+      line-height: 1.65;
+      opacity: .76;
+    }
+
+    .award-festival li::before {
+      content: "— ";
+    }
+
+
+    /* =========================
+       PROFESSIONAL PHILOSOPHY
+    ========================= */
+
+    .philosophy {
+      background: #111;
+      color: #f5f3ee;
+      padding: 120px 6%;
+    }
+
+    .philosophy-grid {
+      display: grid;
+      grid-template-columns: 150px minmax(0, 950px);
+      gap: 40px;
+    }
+
+    .philosophy h3 {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 1.7px;
+    }
+
+    .philosophy p {
+      font-size: clamp(32px, 4.5vw, 62px);
+      line-height: 1.14;
+      letter-spacing: -2px;
+    }
+
+
+    /* =========================
+       ABOUT
+    ========================= */
+
+    .about {
+      padding: 110px 6%;
+      border-top: 1px solid #bbb;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 150px minmax(0, 850px);
+      gap: 40px;
+    }
+
+    .about h3 {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 1.7px;
+    }
+
+    .about-copy p {
+      font-size: 21px;
+      line-height: 1.6;
+      margin-bottom: 25px;
+    }
+
+
+    /* =========================
+       CONTACT
+    ========================= */
+
+    .contact {
+      padding: 110px 6%;
+      border-top: 1px solid #bbb;
+    }
+
+    .contact h2 {
+      font-size: clamp(50px, 8vw, 105px);
+      line-height: .9;
+      letter-spacing: -4px;
+      margin-bottom: 40px;
+    }
+
+    .contact p {
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
 
     footer {
-      padding: 80px 6%;
       background: #111;
-      color: white;
+      color: #f5f3ee;
+      padding: 35px 6%;
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      font-size: 13px;
     }
 
-    footer h2 {
-      font-size: clamp(45px, 7vw, 90px);
-      margin-bottom: 30px;
-      letter-spacing: -3px;
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 900px) {
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-image {
+        max-width: 500px;
+      }
+
+      .career-item {
+        grid-template-columns: 55px 1fr;
+      }
+
+      .career-description {
+        grid-column: 2;
+      }
+
+      .career-year {
+        grid-column: 2;
+        text-align: left;
+      }
+
+      .award-project {
+        grid-template-columns: 55px 1fr;
+      }
+
+      .award-details {
+        grid-column: 2;
+      }
+
     }
 
-    /* MOBILE */
 
-    @media (max-width: 800px) {
+    @media (max-width: 700px) {
 
       nav .links {
+        gap: 12px;
+        font-size: 12px;
+      }
+
+      nav .links a:nth-child(2),
+      nav .links a:nth-child(4) {
         display: none;
       }
 
       .hero {
-        min-height: auto;
-        grid-template-columns: 1fr;
-        gap: 45px;
-        padding-top: 50px;
-        padding-bottom: 80px;
+        padding-top: 55px;
       }
 
-      .hero-text h1 {
+      .hero h1,
+      .section-header h2,
+      .awards-header h2,
+      .contact h2 {
         letter-spacing: -2px;
       }
 
-      .hero-text p {
-        font-size: 18px;
-      }
-
-      section {
-        padding-top: 70px;
-        padding-bottom: 70px;
-      }
-
-      .career-paths {
+      .intro-grid,
+      .philosophy-grid,
+      .about-grid {
         grid-template-columns: 1fr;
+        gap: 25px;
       }
 
-      .career-path {
-        min-height: 260px;
-        border-right: none;
-        border-bottom: 1px solid #bbb;
-      }
-
-      .career-path:last-child {
-        border-bottom: none;
-      }
-
-      .education-item,
-      .language-item {
+      .award-project {
         grid-template-columns: 1fr;
-        gap: 10px;
+        gap: 14px;
       }
 
-      .about p {
-        font-size: 21px;
+      .award-details {
+        grid-column: 1;
+      }
+
+      .career-item {
+        grid-template-columns: 1fr;
+        gap: 15px;
+      }
+
+      .career-description,
+      .career-year {
+        grid-column: 1;
+      }
+
+      .career-number {
+        margin-bottom: 5px;
+      }
+
+      footer {
+        flex-direction: column;
       }
 
     }
@@ -344,6 +535,9 @@
 
 <body>
 
+
+  <!-- NAVIGATION -->
+
   <nav>
 
     <div class="logo">
@@ -351,55 +545,86 @@
     </div>
 
     <div class="links">
-      <a href="#work">Portfolio</a>
-      <a href="#education">Education</a>
+      <a href="#career">Portfolio</a>
+      <a href="professional-journey.html">Journey</a>
+      <a href="#awards">Awards</a>
       <a href="#about">About</a>
-      <a href="#contact">Contact</a>
     </div>
 
   </nav>
 
 
+
   <main>
+
 
     <!-- HERO -->
 
     <section class="hero">
 
-      <div class="hero-photo">
+      <div class="hero-grid">
 
-        <img
-          src="Foto profile 2.png"
-          alt="Alejandro"
-        >
+
+        <div>
+
+          <div class="hero-eyebrow">
+            Creative Strategy · Music · Project Development
+          </div>
+
+          <h1>
+            Music Lover.<br>
+            Strategy Fan.<br>
+            Instinct Believer.
+          </h1>
+
+          <p class="hero-tagline">
+            I develop ideas, identities, projects and stories
+            designed to connect with people.
+          </p>
+
+          <p class="hero-role">
+            Artist & Project Developer · Creative Director · Journalist · Entrepreneur
+            <br>
+            Berlin, Germany
+          </p>
+
+        </div>
+
+
+        <div class="hero-image">
+
+          <!-- Replace profile.jpg only if your current portrait has another filename -->
+
+          <img
+            src="profile.jpg"
+            alt="Alejandro portrait"
+          >
+
+        </div>
+
 
       </div>
 
-      <div class="hero-text">
+    </section>
 
-        <h1>
-          Music Lover.<br>
-          Strategy Fan.<br>
-          Instinct<br>
-          Believer.
-        </h1>
 
-        <div class="roles">
-          Artist & Project Developer ·
-          Creative Director ·
-          Journalist ·
-          Entrepreneur
+
+    <!-- PROFESSIONAL INTRO -->
+
+    <section class="intro">
+
+      <div class="intro-grid">
+
+        <div class="section-label">
+          Profile
         </div>
 
         <p>
-          Music has been part of my life for as long as I can remember.
-          I have released two albums in Latin America and I am currently
-          developing a new music project.
-
-          Across my career, I have built projects where I was not only
-          at the creative core, but also responsible for turning ideas
-          into narratives, strategies and audiences — often achieving
-          significant results with limited resources.
+          My career has moved across journalism, advertising,
+          entrepreneurship and music, but the underlying work has
+          remained consistent: identifying potential, shaping a clear
+          narrative and turning ideas into projects capable of finding
+          their audience.
         </p>
 
       </div>
@@ -407,316 +632,780 @@
     </section>
 
 
+
     <!-- CAREER & PORTFOLIO -->
 
-    <section id="work">
+    <section class="career" id="career">
 
-      <h2>
-        Career & Portfolio
-      </h2>
+      <div class="section-header">
 
-      <p class="career-intro">
-        My professional journey has developed across three connected worlds:
-        audiovisual storytelling, creative direction and entrepreneurship,
-        and independent music project development.
-      </p>
+        <div class="section-eyebrow">
+          Areas of Development
+        </div>
+
+        <h2>
+          Career &<br>
+          Portfolio
+        </h2>
+
+        <p>
+          Three areas that have shaped how I understand audiences,
+          culture, ideas and project development.
+        </p>
+
+      </div>
 
 
-      <div class="career-paths">
 
-        <!-- AUDIOVISUAL JOURNALISM -->
+      <div class="career-list">
 
-        <a
-          href="journalism.html"
-          class="career-path"
-        >
 
-          <div class="career-path-number">
+        <!-- 01 JOURNALISM -->
+
+        <a class="career-item" href="journalism.html">
+
+          <div class="career-number">
             01
           </div>
 
-          <h3>
-            Audiovisual Journalism
-          </h3>
+          <div class="career-title">
 
-          <p>
-            Stories · Production · Media
-          </p>
+            <h3>
+              Audiovisual Journalism
+            </h3>
 
-          <div class="career-path-period">
+            <p>
+              Stories · Production · Media
+            </p>
+
+          </div>
+
+          <div class="career-description">
+            Learning how to find stories, understand context,
+            identify what matters and transform information into
+            narratives people want to follow.
+          </div>
+
+          <div class="career-year">
             2000 — 2008
           </div>
 
-          <div class="career-path-arrow">
-            →
-          </div>
-
         </a>
 
 
-        <!-- CREATIVE DIRECTION -->
 
-        <a
-          href="creative.html"
-          class="career-path"
-        >
+        <!-- 02 CREATIVE -->
 
-          <div class="career-path-number">
+        <a class="career-item" href="creative.html">
+
+          <div class="career-number">
             02
           </div>
 
-          <h3>
-            Creative Direction & Entrepreneurship
-          </h3>
+          <div class="career-title">
 
-          <p>
-            Ideas · Brands · Copywriting · Strategy
-          </p>
+            <h3>
+              Creative Direction & Entrepreneurship
+            </h3>
 
-          <div class="career-path-period">
+            <p>
+              Ideas · Brands · Copywriting · Strategy
+            </p>
+
+          </div>
+
+          <div class="career-description">
+            Developing concepts, campaigns, brands and businesses by
+            connecting human insight with strategy, creativity and
+            execution.
+          </div>
+
+          <div class="career-year">
             2008 — Today
           </div>
 
-          <div class="career-path-arrow">
-            →
-          </div>
-
         </a>
 
 
-        <!-- MUSIC -->
 
-        <a
-          href="music.html"
-          class="career-path"
-        >
+        <!-- 03 MUSIC -->
 
-          <div class="career-path-number">
+        <a class="career-item" href="music.html">
+
+          <div class="career-number">
             03
           </div>
 
-          <h3>
-            Music
-          </h3>
+          <div class="career-title">
 
-          <p>
-            Independent Project Development ·
-            Artist Identity · Releases
-          </p>
+            <h3>
+              Music
+            </h3>
 
-          <div class="career-path-period">
-            2007 — Today
+            <p>
+              Independent Project Development · Artist Identity · Releases
+            </p>
+
           </div>
 
-          <div class="career-path-arrow">
-            →
+          <div class="career-description">
+            Developing independent music projects from the inside:
+            artistic identity, creative direction, releases,
+            communication and the relationship between an artist,
+            a project and its audience.
+          </div>
+
+          <div class="career-year">
+            2007 — Today
           </div>
 
         </a>
 
-      </div>
-
-
-      <a
-        href="professional-journey.html"
-        class="journey-link"
-      >
-        View Full Professional Journey →
-      </a>
-
-    </section>
-
-
-    <!-- EDUCATION -->
-
-    <section id="education">
-
-      <h2>
-        Professional Education
-      </h2>
-
-      <div class="education-item">
-
-        <div class="education-date">
-          2000 — 2006
-        </div>
-
-        <div class="education-info">
-
-          <h3>
-            Universidad Bicentenaria de Aragua
-          </h3>
-
-          <p>
-            Bachelor's Degree in Journalism.
-            Specialization in communication and crisis management.
-          </p>
-
-        </div>
 
       </div>
 
 
-      <div class="education-item">
+      <div class="journey-link">
 
-        <div class="education-date">
-          2014 — 2015
-        </div>
-
-        <div class="education-info">
-
-          <h3>
-            Brother Ad School
-          </h3>
-
-          <p>
-            Creative Advertising & Creative Direction Program.
-          </p>
-
-        </div>
-
-      </div>
-
-
-      <div class="education-item">
-
-        <div class="education-date">
-          2018
-        </div>
-
-        <div class="education-info">
-
-          <h3>
-            IAE Business School — Universidad Austral
-          </h3>
-
-          <p>
-            NAVES: Entrepreneurship & Business Development Program.
-          </p>
-
-        </div>
-
-      </div>
-
-
-      <div class="education-item">
-
-        <div class="education-date">
-          2018
-        </div>
-
-        <div class="education-info">
-
-          <h3>
-            Government of the City of Buenos Aires
-          </h3>
-
-          <p>
-            Vos Lo Hacés: Entrepreneurship & Business Development Program.
-          </p>
-
-        </div>
+        <a href="professional-journey.html">
+          View Full Professional Journey →
+        </a>
 
       </div>
 
     </section>
 
 
-    <!-- LANGUAGES -->
 
-    <section id="languages">
+    <!-- AWARDS -->
 
-      <h2>
-        Languages & Additional Training
-      </h2>
+    <section class="awards-section" id="awards">
 
-      <div class="language-item">
 
-        <div class="language-date">
-          2023 — 2025
+      <div class="awards-header">
+
+        <div class="awards-eyebrow">
+          Selected Recognition
         </div>
 
-        <div class="language-info">
+        <h2>
+          Awards &<br>
+          Recognition
+        </h2>
 
-          <h3>
-            German — Integration Course & B1
-          </h3>
-
-          <p>
-            German language and official integration training.
-          </p>
-
-        </div>
+        <p>
+          Selected recognition across international and Latin American
+          advertising festivals for digital, social, direct, television
+          and integrated creative work.
+        </p>
 
       </div>
 
 
-      <div class="language-item">
 
-        <div class="language-date">
-          2026 — 2027
-        </div>
+      <div class="awards-list">
 
-        <div class="language-info">
 
-          <h3>
-            Professional German — B2
-          </h3>
+        <!-- 01 MISSING TAG -->
 
-          <p>
-            Professional German language training.
-          </p>
+        <article class="award-project">
 
-        </div>
+          <div class="award-number">
+            01
+          </div>
+
+
+          <div class="award-project-title">
+
+            <h3>
+              Missing Tag
+            </h3>
+
+            <p>
+              Missing Children Argentina
+            </p>
+
+          </div>
+
+
+          <div class="award-details">
+
+
+            <div class="award-festival">
+
+              <h4>
+                Cannes Lions
+              </h4>
+
+              <ul>
+
+                <li>
+                  Shortlist — Media, Digital & Social / Use of Social Platforms
+                </li>
+
+              </ul>
+
+            </div>
+
+
+
+            <div class="award-festival">
+
+              <h4>
+                El Ojo de Iberoamérica
+              </h4>
+
+              <ul>
+
+                <li>
+                  Shortlist — El Ojo Interactivo / Actions in Social Networks
+                </li>
+
+                <li>
+                  Shortlist — El Ojo Sustentable / Social Responsibility
+                </li>
+
+                <li>
+                  Shortlist — El Ojo Innovación / Technology
+                </li>
+
+                <li>
+                  Shortlist — El Ojo Media / Actions in Social Networks
+                </li>
+
+              </ul>
+
+            </div>
+
+
+
+            <div class="award-festival">
+
+              <h4>
+                Festival of Media LatAm
+              </h4>
+
+              <ul>
+
+                <li>
+                  Gold — Best Social Media Campaign
+                </li>
+
+              </ul>
+
+            </div>
+
+
+
+            <div class="award-festival">
+
+              <h4>
+                +Digital
+              </h4>
+
+              <ul>
+
+                <li>
+                  Bronze — Social Networks / Native Use of Media
+                </li>
+
+              </ul>
+
+            </div>
+
+
+          </div>
+
+        </article>
+
+
+
+        <!-- 02 MISSING FACE -->
+
+        <article class="award-project">
+
+          <div class="award-number">
+            02
+          </div>
+
+
+          <div class="award-project-title">
+
+            <h3>
+              Missing Face
+            </h3>
+
+            <p>
+              Creative Recognition
+            </p>
+
+          </div>
+
+
+          <div class="award-details">
+
+
+            <div class="award-festival">
+
+              <h4>
+                El Diente
+              </h4>
+
+              <ul>
+
+                <li>
+                  Gold — Interactive / Students
+                </li>
+
+              </ul>
+
+            </div>
+
+
+
+            <div class="award-festival">
+
+              <h4>
+                Brother Ad School
+              </h4>
+
+              <ul>
+
+                <li>
+                  Silver — Push The Power
+                </li>
+
+              </ul>
+
+            </div>
+
+
+          </div>
+
+        </article>
+
+
+
+        <!-- 03 BEST DESTINATIONS -->
+
+        <article class="award-project">
+
+          <div class="award-number">
+            03
+          </div>
+
+
+          <div class="award-project-title">
+
+            <h3>
+              Best Destinations
+            </h3>
+
+            <p>
+              UNICEF Argentina
+            </p>
+
+          </div>
+
+
+          <div class="award-details">
+
+
+            <div class="award-festival">
+
+              <h4>
+                Echo Latam
+              </h4>
+
+              <ul>
+
+                <li>
+                  Gold — Social
+                </li>
+
+                <li>
+                  Gold — Lead Generation
+                </li>
+
+                <li>
+                  Gold — Campaigns and Sales Programs
+                </li>
+
+                <li>
+                  Gold — Acquisition Campaigns
+                </li>
+
+                <li>
+                  Silver — Special Prize for Creativity
+                </li>
+
+              </ul>
+
+            </div>
+
+
+          </div>
+
+        </article>
+
+
+
+        <!-- 04 CYBERBULLYING SPOT -->
+
+        <article class="award-project">
+
+          <div class="award-number">
+            04
+          </div>
+
+
+          <div class="award-project-title">
+
+            <h3>
+              Cyberbullying Spot
+            </h3>
+
+            <p>
+              Government of the City of Buenos Aires
+            </p>
+
+          </div>
+
+
+          <div class="award-details">
+
+
+            <div class="award-festival">
+
+              <h4>
+                El Diente
+              </h4>
+
+              <ul>
+
+                <li>
+                  Silver — TV / Students
+                </li>
+
+              </ul>
+
+            </div>
+
+
+
+            <div class="award-festival">
+
+              <h4>
+                Brother Ad School
+              </h4>
+
+              <ul>
+
+                <li>
+                  Silver — Push The Power
+                </li>
+
+              </ul>
+
+            </div>
+
+
+          </div>
+
+        </article>
+
+
+
+        <!-- 05 CYBERBULLYING PRINTS -->
+
+        <article class="award-project">
+
+          <div class="award-number">
+            05
+          </div>
+
+
+          <div class="award-project-title">
+
+            <h3>
+              Cyberbullying Prints
+            </h3>
+
+            <p>
+              Government of the City of Buenos Aires
+            </p>
+
+          </div>
+
+
+          <div class="award-details">
+
+
+            <div class="award-festival">
+
+              <h4>
+                La Oreja
+              </h4>
+
+              <ul>
+
+                <li>
+                  Shortlist — Print
+                </li>
+
+              </ul>
+
+            </div>
+
+
+
+            <div class="award-festival">
+
+              <h4>
+                Brother Ad School
+              </h4>
+
+              <ul>
+
+                <li>
+                  Winner — Brother Plus
+                </li>
+
+              </ul>
+
+            </div>
+
+
+          </div>
+
+        </article>
+
+
+
+        <!-- 06 BEARD -->
+
+        <article class="award-project">
+
+          <div class="award-number">
+            06
+          </div>
+
+
+          <div class="award-project-title">
+
+            <h3>
+              It's Not You Without Your Beard
+            </h3>
+
+            <p>
+              Integrated Campaign
+            </p>
+
+          </div>
+
+
+          <div class="award-details">
+
+
+            <div class="award-festival">
+
+              <h4>
+                AMDIA
+              </h4>
+
+              <ul>
+
+                <li>
+                  Grand Prix
+                </li>
+
+                <li>
+                  Gold — Digital Campaign
+                </li>
+
+              </ul>
+
+            </div>
+
+
+
+            <div class="award-festival">
+
+              <h4>
+                Amauta
+              </h4>
+
+              <ul>
+
+                <li>
+                  Bronze — Direct
+                </li>
+
+              </ul>
+
+            </div>
+
+
+
+            <div class="award-festival">
+
+              <h4>
+                Echo Latam
+              </h4>
+
+              <ul>
+
+                <li>
+                  Gold — Creativity
+                </li>
+
+                <li>
+                  Gold — Low-Cost Creativity
+                </li>
+
+                <li>
+                  Gold — Integrated Campaign
+                </li>
+
+                <li>
+                  Silver — Products and Consumer Campaign
+                </li>
+
+              </ul>
+
+            </div>
+
+
+
+            <div class="award-festival">
+
+              <h4>
+                Effie
+              </h4>
+
+              <ul>
+
+                <li>
+                  Shortlist — Hygiene & Personal Care
+                </li>
+
+              </ul>
+
+            </div>
+
+
+          </div>
+
+        </article>
+
 
       </div>
 
     </section>
+
+
+
+    <!-- PHILOSOPHY -->
+
+    <section class="philosophy">
+
+      <div class="philosophy-grid">
+
+        <h3>
+          How I Think
+        </h3>
+
+        <p>
+          I am interested in the space where instinct meets strategy:
+          finding what makes an artist, idea or project distinctive,
+          giving it a clear identity and building the conditions for
+          people to care about it.
+        </p>
+
+      </div>
+
+    </section>
+
 
 
     <!-- ABOUT -->
 
-    <section
-      id="about"
-      class="about"
-    >
+    <section class="about" id="about">
+
+      <div class="about-grid">
+
+        <h3>
+          About
+        </h3>
+
+
+        <div class="about-copy">
+
+          <p>
+            I started my career in journalism and later moved into
+            advertising, creative direction, strategy and
+            entrepreneurship.
+          </p>
+
+          <p>
+            Alongside that professional journey, music has remained a
+            constant part of my life. Since 2007 I have developed my
+            own independent music projects, released two albums in
+            Latin America and continued exploring the relationship
+            between artistic identity, storytelling and audience
+            development.
+          </p>
+
+          <p>
+            Today I bring those experiences together with a particular
+            interest in music, artist development, creative strategy
+            and projects where culture and business intersect.
+          </p>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+
+    <!-- CONTACT -->
+
+    <section class="contact">
 
       <h2>
-        About
+        Let’s build<br>
+        something worth<br>
+        listening to.
       </h2>
 
       <p>
-        I am a journalist, creative director,
-        entrepreneur and independent music project developer.
-
-        My career has moved across storytelling,
-        advertising, strategy, business development
-        and music — different disciplines connected
-        by the same instinct: identifying potential,
-        developing ideas and finding the audience
-        that can make them grow.
+        Berlin, Germany
       </p>
 
     </section>
 
+
   </main>
 
 
-  <footer id="contact">
 
-    <h2>
-      Let’s work together.
-    </h2>
+  <!-- FOOTER -->
 
-    <p>
-      Berlin, Germany
-    </p>
+  <footer>
 
-    <p style="margin-top:20px;">
-      Email · LinkedIn · Instagram
-    </p>
+    <div>
+      © Alejandro
+    </div>
+
+    <div>
+      Creative Strategy · Music · Project Development
+    </div>
 
   </footer>
+
 
 </body>
 
