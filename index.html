@@ -198,8 +198,7 @@
     }
 
     .education-summary-card {
-      min-height: 220px;
-      padding: 34px 38px;
+      padding: 34px 38px 36px;
     }
 
     .education-summary-card:first-child {
@@ -211,21 +210,40 @@
       text-transform: uppercase;
       letter-spacing: 2px;
       opacity: 0.6;
+      margin-bottom: 30px;
+    }
+
+    .education-main-title {
+      font-size: clamp(28px, 3vw, 43px);
+      line-height: 1.03;
+      letter-spacing: -1.5px;
+      margin-bottom: 10px;
+    }
+
+    .education-main-school {
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 1.45;
       margin-bottom: 28px;
     }
 
-    .education-summary-card h3 {
-      font-size: clamp(27px, 3vw, 42px);
-      line-height: 1.05;
-      letter-spacing: -1.5px;
-      margin-bottom: 16px;
+    .education-study {
+      padding: 18px 0;
+      border-top: 1px solid #ccc;
     }
 
-    .education-summary-card p {
-      font-size: 16px;
-      line-height: 1.55;
-      max-width: 500px;
-      margin-bottom: 24px;
+    .education-study strong {
+      display: block;
+      font-size: 18px;
+      line-height: 1.25;
+      margin-bottom: 5px;
+    }
+
+    .education-study span {
+      display: block;
+      font-size: 14px;
+      line-height: 1.45;
+      opacity: 0.72;
     }
 
     .education-summary-card a,
@@ -240,6 +258,11 @@
     .education-summary-card a:hover,
     .education-details-link:hover {
       opacity: 0.5;
+    }
+
+    .education-summary-card a {
+      display: inline-block;
+      margin-top: 18px;
     }
 
     .education-details-link {
@@ -318,7 +341,6 @@
       }
 
       .education-summary-card {
-        min-height: auto;
         padding: 30px 0;
       }
 
@@ -440,19 +462,39 @@
 
         <div class="education-summary-card">
           <div class="education-summary-label">Education & Professional Development</div>
-          <h3>Communication, creativity & business development</h3>
-          <p>
-            Communication Sciences, creative training and business-model development across Universidad Bicentenaria de Aragua, Brother Ad School, NAVES / IAE Business School and Vos Lo Hacés.
-          </p>
+
+          <div class="education-main-title">Bachelor's Degree in Communication Sciences</div>
+          <div class="education-main-school">Universidad Bicentenaria de Aragua · Venezuela</div>
+
+          <div class="education-study">
+            <strong>Creativity, Strategic Communication & Art Direction</strong>
+            <span>Brother Ad School Worldwide · Argentina</span>
+          </div>
+
+          <div class="education-study">
+            <strong>Business Model Development</strong>
+            <span>NAVES Program — IAE Business School, Universidad Austral · Argentina</span>
+          </div>
+
+          <div class="education-study">
+            <strong>Business Model Development & Pitch Presentations</strong>
+            <span>Vos Lo Hacés — Government of the City of Buenos Aires · Argentina</span>
+          </div>
+
           <a href="education.html">View details →</a>
         </div>
 
         <div class="education-summary-card">
           <div class="education-summary-label">Professional Integration in Germany</div>
-          <h3>Language & professional integration</h3>
-          <p>
-            German integration and professional-language training, together with official counseling focused on professional integration and education in Germany.
-          </p>
+
+          <div class="education-main-title">German B1 Integration Course & Professional B2</div>
+          <div class="education-main-school">Job Konzept · Germany</div>
+
+          <div class="education-study">
+            <strong>Professional Integration & Education Counseling</strong>
+            <span>Beratung, Bildung und Beruf Berlin / GesBiT · Germany</span>
+          </div>
+
           <a href="education.html">View details →</a>
         </div>
 
