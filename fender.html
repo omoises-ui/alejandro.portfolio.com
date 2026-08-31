@@ -1,1 +1,953 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Fender — Kurt Cobain Signature Jaguar — Alejandro</title>
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f3ee;
+      color: #111;
+      line-height: 1.4;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 28px 6%;
+      font-size: 14px;
+    }
+
+    nav .logo {
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      color: #111;
+      text-decoration: none;
+      margin-left: 24px;
+    }
+
+    nav a:hover {
+      opacity: .55;
+    }
+
+
+    /* HEADER */
+
+    .page-header {
+      padding: 90px 6% 90px;
+      border-top: 1px solid #ccc;
+    }
+
+    .eyebrow {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 28px;
+    }
+
+    .page-header h1 {
+      font-size: clamp(55px, 8vw, 120px);
+      line-height: .9;
+      letter-spacing: -4px;
+      max-width: 1200px;
+    }
+
+    .page-header p {
+      margin-top: 35px;
+      max-width: 820px;
+      font-size: 22px;
+      line-height: 1.5;
+    }
+
+
+    /* PROJECT META */
+
+    .project-meta {
+      padding: 70px 6%;
+      border-top: 1px solid #bbb;
+      display: grid;
+      grid-template-columns: 150px 1fr;
+      gap: 40px;
+    }
+
+    .meta-label {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 1.6px;
+      opacity: .55;
+    }
+
+    .meta-content {
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+
+    /* INTRO */
+
+    .intro {
+      padding: 90px 6%;
+    }
+
+    .intro-inner {
+      max-width: 900px;
+      margin-left: 190px;
+    }
+
+    .intro p {
+      font-size: 26px;
+      line-height: 1.5;
+      margin-bottom: 26px;
+    }
+
+
+    /* CAMPAIGN */
+
+    .media-section {
+      width: 88%;
+      margin: 0 auto 110px;
+    }
+
+    .media-label {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 18px;
+    }
+
+    .media-title {
+      font-size: clamp(34px, 5vw, 64px);
+      line-height: 1;
+      letter-spacing: -2px;
+      margin-bottom: 24px;
+    }
+
+    .media-description {
+      max-width: 760px;
+      font-size: 18px;
+      line-height: 1.55;
+      margin-bottom: 45px;
+    }
+
+
+    /* MAIN ART */
+
+    .main-art {
+      width: 76%;
+      margin: 0 auto;
+    }
+
+    .main-art button {
+      display: block;
+      border: 0;
+      background: none;
+      padding: 0;
+      width: 100%;
+      cursor: zoom-in;
+    }
+
+    .main-art img {
+      display: block;
+      width: 100%;
+      height: auto;
+      transition: opacity .2s ease;
+    }
+
+    .main-art button:hover img {
+      opacity: .75;
+    }
+
+    .art-caption {
+      margin-top: 14px;
+      font-size: 17px;
+      line-height: 1.4;
+      font-weight: 600;
+    }
+
+    .image-hint {
+      width: 76%;
+      margin: 15px auto 0;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1.4px;
+      opacity: .45;
+    }
+
+
+    /* MOCKUP */
+
+    .mockup {
+      width: 88%;
+      margin: 0 auto;
+    }
+
+    .mockup img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+
+    /* CASE TEXT */
+
+    .content {
+      padding: 20px 6% 60px;
+    }
+
+    .case-section {
+      display: grid;
+      grid-template-columns: 150px minmax(0, 820px);
+      gap: 40px;
+      margin-bottom: 85px;
+    }
+
+    .case-section h3 {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 1.6px;
+    }
+
+    .case-section p {
+      font-size: 21px;
+      line-height: 1.6;
+    }
+
+    .highlight {
+      font-size: 31px !important;
+      line-height: 1.35 !important;
+      font-weight: 500;
+    }
+
+
+    /* CREDITS */
+
+    .credits p {
+      font-size: 16px;
+      line-height: 1.9;
+      opacity: .82;
+    }
+
+
+    /* IMPACT */
+
+    .impact {
+      background: #111;
+      color: #f5f3ee;
+      padding: 100px 6%;
+    }
+
+    .impact-grid {
+      display: grid;
+      grid-template-columns: 150px minmax(0, 850px);
+      gap: 40px;
+    }
+
+    .impact h3 {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 1.6px;
+    }
+
+    .impact p {
+      font-size: 28px;
+      line-height: 1.45;
+    }
+
+
+    /* BACK */
+
+    .back {
+      padding: 70px 6%;
+      border-top: 1px solid #ccc;
+    }
+
+    .back a {
+      color: #111;
+      text-decoration: none;
+      font-size: 20px;
+    }
+
+    .back a:hover {
+      opacity: .55;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+      padding: 70px 6%;
+      background: #111;
+      color: #fff;
+    }
+
+    footer h2 {
+      font-size: clamp(40px, 6vw, 80px);
+      margin-bottom: 25px;
+      letter-spacing: -2px;
+    }
+
+
+    /* LIGHTBOX */
+
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,.95);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      padding: 30px;
+      z-index: 9999;
+    }
+
+    .lightbox.active {
+      display: flex;
+    }
+
+    .lightbox img {
+      max-width: 95vw;
+      max-height: 92vh;
+      width: auto;
+      height: auto;
+      display: block;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 18px;
+      right: 28px;
+      border: 0;
+      background: none;
+      color: white;
+      font-size: 42px;
+      cursor: pointer;
+    }
+
+
+    /* MOBILE */
+
+    @media (max-width: 700px) {
+
+      nav .links {
+        display: none;
+      }
+
+      .page-header h1 {
+        letter-spacing: -2px;
+      }
+
+      .project-meta,
+      .case-section,
+      .impact-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+      }
+
+      .intro-inner {
+        margin-left: 0;
+      }
+
+      .intro p {
+        font-size: 21px;
+      }
+
+      .media-section,
+      .main-art,
+      .image-hint,
+      .mockup {
+        width: 100%;
+      }
+
+      .case-section p {
+        font-size: 18px;
+      }
+
+      .highlight {
+        font-size: 25px !important;
+      }
+
+      .impact p {
+        font-size: 23px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <nav>
+
+    <div class="logo">
+      ALEJANDRO
+    </div>
+
+    <div class="links">
+      <a href="index.html">Home</a>
+      <a href="creative.html">Creative Portfolio</a>
+      <a href="music-graphics.html">Music Campaigns</a>
+      <a href="index.html#about">About</a>
+    </div>
+
+  </nav>
+
+
+
+  <main>
+
+
+    <!-- HEADER -->
+
+    <section class="page-header">
+
+      <div class="eyebrow">
+        Graphic Campaign · Music Industry · Outdoor
+      </div>
+
+      <h1>
+        Fender<br>
+        Kurt Cobain Jaguar
+      </h1>
+
+      <p>
+        Turning an iconic artist’s cultural legacy into a single,
+        provocative outdoor headline for the Fender Kurt Cobain
+        Signature Jaguar.
+      </p>
+
+    </section>
+
+
+
+    <!-- PROJECT INFORMATION -->
+
+    <section class="project-meta">
+
+      <div class="meta-label">
+        Project
+      </div>
+
+      <div class="meta-content">
+
+        <strong>Client:</strong> Fender Latin America
+        <br>
+
+        <strong>Year:</strong> 2019
+        <br>
+
+        <strong>Market:</strong> Latin America
+        <br>
+
+        <strong>Media:</strong> Outdoor Advertising
+        <br>
+
+        <strong>Product:</strong> Kurt Cobain Signature Jaguar
+        <br>
+
+        <strong>Project:</strong> Freelance — developed directly with the client
+        <br>
+
+        <strong>Role:</strong> Copywriter
+
+      </div>
+
+    </section>
+
+
+
+    <!-- INTRO -->
+
+    <section class="intro">
+
+      <div class="intro-inner">
+
+        <p>
+          In 2019, <strong>Fender Latin America</strong> approached us
+          with a straightforward brief: create an outdoor campaign that
+          would put the product at the center of the communication and
+          promote the <strong>Kurt Cobain Signature Jaguar</strong>
+          across Latin America.
+        </p>
+
+        <p>
+          The conditions made the challenge more interesting.
+        </p>
+
+        <p>
+          There was virtually <strong>no production budget</strong>,
+          the campaign had to be developed in just
+          <strong>three days</strong>, and outdoor media demanded an
+          idea that could be understood almost instantly.
+        </p>
+
+        <p>
+          The solution was reduced to its most essential elements:
+          <strong>
+            an iconic product, a powerful cultural truth and one
+            short, memorable headline.
+          </strong>
+        </p>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- GRAPHIC CAMPAIGN -->
+
+    <section class="media-section">
+
+      <div class="media-label">
+        Graphic Campaign
+      </div>
+
+      <h2 class="media-title">
+        He wanted to die.<br>
+        But he couldn’t.
+      </h2>
+
+      <p class="media-description">
+        A single outdoor execution built around the Kurt Cobain
+        Signature Jaguar, using one provocative headline to connect
+        the product with the enduring cultural legacy of the artist
+        who inspired it.
+      </p>
+
+
+      <div class="main-art">
+
+        <button
+          type="button"
+          class="art-button"
+          data-image="01-Fender_1000_1000.jpg"
+        >
+
+          <img
+            src="01-Fender_1000_1000.jpg"
+            alt="Fender Kurt Cobain Signature Jaguar campaign"
+          >
+
+        </button>
+
+
+        <p class="art-caption">
+          He wanted to die. But he couldn’t.
+        </p>
+
+      </div>
+
+
+      <div class="image-hint">
+        Click the piece to enlarge
+      </div>
+
+    </section>
+
+
+
+    <!-- MOCKUP -->
+
+    <section class="media-section">
+
+      <div class="media-label">
+        Campaign in Context
+      </div>
+
+      <h2 class="media-title">
+        Outdoor Advertising
+      </h2>
+
+      <p class="media-description">
+        The campaign was conceived specifically for outdoor media,
+        where a complete story needed to be understood in only a
+        few seconds.
+      </p>
+
+      <div class="mockup">
+
+        <img
+          src="mock-up-cobain.jpg"
+          alt="Fender Kurt Cobain Signature Jaguar outdoor advertising mockup"
+        >
+
+      </div>
+
+    </section>
+
+
+
+    <section class="content">
+
+
+      <!-- INSIGHT -->
+
+      <div class="case-section">
+
+        <h3>
+          The Insight
+        </h3>
+
+        <p>
+          Kurt Cobain’s physical absence is one of the most tragic and
+          widely remembered parts of his story.
+          <br><br>
+
+          Yet decades after his death, he never truly disappeared.
+          <br><br>
+
+          His music, image, influence and artistic legacy remain deeply
+          embedded in popular culture and continue to influence new
+          generations of musicians and listeners.
+          <br><br>
+
+          That contradiction became the starting point for the campaign:
+          <strong>
+            Cobain may have chosen to disappear physically, but culturally,
+            he never succeeded in disappearing at all.
+          </strong>
+          <br><br>
+
+          The Fender Jaguar associated with him had become one of the
+          objects through which that legacy continued to exist.
+        </p>
+
+      </div>
+
+
+
+      <!-- IDEA -->
+
+      <div class="case-section">
+
+        <h3>
+          The Idea
+        </h3>
+
+        <p>
+          Outdoor advertising gives you only a few seconds.
+          <br><br>
+
+          There was no space for a long story, and no budget to manufacture
+          one through an elaborate production.
+          <br><br>
+
+          So we compressed the entire narrative into a single provocative
+          headline:
+          <strong>He wanted to die. But he couldn’t.</strong>
+          <br><br>
+
+          The line was paired directly with the
+          <strong>Kurt Cobain Signature Jaguar</strong>, making the guitar
+          both the product and the resolution of the story.
+          <br><br>
+
+          In only a few words, the execution connected Cobain’s physical
+          absence with the persistence of his artistic influence.
+          <br><br>
+
+          The product became evidence of the idea:
+          <strong>
+            an artist can disappear, but what he creates can remain.
+          </strong>
+          <br><br>
+
+          Rather than simply showing another signature guitar, the campaign
+          used the cultural story behind the instrument to give the product
+          meaning.
+        </p>
+
+      </div>
+
+
+
+      <!-- MY ROLE -->
+
+      <div class="case-section">
+
+        <h3>
+          My Role
+        </h3>
+
+        <p>
+          For this release, my hands-on role was primarily as
+          <strong>Copywriter</strong>.
+          <br><br>
+
+          I worked on translating the strategic and cultural insight
+          surrounding Kurt Cobain into a headline capable of functioning
+          in outdoor media, where the message needed to be immediate,
+          memorable and inseparable from the product.
+          <br><br>
+
+          The challenge was to tell a much larger story — about absence,
+          legacy and cultural permanence — using almost no words.
+          <br><br>
+
+          The creative direction was developed together with
+          <strong>David Carrillo</strong>, who also led the art direction
+          of the execution.
+        </p>
+
+      </div>
+
+
+
+      <!-- HOW I THINK -->
+
+      <div class="case-section">
+
+        <h3>
+          How I Think
+        </h3>
+
+        <p class="highlight">
+          When you only have a few seconds to tell a story, find the
+          cultural truth that can make a few words carry the weight
+          of an entire narrative.
+        </p>
+
+      </div>
+
+
+
+      <!-- CREDITS -->
+
+      <div class="case-section credits">
+
+        <h3>
+          Credits
+        </h3>
+
+        <p>
+
+          <strong>Client:</strong>
+          Fender Latin America
+          <br>
+
+          <strong>Year:</strong>
+          2019
+          <br>
+
+          <strong>Market:</strong>
+          Latin America
+          <br>
+
+          <strong>Project:</strong>
+          Freelance — developed directly with the client
+          <br><br>
+
+          <strong>Creative Direction:</strong>
+          Moisés Ojeda / David Carrillo
+          <br>
+
+          <strong>Art Direction:</strong>
+          David Carrillo
+          <br>
+
+          <strong>Copywriting:</strong>
+          Moisés Ojeda
+
+        </p>
+
+      </div>
+
+
+    </section>
+
+
+
+    <!-- IMPACT -->
+
+    <section class="impact">
+
+      <div class="impact-grid">
+
+        <h3>
+          Impact
+        </h3>
+
+        <p>
+          With virtually no production budget and only three days to
+          develop the work, the project reduced the campaign to the
+          elements that mattered most:
+          <strong>
+            the product, the cultural insight and the headline.
+          </strong>
+          <br><br>
+
+          The result was a single outdoor execution designed to turn
+          the Kurt Cobain Signature Jaguar from a product image into
+          the final piece of a larger story about artistic legacy.
+          <br><br>
+
+          Rather than competing for attention through production value,
+          the campaign relied on an idea that could be understood in
+          seconds — an essential requirement for outdoor advertising.
+        </p>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- BACK -->
+
+    <div class="back">
+
+      <a href="music-graphics.html">
+        ← Back to Graphic Campaigns — Music Industry
+      </a>
+
+    </div>
+
+
+  </main>
+
+
+
+  <footer>
+
+    <h2>
+      Let’s work together.
+    </h2>
+
+    <p>
+      Berlin, Germany
+    </p>
+
+  </footer>
+
+
+
+  <!-- LIGHTBOX -->
+
+  <div
+    class="lightbox"
+    id="lightbox"
+    aria-hidden="true"
+  >
+
+    <button
+      class="lightbox-close"
+      id="lightbox-close"
+      type="button"
+      aria-label="Close image"
+    >
+      ×
+    </button>
+
+    <img
+      id="lightbox-image"
+      src=""
+      alt="Enlarged Fender campaign artwork"
+    >
+
+  </div>
+
+
+
+  <script>
+
+    const buttons =
+      document.querySelectorAll(".art-button");
+
+    const lightbox =
+      document.getElementById("lightbox");
+
+    const lightboxImage =
+      document.getElementById("lightbox-image");
+
+    const closeButton =
+      document.getElementById("lightbox-close");
+
+
+    buttons.forEach(function(button) {
+
+      button.addEventListener("click", function() {
+
+        const source =
+          button.getAttribute("data-image");
+
+        lightboxImage.src = source;
+
+        lightbox.classList.add("active");
+
+        lightbox.setAttribute("aria-hidden", "false");
+
+      });
+
+    });
+
+
+    function closeLightbox() {
+
+      lightbox.classList.remove("active");
+
+      lightbox.setAttribute("aria-hidden", "true");
+
+      lightboxImage.src = "";
+
+    }
+
+
+    closeButton.addEventListener(
+      "click",
+      closeLightbox
+    );
+
+
+    lightbox.addEventListener(
+      "click",
+      function(event) {
+
+        if (event.target === lightbox) {
+          closeLightbox();
+        }
+
+      }
+    );
+
+
+    document.addEventListener(
+      "keydown",
+      function(event) {
+
+        if (event.key === "Escape") {
+          closeLightbox();
+        }
+
+      }
+    );
+
+  </script>
+
+
+</body>
+
+</html>
