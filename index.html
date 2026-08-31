@@ -199,20 +199,40 @@
       opacity: 0.5;
     }
 
-    /* EDUCATION & TRAINING */
+    /* EDUCATION */
 
-    .education-grid {
+    .education-columns {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: 1fr 1fr;
       border-top: 1px solid #bbb;
-      border-left: 1px solid #bbb;
+      border-bottom: 1px solid #bbb;
     }
 
-    .education-card {
-      min-height: 255px;
-      padding: 30px;
+    .education-column {
+      padding: 35px 38px 10px;
+    }
+
+    .education-column:first-child {
       border-right: 1px solid #bbb;
-      border-bottom: 1px solid #bbb;
+    }
+
+    .education-column-title {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 40px;
+      opacity: 0.6;
+    }
+
+    .education-entry {
+      padding: 0 0 34px;
+      margin-bottom: 34px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .education-entry:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
     }
 
     .education-date {
@@ -220,20 +240,26 @@
       text-transform: uppercase;
       letter-spacing: 1px;
       opacity: 0.55;
-      margin-bottom: 45px;
+      margin-bottom: 12px;
     }
 
-    .education-card h3 {
-      font-size: clamp(22px, 2.2vw, 32px);
+    .education-entry h3 {
+      font-size: clamp(22px, 2.2vw, 31px);
       line-height: 1.08;
       letter-spacing: -1px;
-      margin-bottom: 14px;
+      margin-bottom: 8px;
     }
 
-    .education-card p {
+    .education-institution {
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .education-entry p {
       font-size: 15px;
       line-height: 1.55;
-      max-width: 360px;
+      max-width: 520px;
     }
 
     /* ABOUT */
@@ -293,7 +319,7 @@
       }
 
       .career-paths,
-      .education-grid {
+      .education-columns {
         grid-template-columns: 1fr;
       }
 
@@ -307,12 +333,18 @@
         border-bottom: none;
       }
 
-      .education-card {
-        min-height: auto;
+      .education-column {
+        padding: 30px 0 0;
       }
 
-      .education-date {
-        margin-bottom: 25px;
+      .education-column:first-child {
+        border-right: none;
+        border-bottom: 1px solid #bbb;
+        padding-bottom: 15px;
+      }
+
+      .education-column:last-child {
+        padding-top: 40px;
       }
 
       .about p {
@@ -499,63 +531,98 @@
 
     </section>
 
-    <!-- EDUCATION & TRAINING -->
+    <!-- EDUCATION -->
 
     <section id="education">
 
       <h2>
-        Education & Training
+        Education
       </h2>
 
-      <div class="education-grid">
+      <div class="education-columns">
 
-        <div class="education-card">
-          <div class="education-date">2000 — 2006</div>
-          <h3>Universidad Bicentenaria de Aragua</h3>
-          <p>
-            Bachelor's Degree in Journalism.
-            Specialization in communication and crisis management.
-          </p>
+        <!-- HIGHER EDUCATION -->
+
+        <div class="education-column">
+
+          <div class="education-column-title">
+            Higher Education
+          </div>
+
+          <div class="education-entry">
+            <div class="education-date">Jan. 2025 — Present</div>
+            <h3>Master Product Management (M.A.)</h3>
+            <div class="education-institution">IU International University of Applied Sciences · Germany</div>
+            <p>
+              Distance-learning master's program. Application process in progress.
+            </p>
+          </div>
+
+          <div class="education-entry">
+            <div class="education-date">Oct. 2000 — Jul. 2006</div>
+            <h3>Communication Sciences</h3>
+            <div class="education-institution">Universidad Bicentenaria de Aragua · Venezuela</div>
+            <p>
+              Completed university degree, 10 semesters.
+              Focus: Corporate Communication.
+            </p>
+          </div>
+
         </div>
 
-        <div class="education-card">
-          <div class="education-date">2014 — 2015</div>
-          <h3>Brother Ad School</h3>
-          <p>
-            Creative Advertising & Creative Direction Program.
-          </p>
-        </div>
+        <!-- COURSES & PROFESSIONAL TRAINING -->
 
-        <div class="education-card">
-          <div class="education-date">2018</div>
-          <h3>IAE Business School — Universidad Austral</h3>
-          <p>
-            NAVES: Entrepreneurship & Business Development Program.
-          </p>
-        </div>
+        <div class="education-column">
 
-        <div class="education-card">
-          <div class="education-date">2018</div>
-          <h3>Government of the City of Buenos Aires</h3>
-          <p>
-            Vos Lo Hacés: Entrepreneurship & Business Development Program.
-          </p>
-        </div>
+          <div class="education-column-title">
+            Professional Training & Courses
+          </div>
 
-        <div class="education-card">
-          <div class="education-date">2023 — 2025</div>
-          <h3>German — Integration Course & B1</h3>
-          <p>
-            German language and official integration training.
-          </p>
-        </div>
+          <div class="education-entry">
+            <div class="education-date">May 2022 — Jul. 2026</div>
+            <h3>German B1 Integration Course & Professional B2</h3>
+            <div class="education-institution">Job Konzept · Germany</div>
+            <p>
+              German-language integration training and professionally oriented B2 German.
+            </p>
+          </div>
 
-        <div class="education-card">
-          <div class="education-date">2026 — 2027</div>
-          <h3>Professional German — B2</h3>
-          <p>
-            Professional German language training.
-          </p>
+          <div class="education-entry">
+            <div class="education-date">Mar. 2025 — Sep. 2025</div>
+            <h3>Professional Integration & Education Counseling</h3>
+            <div class="education-institution">Beratung, Bildung und Beruf Berlin / GesBiT · Germany</div>
+            <p>
+              Official counseling focused on professional integration and educational guidance.
+            </p>
+          </div>
+
+          <div class="education-entry">
+            <div class="education-date">May 2018 — Dec. 2018</div>
+            <h3>Business Model Development</h3>
+            <div class="education-institution">NAVES Program — IAE Business School, Universidad Austral · Argentina</div>
+            <p>
+              Training and competition focused on business-model development.
+            </p>
+          </div>
+
+          <div class="education-entry">
+            <div class="education-date">Jul. 2017 — Dec. 2017</div>
+            <h3>Business Model Development & Pitch Presentations</h3>
+            <div class="education-institution">Vos Lo Hacés — Government of the City of Buenos Aires · Argentina</div>
+            <p>
+              Entrepreneurship school focused on developing business models and presenting pitches.
+            </p>
+          </div>
+
+          <div class="education-entry">
+            <div class="education-date">Dec. 2014 — Dec. 2015</div>
+            <h3>Creativity, Strategic Communication & Art Direction</h3>
+            <div class="education-institution">Brother Ad School Worldwide · Argentina</div>
+            <p>
+              Professional training in creativity, strategic communication and art direction.
+            </p>
+          </div>
+
         </div>
 
       </div>
