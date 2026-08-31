@@ -126,13 +126,6 @@
       margin-bottom: 26px;
     }
 
-    .media-description {
-      max-width: 760px;
-      font-size: 18px;
-      line-height: 1.55;
-      margin-bottom: 40px;
-    }
-
 
     /* VIDEO */
 
@@ -204,11 +197,27 @@
     }
 
 
-    /* AWARDS UNDER GRAPHICS */
+    /* AWARDS */
+
+    .awards-heading {
+      width: 72%;
+      margin: 36px auto 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: .2px;
+    }
+
+    .awards-icon {
+      font-size: 18px;
+      line-height: 1;
+    }
 
     .campaign-awards {
       width: 72%;
-      margin: 28px auto 0;
+      margin: 0 auto;
       padding-top: 18px;
       border-top: 1px solid #ccc;
       display: grid;
@@ -311,10 +320,6 @@
       font-size: 20px;
     }
 
-    .back a:hover {
-      opacity: .55;
-    }
-
 
     /* FOOTER */
 
@@ -394,6 +399,7 @@
       .print-main,
       .print-small,
       .image-hint,
+      .awards-heading,
       .campaign-awards {
         width: 100%;
       }
@@ -533,8 +539,6 @@
         </h2>
 
 
-        <!-- MAIN PRINT -->
-
         <div class="print-main">
 
           <button
@@ -553,10 +557,7 @@
         </div>
 
 
-        <!-- TWO SMALL PRINTS -->
-
         <div class="print-small">
-
 
           <button
             type="button"
@@ -585,7 +586,6 @@
 
           </button>
 
-
         </div>
 
 
@@ -594,8 +594,15 @@
         </div>
 
 
+        <!-- AWARDS HEADING -->
 
-        <!-- AWARDS / RECOGNITION -->
+        <div class="awards-heading">
+          <span class="awards-icon">🏆</span>
+          <span>Awards</span>
+        </div>
+
+
+        <!-- AWARDS DETAILS -->
 
         <div class="campaign-awards">
 
@@ -791,8 +798,6 @@
     </section>
 
 
-
-    <!-- BACK -->
 
     <div class="back">
 
