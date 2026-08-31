@@ -27,6 +27,9 @@
       line-height: 1.4;
     }
 
+
+    /* NAVIGATION */
+
     nav {
       display: flex;
       justify-content: space-between;
@@ -164,7 +167,7 @@
 
     .main-art {
       width: 72%;
-      margin: 0 auto 22px;
+      margin: 0 auto 32px;
     }
 
     .main-art button,
@@ -206,9 +209,16 @@
       opacity: .72;
     }
 
+    .art-caption {
+      margin-top: 12px;
+      font-size: 15px;
+      line-height: 1.4;
+      font-weight: 600;
+    }
+
     .image-hint {
       width: 72%;
-      margin: 18px auto 0;
+      margin: 22px auto 0;
       font-size: 12px;
       text-transform: uppercase;
       letter-spacing: 1.4px;
@@ -401,6 +411,11 @@
         grid-template-columns: 1fr;
       }
 
+      .art-caption {
+        font-size: 14px;
+        margin-bottom: 22px;
+      }
+
       .case-section p {
         font-size: 18px;
       }
@@ -422,6 +437,8 @@
 
 <body>
 
+
+  <!-- NAVIGATION -->
 
   <nav>
 
@@ -535,7 +552,7 @@
 
 
 
-      <!-- GRAPHIC CAMPAIGN FIRST -->
+      <!-- GRAPHIC CAMPAIGN -->
 
       <section class="media-section">
 
@@ -554,7 +571,7 @@
         </p>
 
 
-        <!-- MAIN IMAGE -->
+        <!-- MAIN GRAPHIC -->
 
         <div class="main-art">
 
@@ -571,39 +588,61 @@
 
           </button>
 
+          <p class="art-caption">
+            Don’t let noise affect your music.
+          </p>
+
         </div>
 
 
-        <!-- TWO SMALL IMAGES -->
+        <!-- SMALL GRAPHICS -->
 
         <div class="small-art">
 
-          <button
-            type="button"
-            class="art-button"
-            data-image="skullcandy-02.jpg"
-          >
 
-            <img
-              src="skullcandy-02.jpg"
-              alt="Skullcandy Bob Marley and the Rottweiler campaign execution"
+          <div>
+
+            <button
+              type="button"
+              class="art-button"
+              data-image="skullcandy-02.jpg"
             >
 
-          </button>
+              <img
+                src="skullcandy-02.jpg"
+                alt="Skullcandy Bob Marley and the Rottweiler campaign execution"
+              >
+
+            </button>
+
+            <p class="art-caption">
+              Don’t let noise affect your music.
+            </p>
+
+          </div>
 
 
-          <button
-            type="button"
-            class="art-button"
-            data-image="skullcandy-03.jpg"
-          >
+          <div>
 
-            <img
-              src="skullcandy-03.jpg"
-              alt="Skullcandy Red Hot Chili's Blenders campaign execution"
+            <button
+              type="button"
+              class="art-button"
+              data-image="skullcandy-03.jpg"
             >
 
-          </button>
+              <img
+                src="skullcandy-03.jpg"
+                alt="Skullcandy Red Hot Chili's Blenders campaign execution"
+              >
+
+            </button>
+
+            <p class="art-caption">
+              Don’t let noise affect your music.
+            </p>
+
+          </div>
+
 
         </div>
 
@@ -616,7 +655,7 @@
 
 
 
-      <!-- MAGAZINE MOCKUP SECOND -->
+      <!-- MAGAZINE MOCKUP -->
 
       <section class="media-section">
 
@@ -865,6 +904,8 @@
   </main>
 
 
+
+  <!-- FOOTER -->
 
   <footer>
 
