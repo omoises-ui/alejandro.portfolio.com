@@ -193,7 +193,44 @@
       max-width: 760px;
       font-size: 19px;
       line-height: 1.5;
-      margin-bottom: 45px;
+      margin-bottom: 35px;
+    }
+
+    .awards-details {
+      border-top: 1px solid #bbb;
+      border-bottom: 1px solid #bbb;
+    }
+
+    .awards-details summary {
+      list-style: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+      padding: 28px 0;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+
+    .awards-details summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .awards-details summary::after {
+      content: "+";
+      font-size: 28px;
+      font-weight: 400;
+      line-height: 1;
+    }
+
+    .awards-details[open] summary::after {
+      content: "−";
+    }
+
+    .awards-details summary:hover {
+      opacity: 0.55;
     }
 
     .awards-grid {
@@ -201,6 +238,7 @@
       grid-template-columns: 1fr 1fr;
       border-top: 1px solid #bbb;
       border-left: 1px solid #bbb;
+      margin-bottom: 35px;
     }
 
     .award-card {
@@ -395,6 +433,10 @@
         padding: 30px 0;
       }
 
+      .award-card {
+        padding: 28px 24px 30px;
+      }
+
       .about p {
         font-size: 21px;
       }
@@ -514,119 +556,124 @@
         Selected recognition across international and Latin American advertising festivals for digital, social, direct, television, print and integrated campaigns.
       </p>
 
-      <div class="awards-grid">
+      <details class="awards-details">
+        <summary>View Awards by Project</summary>
 
-        <div class="award-card">
-          <h3>Missing Tag</h3>
+        <div class="awards-grid">
 
-          <div class="award-festival">
-            <strong>Cannes Lions</strong>
-            <span>Shortlist — Media Digital & Social, Use of Social Platforms.</span>
+          <div class="award-card">
+            <h3>Missing Tag</h3>
+
+            <div class="award-festival">
+              <strong>Cannes Lions</strong>
+              <span>Shortlist — Media Digital & Social, Use of Social Platforms.</span>
+            </div>
+
+            <div class="award-festival">
+              <strong>El Ojo de Iberoamérica</strong>
+              <span>Shortlist — El Ojo Interactivo, Actions in Social Networks.</span>
+              <span>Shortlist — El Ojo Sustentable, Social Responsibility.</span>
+              <span>Shortlist — El Ojo Innovación, Technology.</span>
+              <span>Shortlist — El Ojo Media, Actions in Social Networks.</span>
+            </div>
+
+            <div class="award-festival">
+              <strong>Festival of Media LatAm</strong>
+              <span>Gold — Best Social Media Campaign.</span>
+            </div>
+
+            <div class="award-festival">
+              <strong>+Digital</strong>
+              <span>Bronze — Social Networks, Native Use Media.</span>
+            </div>
           </div>
 
-          <div class="award-festival">
-            <strong>El Ojo de Iberoamérica</strong>
-            <span>Shortlist — El Ojo Interactivo, Actions in Social Networks.</span>
-            <span>Shortlist — El Ojo Sustentable, Social Responsibility.</span>
-            <span>Shortlist — El Ojo Innovación, Technology.</span>
-            <span>Shortlist — El Ojo Media, Actions in Social Networks.</span>
+          <div class="award-card">
+            <h3>Missing Face</h3>
+
+            <div class="award-festival">
+              <strong>El Diente</strong>
+              <span>Gold — Interactive, Students.</span>
+            </div>
+
+            <div class="award-festival">
+              <strong>Brother Ad School</strong>
+              <span>Silver — Push The Power.</span>
+            </div>
           </div>
 
-          <div class="award-festival">
-            <strong>Festival of Media LatAm</strong>
-            <span>Gold — Best Social Media Campaign.</span>
+          <div class="award-card">
+            <h3>Best Destinations</h3>
+
+            <div class="award-festival">
+              <strong>Echo Latam</strong>
+              <span>Gold — Social.</span>
+              <span>Gold — Lead Generation.</span>
+              <span>Gold — Campaigns and Sales Programs.</span>
+              <span>Gold — Acquisition Campaigns.</span>
+              <span>Silver — Special Prize for Creativity.</span>
+            </div>
           </div>
 
-          <div class="award-festival">
-            <strong>+Digital</strong>
-            <span>Bronze — Social Networks, Native Use Media.</span>
+          <div class="award-card">
+            <h3>Cyberbullying Spot</h3>
+
+            <div class="award-festival">
+              <strong>El Diente</strong>
+              <span>Silver — TV, Students.</span>
+            </div>
+
+            <div class="award-festival">
+              <strong>Brother Ad School</strong>
+              <span>Silver — Push The Power.</span>
+            </div>
           </div>
+
+          <div class="award-card">
+            <h3>Cyberbullying Prints</h3>
+
+            <div class="award-festival">
+              <strong>La Oreja</strong>
+              <span>Shortlist — Print.</span>
+            </div>
+
+            <div class="award-festival">
+              <strong>Brother Ad School</strong>
+              <span>Winner — Brother Plus.</span>
+            </div>
+          </div>
+
+          <div class="award-card">
+            <h3>It's Not You Without Your Beard</h3>
+
+            <div class="award-festival">
+              <strong>AMDIA</strong>
+              <span>Grand Prix.</span>
+              <span>Gold — Digital Campaign.</span>
+            </div>
+
+            <div class="award-festival">
+              <strong>Amauta</strong>
+              <span>Bronze — Direct.</span>
+            </div>
+
+            <div class="award-festival">
+              <strong>Echo Latam</strong>
+              <span>Gold — Creativity.</span>
+              <span>Gold — Creativity Low Cost.</span>
+              <span>Gold — Integrated Campaign.</span>
+              <span>Silver — Products and Consumption Campaign.</span>
+            </div>
+
+            <div class="award-festival">
+              <strong>Effie</strong>
+              <span>Shortlist — Hygiene and Personal Care.</span>
+            </div>
+          </div>
+
         </div>
 
-        <div class="award-card">
-          <h3>Missing Face</h3>
-
-          <div class="award-festival">
-            <strong>El Diente</strong>
-            <span>Gold — Interactive, Students.</span>
-          </div>
-
-          <div class="award-festival">
-            <strong>Brother Ad School</strong>
-            <span>Silver — Push The Power.</span>
-          </div>
-        </div>
-
-        <div class="award-card">
-          <h3>Best Destinations</h3>
-
-          <div class="award-festival">
-            <strong>Echo Latam</strong>
-            <span>Gold — Social.</span>
-            <span>Gold — Lead Generation.</span>
-            <span>Gold — Campaigns and Sales Programs.</span>
-            <span>Gold — Acquisition Campaigns.</span>
-            <span>Silver — Special Prize for Creativity.</span>
-          </div>
-        </div>
-
-        <div class="award-card">
-          <h3>Cyberbullying Spot</h3>
-
-          <div class="award-festival">
-            <strong>El Diente</strong>
-            <span>Silver — TV, Students.</span>
-          </div>
-
-          <div class="award-festival">
-            <strong>Brother Ad School</strong>
-            <span>Silver — Push The Power.</span>
-          </div>
-        </div>
-
-        <div class="award-card">
-          <h3>Cyberbullying Prints</h3>
-
-          <div class="award-festival">
-            <strong>La Oreja</strong>
-            <span>Shortlist — Print.</span>
-          </div>
-
-          <div class="award-festival">
-            <strong>Brother Ad School</strong>
-            <span>Winner — Brother Plus.</span>
-          </div>
-        </div>
-
-        <div class="award-card">
-          <h3>It's Not You Without Your Beard</h3>
-
-          <div class="award-festival">
-            <strong>AMDIA</strong>
-            <span>Grand Prix.</span>
-            <span>Gold — Digital Campaign.</span>
-          </div>
-
-          <div class="award-festival">
-            <strong>Amauta</strong>
-            <span>Bronze — Direct.</span>
-          </div>
-
-          <div class="award-festival">
-            <strong>Echo Latam</strong>
-            <span>Gold — Creativity.</span>
-            <span>Gold — Creativity Low Cost.</span>
-            <span>Gold — Integrated Campaign.</span>
-            <span>Silver — Products and Consumption Campaign.</span>
-          </div>
-
-          <div class="award-festival">
-            <strong>Effie</strong>
-            <span>Shortlist — Hygiene and Personal Care.</span>
-          </div>
-        </div>
-
-      </div>
+      </details>
 
     </section>
 
