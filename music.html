@@ -125,6 +125,10 @@ nav{display:block;padding:20px 5vw;border-bottom:1px solid #aaa;font-size:.875re
 .band-portrait img{width:100%;height:auto}
 .album-artwork{margin:32px 0 42px}
 
+.case-side .album-player{margin:6px 0 0;padding:16px}
+.case-side .album-player h3{font-size:1.45rem}
+.case-side .album-tracklist{max-height:220px}
+
 @media(min-width:480px){
   .case-side{grid-template-columns:repeat(2,minmax(0,1fr))}
   .campaign-preview{flex-direction:row;align-items:center;justify-content:space-between;gap:20px}
@@ -203,7 +207,35 @@ nav{display:block;padding:20px 5vw;border-bottom:1px solid #aaa;font-size:.875re
     <figcaption><span>Todos los Monstruos</span><span>Promotional portrait</span></figcaption>
   </figure>
   <div class="case-body">
-    <aside class="case-side"><div><div class="role-label">Role</div><p class="role">Founder<br>Artist & Project Developer<br>Creative & Musical Director<br>Songwriter</p></div><div><div class="outcome-label">Focus</div><p class="role">World-building<br>Team Leadership<br>Live Innovation<br>Media & Audience</p></div></aside>
+    <aside class="case-side"><div><div class="role-label">Role</div><p class="role">Founder<br>Artist & Project Developer<br>Creative & Musical Director<br>Songwriter</p></div><div><div class="outcome-label">Focus</div><p class="role">World-building<br>Team Leadership<br>Live Innovation<br>Media & Audience</p></div>
+      <section class="album-player" aria-labelledby="album-player-title">
+      <div class="player-kicker">Full album · 2012</div>
+      <h3 id="album-player-title">Todos los Monstruos</h3>
+      <audio id="album-audio" preload="metadata" src="assets/audio/01-flashback.mp3"></audio>
+      <div class="now-playing" aria-live="polite"><span class="now-number">01</span><strong class="now-title">Flashback</strong></div>
+      <div class="transport">
+        <button class="transport-button" id="album-prev" type="button" aria-label="Previous track">←</button>
+        <button class="transport-button transport-button--play" id="album-play" type="button" aria-label="Play album">▶</button>
+        <button class="transport-button" id="album-next" type="button" aria-label="Next track">→</button>
+      </div>
+      <div class="timeline">
+        <input id="album-progress" type="range" min="0" max="100" value="0" step="0.1" aria-label="Track progress">
+        <div class="timecode"><span id="album-current">0:00</span><span id="album-duration">3:19</span></div>
+      </div>
+      <ol class="album-tracklist" aria-label="Album track list">
+        <li><button class="track-row is-active" type="button" data-track="0" aria-current="true"><span>01</span><span>Flashback</span><time>3:19</time></button></li>
+        <li><button class="track-row" type="button" data-track="1"><span>02</span><span>Ella Sonríe</span><time>3:02</time></button></li>
+        <li><button class="track-row" type="button" data-track="2"><span>03</span><span>Invencible</span><time>3:22</time></button></li>
+        <li><button class="track-row" type="button" data-track="3"><span>04</span><span>Electro Zikoziz</span><time>3:17</time></button></li>
+        <li><button class="track-row" type="button" data-track="4"><span>05</span><span>¿Fue Real?</span><time>2:55</time></button></li>
+        <li><button class="track-row" type="button" data-track="5"><span>06</span><span>Shutdown</span><time>2:56</time></button></li>
+        <li><button class="track-row" type="button" data-track="6"><span>07</span><span>Agorafobia</span><time>2:52</time></button></li>
+        <li><button class="track-row" type="button" data-track="7"><span>08</span><span>XXX</span><time>4:50</time></button></li>
+        <li><button class="track-row" type="button" data-track="8"><span>09</span><span>Suave</span><time>2:52</time></button></li>
+        <li><button class="track-row" type="button" data-track="9"><span>10</span><span>Karma Magnético</span><time>3:55</time></button></li>
+      </ol>
+    </section>
+    </aside>
     <div class="case-copy"><p>I founded Todos los Monstruos in Caracas in 2009 and led its development as both a musical project and a multidisciplinary creative universe. By 2012, the sound we had developed in the studio—blending genres, electronic rhythms and technology—had become genuinely distinctive within the scene and its moment.</p>
       <figure class="archive-figure album-artwork">
         <img src="assets/todos-los-monstruos-album.webp" width="1536" height="1024" alt="Todos los Monstruos album artwork, physical edition and compact disc" loading="lazy">
@@ -233,33 +265,7 @@ nav{display:block;padding:20px 5vw;border-bottom:1px solid #aaa;font-size:.875re
         </div>
         <figcaption><span>Muestra de material gráfico</span><span>Colaboración con Jean Piero Montilla · Clic para ampliar</span></figcaption>
       </figure>
-      <section class="album-player" aria-labelledby="album-player-title">
-      <div class="player-kicker">Full album · 2012</div>
-      <h3 id="album-player-title">Todos los Monstruos</h3>
-      <audio id="album-audio" preload="metadata" src="assets/audio/01-flashback.mp3"></audio>
-      <div class="now-playing" aria-live="polite"><span class="now-number">01</span><strong class="now-title">Flashback</strong></div>
-      <div class="transport">
-        <button class="transport-button" id="album-prev" type="button" aria-label="Previous track">←</button>
-        <button class="transport-button transport-button--play" id="album-play" type="button" aria-label="Play album">▶</button>
-        <button class="transport-button" id="album-next" type="button" aria-label="Next track">→</button>
-      </div>
-      <div class="timeline">
-        <input id="album-progress" type="range" min="0" max="100" value="0" step="0.1" aria-label="Track progress">
-        <div class="timecode"><span id="album-current">0:00</span><span id="album-duration">3:19</span></div>
-      </div>
-      <ol class="album-tracklist" aria-label="Album track list">
-        <li><button class="track-row is-active" type="button" data-track="0" aria-current="true"><span>01</span><span>Flashback</span><time>3:19</time></button></li>
-        <li><button class="track-row" type="button" data-track="1"><span>02</span><span>Ella Sonríe</span><time>3:02</time></button></li>
-        <li><button class="track-row" type="button" data-track="2"><span>03</span><span>Invencible</span><time>3:22</time></button></li>
-        <li><button class="track-row" type="button" data-track="3"><span>04</span><span>Electro Zikoziz</span><time>3:17</time></button></li>
-        <li><button class="track-row" type="button" data-track="4"><span>05</span><span>¿Fue Real?</span><time>2:55</time></button></li>
-        <li><button class="track-row" type="button" data-track="5"><span>06</span><span>Shutdown</span><time>2:56</time></button></li>
-        <li><button class="track-row" type="button" data-track="6"><span>07</span><span>Agorafobia</span><time>2:52</time></button></li>
-        <li><button class="track-row" type="button" data-track="7"><span>08</span><span>XXX</span><time>4:50</time></button></li>
-        <li><button class="track-row" type="button" data-track="8"><span>09</span><span>Suave</span><time>2:52</time></button></li>
-        <li><button class="track-row" type="button" data-track="9"><span>10</span><span>Karma Magnético</span><time>3:55</time></button></li>
-      </ol>
-    </section>
+      
       <figure class="video-feature">
         <div class="video-frame"><iframe src="https://www.youtube.com/embed/c6GjsPSOo2Q?si=jP8AseE3213DxNOf" title="Todos los Monstruos — live sampling with PlayStation controllers" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" loading="lazy" allowfullscreen></iframe></div>
         <figcaption><span>Live experimentation</span><span>PlayStation controllers · Real-time sampling</span></figcaption>
