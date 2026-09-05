@@ -121,6 +121,10 @@ nav{display:block;padding:20px 5vw;border-bottom:1px solid #aaa;font-size:.875re
 .press-card--feature,.press-card--wide{grid-column:1/-1;grid-row:span 2}
 .press-card--portrait{grid-row:span 2}
 
+.band-portrait{margin:-4px 0 48px}
+.band-portrait img{width:100%;height:auto}
+.album-artwork{margin:32px 0 42px}
+
 @media(min-width:480px){
   .case-side{grid-template-columns:repeat(2,minmax(0,1fr))}
   .campaign-preview{flex-direction:row;align-items:center;justify-content:space-between;gap:20px}
@@ -160,6 +164,8 @@ nav{display:block;padding:20px 5vw;border-bottom:1px solid #aaa;font-size:.875re
   .case-side{display:flex;flex-direction:column;gap:35px;padding-bottom:0;border-bottom:0}
   .case-copy{font-size:1.125rem;line-height:1.62}
   .case-hero{margin:-10px 0 72px}
+  .band-portrait{width:calc(100% - 150px);margin:-10px 0 72px 150px}
+  .album-artwork{margin:38px 0 48px}
   .album-player{max-width:790px;margin:32px 0 48px;padding:20px 22px}
   .album-tracklist{max-height:210px}
   .skills{padding:85px 6% 100px}
@@ -192,13 +198,17 @@ nav{display:block;padding:20px 5vw;border-bottom:1px solid #aaa;font-size:.875re
 
 <section class="case" id="todos-los-monstruos">
   <div class="case-head"><div class="case-number">02 / 03</div><div class="case-title"><h2>Todos los<br>Monstruos</h2><div class="case-meta">Caracas · 2009—2014</div></div></div>
-  <figure class="archive-figure case-hero">
-      <img src="assets/todos-los-monstruos-album.webp" width="1536" height="1024" alt="Todos los Monstruos: band portrait, album artwork, jewel case and compact disc" fetchpriority="high">
-      <figcaption><span>Todos los Monstruos</span><span>Album artwork · Physical edition</span></figcaption>
-    </figure>
+  <figure class="archive-figure case-hero band-portrait">
+    <img src="assets/todos-los-monstruos-band-portrait.webp" width="1800" height="1200" alt="Todos los Monstruos promotional band portrait" fetchpriority="high">
+    <figcaption><span>Todos los Monstruos</span><span>Promotional portrait</span></figcaption>
+  </figure>
   <div class="case-body">
     <aside class="case-side"><div><div class="role-label">Role</div><p class="role">Founder<br>Artist & Project Developer<br>Creative & Musical Director<br>Songwriter</p></div><div><div class="outcome-label">Focus</div><p class="role">World-building<br>Team Leadership<br>Live Innovation<br>Media & Audience</p></div></aside>
     <div class="case-copy"><p>I founded Todos los Monstruos in Caracas in 2009 and led its development as both a musical project and a multidisciplinary creative universe. By 2012, the sound we had developed in the studio—blending genres, electronic rhythms and technology—had become genuinely distinctive within the scene and its moment.</p>
+      <figure class="archive-figure album-artwork">
+        <img src="assets/todos-los-monstruos-album.webp" width="1536" height="1024" alt="Todos los Monstruos album artwork, physical edition and compact disc" loading="lazy">
+        <figcaption><span>Todos los Monstruos</span><span>Album artwork · Physical edition</span></figcaption>
+      </figure>
       <figure class="archive-figure archive-figure--ep">
         <img src="assets/todos-los-monstruos-ep-flashback.webp" width="1448" height="1086" alt="Flashback promotional EP by Todos los Monstruos" loading="lazy">
         <figcaption><span>EP Flashback</span><span>Primer sencillo de la banda · 2012</span></figcaption>
