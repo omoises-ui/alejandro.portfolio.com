@@ -129,6 +129,12 @@ nav{display:block;padding:20px 5vw;border-bottom:1px solid #aaa;font-size:.875re
 .case-side .album-player h3{font-size:1.45rem}
 .case-side .album-tracklist{max-height:220px}
 
+.case-side .press-feature{margin:24px 0 0;padding-top:24px}
+.case-side .press-feature h3{font-size:clamp(1.75rem,7vw,2.35rem);line-height:1;letter-spacing:-1.2px}
+.case-side .press-feature>p{font-size:1rem;line-height:1.6}
+.case-side .press-archive{margin:24px 0 28px}
+.case-side .video-feature{margin:28px 0 8px}
+
 @media(min-width:480px){
   .case-side{grid-template-columns:repeat(2,minmax(0,1fr))}
   .campaign-preview{flex-direction:row;align-items:center;justify-content:space-between;gap:20px}
@@ -156,6 +162,10 @@ nav{display:block;padding:20px 5vw;border-bottom:1px solid #aaa;font-size:.875re
   .press-feature{margin:64px 0 58px;padding-top:34px}
   .press-feature h3{font-size:clamp(3rem,4.2vw,4.4rem);letter-spacing:-2.7px}
   .press-grid{grid-auto-rows:150px}
+  .case-side .press-feature{margin-top:30px;padding-top:26px}
+  .case-side .press-feature h3{font-size:2.15rem;letter-spacing:-1.3px}
+  .case-side .press-grid{grid-auto-rows:88px}
+  .case-side .press-card{padding:5px}
 
   nav{padding:28px 6%}
   .intro{padding:100px 6% 90px}
@@ -235,6 +245,36 @@ nav{display:block;padding:20px 5vw;border-bottom:1px solid #aaa;font-size:.875re
         <li><button class="track-row" type="button" data-track="9"><span>10</span><span>Karma Magnético</span><time>3:55</time></button></li>
       </ol>
     </section>
+      <section class="press-feature" id="press-coverage" aria-labelledby="press-coverage-title">
+        <div class="press-eyebrow">Press &amp; cultural impact</div>
+        <h3 id="press-coverage-title">From an underground project to national coverage.</h3>
+        <p>As a result of the work across music production, live production and press strategy, we achieved a level of media coverage that was significant for an underground, fully independent artist.</p>
+        <figure class="archive-figure press-archive">
+          <div class="press-grid" aria-label="Selected press coverage for Todos los Monstruos">
+            <button class="flyer-card press-card press-card--feature" type="button" data-full="assets/tlm-press-la-mega-invencible.webp" aria-label="Enlarge La Mega interview about Invencible">
+              <img src="assets/tlm-press-la-mega-invencible.webp" width="1088" height="626" alt="La Mega interview with Todos los Monstruos about Invencible" loading="lazy">
+            </button>
+            <button class="flyer-card press-card press-card--portrait" type="button" data-full="assets/tlm-press-el-universal.webp" aria-label="Enlarge El Universal article">
+              <img src="assets/tlm-press-el-universal.webp" width="325" height="711" alt="El Universal article about Todos los Monstruos and PlayStation controllers" loading="lazy">
+            </button>
+            <button class="flyer-card press-card" type="button" data-full="assets/tlm-press-sacven.webp" aria-label="Enlarge SACVEN article">
+              <img src="assets/tlm-press-sacven.webp" width="733" height="611" alt="SACVEN article about Todos los Monstruos" loading="lazy">
+            </button>
+            <button class="flyer-card press-card press-card--portrait" type="button" data-full="assets/tlm-press-newspaper.webp" aria-label="Enlarge printed newspaper clipping">
+              <img src="assets/tlm-press-newspaper.webp" width="1200" height="1600" alt="Printed newspaper listing featuring Todos los Monstruos" loading="lazy">
+            </button>
+            <button class="flyer-card press-card press-card--wide" type="button" data-full="assets/tlm-press-la-mega-feature.webp" aria-label="Enlarge La Mega feature">
+              <img src="assets/tlm-press-la-mega-feature.webp" width="1084" height="630" alt="La Mega feature Todos los Monstruos atacan de nuevo" loading="lazy">
+            </button>
+          </div>
+          <figcaption><span>Selected press coverage · 2012—2013</span><span>Independent media impact · Click to enlarge</span></figcaption>
+        </figure>
+        <p>The video below brings together a selection of this coverage and documents the live-event production developed through the Todos los Monstruos collective. For our most important shows, we expanded the concert format into a multidisciplinary showcase featuring artists from different disciplines.</p>
+        <figure class="video-feature">
+          <div class="video-frame"><iframe src="https://www.youtube.com/embed/2SGPw8NNtTg?start=1" title="Todos los Monstruos — press and live production retrospective" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" loading="lazy" allowfullscreen></iframe></div>
+          <figcaption><span>Press and live-production retrospective</span><span>Todos los Monstruos collective</span></figcaption>
+        </figure>
+      </section>
     </aside>
     <div class="case-copy"><p>I founded Todos los Monstruos in Caracas in 2009 and led its development as both a musical project and a multidisciplinary creative universe. By 2012, the sound we had developed in the studio—blending genres, electronic rhythms and technology—had become genuinely distinctive within the scene and its moment.</p>
       <figure class="archive-figure album-artwork">
@@ -275,36 +315,7 @@ nav{display:block;padding:20px 5vw;border-bottom:1px solid #aaa;font-size:.875re
         <div class="video-frame"><iframe src="https://www.youtube.com/embed/D864hWsXTb4" title="Todos los Monstruos — live performance" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" loading="lazy" allowfullscreen></iframe></div>
         <figcaption><span>Live performance</span><span>Todos los Monstruos · Experimental live format</span></figcaption>
       </figure>
-      <section class="press-feature" id="press-coverage" aria-labelledby="press-coverage-title">
-        <div class="press-eyebrow">Press &amp; cultural impact</div>
-        <h3 id="press-coverage-title">From an underground project to national coverage.</h3>
-        <p>As a result of the work across music production, live production and press strategy, we achieved a level of media coverage that was significant for an underground, fully independent artist.</p>
-        <figure class="archive-figure press-archive">
-          <div class="press-grid" aria-label="Selected press coverage for Todos los Monstruos">
-            <button class="flyer-card press-card press-card--feature" type="button" data-full="assets/tlm-press-la-mega-invencible.webp" aria-label="Enlarge La Mega interview about Invencible">
-              <img src="assets/tlm-press-la-mega-invencible.webp" width="1088" height="626" alt="La Mega interview with Todos los Monstruos about Invencible" loading="lazy">
-            </button>
-            <button class="flyer-card press-card press-card--portrait" type="button" data-full="assets/tlm-press-el-universal.webp" aria-label="Enlarge El Universal article">
-              <img src="assets/tlm-press-el-universal.webp" width="325" height="711" alt="El Universal article about Todos los Monstruos and PlayStation controllers" loading="lazy">
-            </button>
-            <button class="flyer-card press-card" type="button" data-full="assets/tlm-press-sacven.webp" aria-label="Enlarge SACVEN article">
-              <img src="assets/tlm-press-sacven.webp" width="733" height="611" alt="SACVEN article about Todos los Monstruos" loading="lazy">
-            </button>
-            <button class="flyer-card press-card press-card--portrait" type="button" data-full="assets/tlm-press-newspaper.webp" aria-label="Enlarge printed newspaper clipping">
-              <img src="assets/tlm-press-newspaper.webp" width="1200" height="1600" alt="Printed newspaper listing featuring Todos los Monstruos" loading="lazy">
-            </button>
-            <button class="flyer-card press-card press-card--wide" type="button" data-full="assets/tlm-press-la-mega-feature.webp" aria-label="Enlarge La Mega feature">
-              <img src="assets/tlm-press-la-mega-feature.webp" width="1084" height="630" alt="La Mega feature Todos los Monstruos atacan de nuevo" loading="lazy">
-            </button>
-          </div>
-          <figcaption><span>Selected press coverage · 2012—2013</span><span>Independent media impact · Click to enlarge</span></figcaption>
-        </figure>
-        <p>The video below brings together a selection of this coverage and documents the live-event production developed through the Todos los Monstruos collective. For our most important shows, we expanded the concert format into a multidisciplinary showcase featuring artists from different disciplines.</p>
-        <figure class="video-feature">
-          <div class="video-frame"><iframe src="https://www.youtube.com/embed/2SGPw8NNtTg?start=1" title="Todos los Monstruos — press and live production retrospective" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" loading="lazy" allowfullscreen></iframe></div>
-          <figcaption><span>Press and live-production retrospective</span><span>Todos los Monstruos collective</span></figcaption>
-        </figure>
-      </section>
+      
       <p>Todos los Monstruos was selected for Festival Nuevas Bandas, an important Latin American platform for emerging music. It achieved national radio rotation, extensive press coverage and appearances at major festivals, including Caracas Rock before more than 13,000 people. The release artwork was submitted for Latin Grammy consideration.</p><p>Beyond the music, I assembled and led a team including management, road management and press. I also created the Todos los Monstruos collective, expanding concerts into multidisciplinary events with circus performers, visual artists and guest musicians.</p>
       <div class="outcomes"><div class="outcome"><span>01</span><span>Selected for Festival Nuevas Bandas</span></div><div class="outcome"><span>02</span><span>National radio rotation and extensive press coverage</span></div><div class="outcome"><span>03</span><span>Caracas Rock performance before 13,000+ people</span></div><div class="outcome"><span>04</span><span>A multidisciplinary team, collective and live format built around one vision</span></div></div>
       <div class="turning-point"><strong>A defining lesson</strong><p>At the height of the project, I signed an agreement with a Colombian record label that prevented me from releasing new music for more than five years. It became a defining lesson in artist rights, contracts and long-term release strategy. During that period, I began developing #HarakiriRobot—an alternative creative path that would fully re-emerge years later in Berlin.</p></div>
