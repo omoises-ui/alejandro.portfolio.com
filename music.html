@@ -89,6 +89,29 @@ nav{display:block;padding:20px 5vw;border-bottom:1px solid #aaa;font-size:.875re
 .closing p{max-width:1150px;font-size:clamp(2rem,9vw,4rem);line-height:1.06;letter-spacing:-1.8px}
 .back{display:inline-block;margin-top:38px;font-size:.8125rem;text-decoration:none;text-transform:uppercase;letter-spacing:1.4px}
 
+
+.album-showcase{display:grid;grid-template-columns:minmax(0,1fr);gap:18px;margin:-4px 0 48px}
+.album-showcase .case-hero{margin:0}
+.album-player{min-width:0;padding:24px 20px 20px;background:#111;color:#f5f3ee}
+.player-kicker{font-size:.6875rem;letter-spacing:1.5px;text-transform:uppercase;opacity:.58}
+.album-player h3{margin:9px 0 24px;font-size:clamp(1.75rem,8vw,2.6rem);line-height:.95;letter-spacing:-1.3px}
+.now-playing{display:grid;grid-template-columns:34px minmax(0,1fr);align-items:baseline;padding:15px 0;border-top:1px solid #555;border-bottom:1px solid #555}
+.now-number{font-size:.6875rem;letter-spacing:1.2px;opacity:.52}
+.now-title{overflow:hidden;font-size:1rem;font-weight:600;text-overflow:ellipsis;white-space:nowrap}
+.transport{display:flex;align-items:center;justify-content:center;gap:20px;padding:22px 0 18px}
+.transport-button{width:44px;height:44px;border:1px solid #777;border-radius:50%;background:transparent;color:#f5f3ee;font:inherit;font-size:1rem;cursor:pointer}
+.transport-button--play{width:54px;height:54px;border-color:#f5f3ee;background:#f5f3ee;color:#111;font-size:.9rem}
+.transport-button:focus-visible,.track-row:focus-visible,#album-progress:focus-visible{outline:2px solid #f5f3ee;outline-offset:3px}
+.timeline{padding-bottom:17px}
+#album-progress{width:100%;height:2px;margin:0;accent-color:#f5f3ee;cursor:pointer}
+.timecode{display:flex;justify-content:space-between;margin-top:7px;font-size:.625rem;letter-spacing:.8px;opacity:.58}
+.album-tracklist{list-style:none;border-top:1px solid #444}
+.track-row{display:grid;width:100%;grid-template-columns:32px minmax(0,1fr) auto;gap:4px;align-items:center;padding:11px 0;border:0;border-bottom:1px solid #383838;background:transparent;color:#aaa;font:inherit;font-size:.75rem;text-align:left;cursor:pointer}
+.track-row span:first-child{font-size:.625rem;letter-spacing:1px;opacity:.55}
+.track-row time{font-size:.625rem;letter-spacing:.6px;opacity:.55}
+.track-row:hover,.track-row.is-active{color:#fff}
+.track-row.is-active span:first-child{color:#ef3c33;opacity:1}
+
 @media(min-width:480px){
   .case-side{grid-template-columns:repeat(2,minmax(0,1fr))}
   .campaign-preview{flex-direction:row;align-items:center;justify-content:space-between;gap:20px}
@@ -124,6 +147,11 @@ nav{display:block;padding:20px 5vw;border-bottom:1px solid #aaa;font-size:.875re
   .case-side{display:flex;flex-direction:column;gap:35px;padding-bottom:0;border-bottom:0}
   .case-copy{font-size:1.125rem;line-height:1.62}
   .case-hero{margin:-10px 0 72px}
+  .album-showcase{grid-template-columns:minmax(0,1.42fr) minmax(330px,.58fr);gap:24px;align-items:stretch;margin:-10px 0 72px}
+  .album-showcase .case-hero{margin:0}
+  .album-player{display:flex;flex-direction:column;padding:30px 26px 24px}
+  .album-player h3{font-size:clamp(2rem,3vw,3rem)}
+  .album-tracklist{margin-top:auto}
   .skills{padding:85px 6% 100px}
   .skills-grid{gap:60px}
   .skills h2{font-size:clamp(3.7rem,6vw,5.125rem);letter-spacing:-3px}
@@ -154,10 +182,39 @@ nav{display:block;padding:20px 5vw;border-bottom:1px solid #aaa;font-size:.875re
 
 <section class="case" id="todos-los-monstruos">
   <div class="case-head"><div class="case-number">02 / 03</div><div class="case-title"><h2>Todos los<br>Monstruos</h2><div class="case-meta">Caracas · 2009—2014</div></div></div>
-  <figure class="archive-figure case-hero">
-    <img src="assets/todos-los-monstruos-album.webp" width="1536" height="1024" alt="Todos los Monstruos: band portrait, album artwork, jewel case and compact disc" fetchpriority="high">
-    <figcaption><span>Todos los Monstruos</span><span>Album artwork · Physical edition</span></figcaption>
-  </figure>
+  <div class="album-showcase">
+    <figure class="archive-figure case-hero">
+      <img src="assets/todos-los-monstruos-album.webp" width="1536" height="1024" alt="Todos los Monstruos: band portrait, album artwork, jewel case and compact disc" fetchpriority="high">
+      <figcaption><span>Todos los Monstruos</span><span>Album artwork · Physical edition</span></figcaption>
+    </figure>
+    <section class="album-player" aria-labelledby="album-player-title">
+      <div class="player-kicker">Full album · 2012</div>
+      <h3 id="album-player-title">Todos los Monstruos</h3>
+      <audio id="album-audio" preload="metadata" src="assets/audio/01-flashback.mp3"></audio>
+      <div class="now-playing" aria-live="polite"><span class="now-number">01</span><strong class="now-title">Flashback</strong></div>
+      <div class="transport">
+        <button class="transport-button" id="album-prev" type="button" aria-label="Previous track">←</button>
+        <button class="transport-button transport-button--play" id="album-play" type="button" aria-label="Play album">▶</button>
+        <button class="transport-button" id="album-next" type="button" aria-label="Next track">→</button>
+      </div>
+      <div class="timeline">
+        <input id="album-progress" type="range" min="0" max="100" value="0" step="0.1" aria-label="Track progress">
+        <div class="timecode"><span id="album-current">0:00</span><span id="album-duration">3:19</span></div>
+      </div>
+      <ol class="album-tracklist" aria-label="Album track list">
+        <li><button class="track-row is-active" type="button" data-track="0" aria-current="true"><span>01</span><span>Flashback</span><time>3:19</time></button></li>
+        <li><button class="track-row" type="button" data-track="1"><span>02</span><span>Ella Sonríe</span><time>3:02</time></button></li>
+        <li><button class="track-row" type="button" data-track="2"><span>03</span><span>Invencible</span><time>3:22</time></button></li>
+        <li><button class="track-row" type="button" data-track="3"><span>04</span><span>Electro Zikoziz</span><time>3:17</time></button></li>
+        <li><button class="track-row" type="button" data-track="4"><span>05</span><span>¿Fue Real?</span><time>2:55</time></button></li>
+        <li><button class="track-row" type="button" data-track="5"><span>06</span><span>Shutdown</span><time>2:56</time></button></li>
+        <li><button class="track-row" type="button" data-track="6"><span>07</span><span>Agorafobia</span><time>2:52</time></button></li>
+        <li><button class="track-row" type="button" data-track="7"><span>08</span><span>XXX</span><time>4:50</time></button></li>
+        <li><button class="track-row" type="button" data-track="8"><span>09</span><span>Suave</span><time>2:52</time></button></li>
+        <li><button class="track-row" type="button" data-track="9"><span>10</span><span>Karma Magnético</span><time>3:55</time></button></li>
+      </ol>
+    </section>
+  </div>
   <div class="case-body">
     <aside class="case-side"><div><div class="role-label">Role</div><p class="role">Founder<br>Artist & Project Developer<br>Creative & Musical Director<br>Songwriter</p></div><div><div class="outcome-label">Focus</div><p class="role">World-building<br>Team Leadership<br>Live Innovation<br>Media & Audience</p></div></aside>
     <div class="case-copy"><p>I founded Todos los Monstruos in Caracas in 2009 and led its development as both a musical project and a multidisciplinary creative universe.</p>
@@ -197,7 +254,7 @@ nav{display:block;padding:20px 5vw;border-bottom:1px solid #aaa;font-size:.875re
 </section>
 
 <section class="case" id="harakiri-robot">
-  <div class="case-head"><div class="case-number">03 / 03</div><div class="case-title"><h2>Harakiri<br>Robot</h2><div class="case-meta">Buenos Aires · Mexico City · Berlin · 2014—Present</div></div></div>
+  <div class="case-head"><div class="case-number">03 / 03</div><div class="case-title"><h2>#Harakiri<br>Robot</h2><div class="case-meta">Buenos Aires · Mexico City · Berlin · 2014—Present</div></div></div>
   <div class="case-body">
     <aside class="case-side"><div><div class="role-label">Role</div><p class="role">Founder<br>Artist & Project Developer<br>Songwriter<br>Creative Director<br>World-building</p></div><div><div class="outcome-label">Current Stage</div><p class="role">EP Pre-production<br>Crowdfunding<br>Supporter Kits<br>Release Strategy</p></div></aside>
     <div class="case-copy"><p>#HarakiriRobot began during the contractual period that prevented me from releasing new music with Todos los Monstruos. Initially developed between Buenos Aires and Mexico City, it remained largely unreleased before I resumed and reimagined it in Berlin in 2024.</p><p>The project is built around a cyberpunk and post-apocalyptic universe. Through music, visual identity and storytelling, it explores a central paradox of contemporary life: how technological hyperconnectivity can gradually erode genuine human connection.</p><div class="quote">The more connected the system becomes, the more disconnected its humans feel.</div><p>Currently in pre-production for a new EP, #HarakiriRobot brings together songwriting, electronic experimentation, visual world-building and a community-led release strategy. Its crowdfunding campaign is being developed around limited-edition supporter kits containing exclusive materials from the project's fictional universe—turning funding, storytelling and audience participation into one experience.</p><p>The project is also in early conversations with Desperados Records and British producer Dom Goldsmith of HÆLOS.</p>
@@ -236,6 +293,35 @@ flyerLightbox.addEventListener('close',()=>{
   flyerLightboxImage.src='';
   flyerLightboxImage.alt='';
 });
+</script>
+<script>
+(()=>{
+const tracks=[
+['Flashback','assets/audio/01-flashback.mp3','3:19'],
+['Ella Sonríe','assets/audio/02-ella-sonrie.mp3','3:02'],
+['Invencible','assets/audio/03-invencible.mp3','3:22'],
+['Electro Zikoziz','assets/audio/04-electro-zikoziz.mp3','3:17'],
+['¿Fue Real?','assets/audio/05-fue-real.mp3','2:55'],
+['Shutdown','assets/audio/06-shutdown.mp3','2:56'],
+['Agorafobia','assets/audio/07-agorafobia.mp3','2:52'],
+['XXX','assets/audio/08-xxx.mp3','4:50'],
+['Suave','assets/audio/09-suave.mp3','2:52'],
+['Karma Magnético','assets/audio/10-karma-magnetico.mp3','3:55']
+];
+const audio=document.getElementById('album-audio');if(!audio)return;
+const play=document.getElementById('album-play'),progress=document.getElementById('album-progress'),current=document.getElementById('album-current'),duration=document.getElementById('album-duration'),number=document.querySelector('.now-number'),title=document.querySelector('.now-title'),rows=[...document.querySelectorAll('.track-row')];let active=0;
+const format=s=>Number.isFinite(s)?Math.floor(s/60)+':'+String(Math.floor(s%60)).padStart(2,'0'):'0:00';
+const sync=()=>{const playing=!audio.paused;play.textContent=playing?'❚❚':'▶';play.setAttribute('aria-label',playing?'Pause album':'Play album')};
+const loadTrack=(index,autoplay=false)=>{active=(index+tracks.length)%tracks.length;const track=tracks[active];audio.src=track[1];number.textContent=String(active+1).padStart(2,'0');title.textContent=track[0];duration.textContent=track[2];current.textContent='0:00';progress.value=0;rows.forEach((row,i)=>{row.classList.toggle('is-active',i===active);if(i===active)row.setAttribute('aria-current','true');else row.removeAttribute('aria-current')});if(autoplay)audio.play().catch(sync);else sync()};
+play.addEventListener('click',()=>audio.paused?audio.play():audio.pause());
+document.getElementById('album-prev').addEventListener('click',()=>loadTrack(active-1,true));
+document.getElementById('album-next').addEventListener('click',()=>loadTrack(active+1,true));
+rows.forEach(row=>row.addEventListener('click',()=>loadTrack(Number(row.dataset.track),true)));
+audio.addEventListener('play',sync);audio.addEventListener('pause',sync);audio.addEventListener('ended',()=>loadTrack(active+1,true));
+audio.addEventListener('loadedmetadata',()=>duration.textContent=format(audio.duration));
+audio.addEventListener('timeupdate',()=>{current.textContent=format(audio.currentTime);progress.value=audio.duration?(audio.currentTime/audio.duration)*100:0});
+progress.addEventListener('input',()=>{if(audio.duration)audio.currentTime=(Number(progress.value)/100)*audio.duration});
+})();
 </script>
 </body>
 </html>
