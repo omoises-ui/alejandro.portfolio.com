@@ -126,11 +126,22 @@ nav{display:block;padding:20px 5vw;border-bottom:1px solid #aaa;font-size:.875re
 .case-side .album-player{margin:6px 0 0;padding:16px}
 .case-side .album-player h3{font-size:1.45rem}
 .case-side .album-tracklist{max-height:220px}
-.case-side .press-feature{margin:24px 0 0;padding-top:24px}
-.case-side .press-feature h3{font-size:clamp(1.75rem,7vw,2.35rem);line-height:1;letter-spacing:-1.2px}
-.case-side .press-feature>p{font-size:1rem;line-height:1.6}
-.case-side .press-archive{margin:24px 0 28px}
-.case-side .video-feature{margin:28px 0 8px}
+.case-side .album-player{grid-column:1/-1}
+.archive-layout{display:grid;grid-template-columns:minmax(0,1fr);gap:48px;margin:50px 0 56px;padding-top:36px;border-top:1px solid #999}
+.archive-layout .press-feature{margin:0;padding:0;border:0}
+.archive-layout .press-feature h3{font-size:clamp(2rem,8vw,3rem);letter-spacing:-1.7px}
+.archive-layout .press-feature>p{font-size:1rem;line-height:1.65}
+.archive-layout .press-grid{grid-auto-rows:27vw}
+.archive-layout .press-archive{margin:28px 0 32px}
+.archive-layout .flyer-collection{margin:0}
+.archive-layout .flyer-grid{grid-auto-rows:58vw}
+.archive-layout .video-feature{margin:30px 0 34px}
+.interview-archive{margin-top:38px;padding-top:26px;border-top:1px solid #999}
+.interview-archive h4{margin:6px 0 20px;font-size:1.55rem;line-height:1.05;letter-spacing:-.6px}
+.interview-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.interview-card{min-width:0}
+.interview-card figcaption{margin-top:8px;padding-top:8px;border-top:1px solid #aaa;font-size:.75rem;line-height:1.35;letter-spacing:.8px;text-transform:uppercase}
+.case-rail{display:none}
 
 @media(min-width:480px){
   .case-side{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -156,13 +167,17 @@ nav{display:block;padding:20px 5vw;border-bottom:1px solid #aaa;font-size:.875re
 }
 
 @media(min-width:960px){
+  .archive-layout{grid-template-columns:minmax(300px,.76fr) minmax(0,1.24fr);gap:58px;margin:68px 0 72px;padding-top:44px}
+  .archive-layout .press-feature h3{font-size:2.45rem;letter-spacing:-1.5px}
+  .archive-layout .press-grid{grid-auto-rows:105px}
+  .archive-layout .flyer-grid{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:245px;gap:14px}
+  .archive-layout .flyer-card--feature{grid-column:1/-1;grid-row:span 2}
+  .archive-layout .interview-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+  .case-body--continuation .case-rail{display:block}
+
   .press-feature{margin:64px 0 58px;padding-top:34px}
   .press-feature h3{font-size:clamp(3rem,4.2vw,4.4rem);letter-spacing:-2.7px}
   .press-grid{grid-auto-rows:150px}
-  .case-side .press-feature{margin-top:30px;padding-top:26px}
-  .case-side .press-feature h3{font-size:2.15rem;letter-spacing:-1.3px}
-  .case-side .press-grid{grid-auto-rows:88px}
-  .case-side .press-card{padding:5px}
 
   nav{padding:28px 6%}
   .intro{padding:100px 6% 90px}
@@ -244,7 +259,21 @@ nav{display:block;padding:20px 5vw;border-bottom:1px solid #aaa;font-size:.875re
         <li><button class="track-row" type="button" data-track="9"><span>10</span><span>Karma Magnético</span><time>3:55</time></button></li>
       </ol>
     </section>
-      <section class="press-feature" id="press-coverage" aria-labelledby="press-coverage-title">
+      
+    </aside>
+    <div class="case-copy"><p>I founded Todos los Monstruos in Caracas in 2009 and led its development as both a musical project and a multidisciplinary creative universe. By 2012, the sound we had developed in the studio—blending genres, electronic rhythms and technology—had become genuinely distinctive within the scene and its moment.</p>
+      <figure class="archive-figure album-artwork">
+        <img src="assets/todos-los-monstruos-album.webp" width="1536" height="1024" alt="Todos los Monstruos album artwork, physical edition and compact disc" loading="lazy">
+        <figcaption><span>Todos los Monstruos</span><span>Album artwork · Physical edition</span></figcaption>
+      </figure>
+      <figure class="archive-figure archive-figure--ep">
+        <img src="assets/todos-los-monstruos-ep-flashback.webp" width="1448" height="1086" alt="Flashback promotional EP by Todos los Monstruos" loading="lazy">
+        <figcaption><span>EP Flashback</span><span>Primer sencillo de la banda · 2012</span></figcaption>
+      </figure><p>In collaboration with Venezuelan visual artist Jean Piero Montilla, I created a distinctive conceptual language connecting the music with artwork, flyers, press materials, storytelling and live performance. The project combined songwriting and electronic experimentation with Ableton Live and unconventional controllers—including PlayStation controllers used for real-time sampling.</p>
+      </div>
+  </div>
+  <div class="archive-layout" aria-label="Visual identity and media archive">
+    <section class="press-feature" id="press-coverage" aria-labelledby="press-coverage-title">
         <div class="press-eyebrow">Press &amp; cultural impact</div>
         <h3 id="press-coverage-title">From an underground project to national coverage.</h3>
         <p>As a result of the work across music production, live production and press strategy, we achieved a level of media coverage that was significant for an underground, fully independent artist.</p>
@@ -270,25 +299,37 @@ nav{display:block;padding:20px 5vw;border-bottom:1px solid #aaa;font-size:.875re
         </figure>
         <figure class="video-feature">
           <div class="video-frame"><iframe src="https://www.youtube.com/embed/5FyNnmZpv6I" title="Todos los Monstruos — video archive" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" loading="lazy" allowfullscreen></iframe></div>
-          <figcaption><span>Todos los Monstruos</span><span>Video archive</span></figcaption>
+          <figcaption><span>Video clip oficial</span><span>Sencillo “Invencible”</span></figcaption>
         </figure>
         <p>The video below brings together a selection of this coverage and documents the live-event production developed through the Todos los Monstruos collective. For our most important shows, we expanded the concert format into a multidisciplinary showcase featuring artists from different disciplines.</p>
         <figure class="video-feature">
           <div class="video-frame"><iframe src="https://www.youtube.com/embed/2SGPw8NNtTg?start=1" title="Todos los Monstruos — press and live production retrospective" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" loading="lazy" allowfullscreen></iframe></div>
           <figcaption><span>Press and live-production retrospective</span><span>Todos los Monstruos collective</span></figcaption>
         </figure>
+              <section class="interview-archive" aria-labelledby="interview-archive-title">
+          <div class="press-eyebrow">Selected interviews</div>
+          <h4 id="interview-archive-title">Conversations in the media</h4>
+          <div class="interview-grid">
+            <figure class="interview-card">
+              <div class="video-frame"><iframe src="https://www.youtube.com/embed/j5EfwECIsWQ" title="Todos los Monstruos — media interview 01" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" loading="lazy" allowfullscreen></iframe></div>
+              <figcaption>Interview archive · 01</figcaption>
+            </figure>
+            <figure class="interview-card">
+              <div class="video-frame"><iframe src="https://www.youtube.com/embed/TOumGiXLf8M" title="Todos los Monstruos — media interview 02" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" loading="lazy" allowfullscreen></iframe></div>
+              <figcaption>Interview archive · 02</figcaption>
+            </figure>
+            <figure class="interview-card">
+              <div class="video-frame"><iframe src="https://www.youtube.com/embed/nsqgVH9fUHc" title="Todos los Monstruos — media interview 03" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" loading="lazy" allowfullscreen></iframe></div>
+              <figcaption>Interview archive · 03</figcaption>
+            </figure>
+            <figure class="interview-card">
+              <div class="video-frame"><iframe src="https://www.youtube.com/embed/7IkLNsVZBa8" title="Todos los Monstruos — media interview 04" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" loading="lazy" allowfullscreen></iframe></div>
+              <figcaption>Interview archive · 04</figcaption>
+            </figure>
+          </div>
+        </section>
       </section>
-    </aside>
-    <div class="case-copy"><p>I founded Todos los Monstruos in Caracas in 2009 and led its development as both a musical project and a multidisciplinary creative universe. By 2012, the sound we had developed in the studio—blending genres, electronic rhythms and technology—had become genuinely distinctive within the scene and its moment.</p>
-      <figure class="archive-figure album-artwork">
-        <img src="assets/todos-los-monstruos-album.webp" width="1536" height="1024" alt="Todos los Monstruos album artwork, physical edition and compact disc" loading="lazy">
-        <figcaption><span>Todos los Monstruos</span><span>Album artwork · Physical edition</span></figcaption>
-      </figure>
-      <figure class="archive-figure archive-figure--ep">
-        <img src="assets/todos-los-monstruos-ep-flashback.webp" width="1448" height="1086" alt="Flashback promotional EP by Todos los Monstruos" loading="lazy">
-        <figcaption><span>EP Flashback</span><span>Primer sencillo de la banda · 2012</span></figcaption>
-      </figure><p>In collaboration with Venezuelan visual artist Jean Piero Montilla, I created a distinctive conceptual language connecting the music with artwork, flyers, press materials, storytelling and live performance. The project combined songwriting and electronic experimentation with Ableton Live and unconventional controllers—including PlayStation controllers used for real-time sampling.</p>
-      <figure class="archive-figure flyer-collection">
+    <figure class="archive-figure flyer-collection">
         <div class="flyer-grid" aria-label="Muestra de flyers de Todos los Monstruos">
           <button class="flyer-card flyer-card--feature" type="button" data-full="assets/tlm-flyer-flashback.webp" aria-label="Ampliar flyer del lanzamiento de Flashback">
             <img src="assets/tlm-flyer-flashback.webp" width="886" height="1476" alt="Flyer amarillo y azul del lanzamiento de Flashback" loading="lazy">
@@ -308,6 +349,10 @@ nav{display:block;padding:20px 5vw;border-bottom:1px solid #aaa;font-size:.875re
         </div>
         <figcaption><span>Muestra de material gráfico</span><span>Colaboración con Jean Piero Montilla · Clic para ampliar</span></figcaption>
       </figure>
+  </div>
+  <div class="case-body case-body--continuation">
+    <div class="case-rail" aria-hidden="true"></div>
+    <div class="case-copy">
       <figure class="video-feature">
         <div class="video-frame"><iframe src="https://www.youtube.com/embed/c6GjsPSOo2Q?si=jP8AseE3213DxNOf" title="Todos los Monstruos — live sampling with PlayStation controllers" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" loading="lazy" allowfullscreen></iframe></div>
         <figcaption><span>Live experimentation</span><span>PlayStation controllers · Real-time sampling</span></figcaption>
