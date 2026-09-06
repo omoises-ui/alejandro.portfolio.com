@@ -134,9 +134,13 @@ nav{display:block;padding:20px 5vw;border-bottom:1px solid #aaa;font-size:.875re
 .archive-layout .press-grid{grid-auto-rows:27vw}
 .archive-layout .press-archive{margin:28px 0 32px}
 .archive-layout .flyer-collection{margin:0}
+.archive-right{min-width:0}
+.invencible-feature{margin:0 0 38px}
+.invencible-feature .video-frame{box-shadow:0 14px 36px rgba(0,0,0,.12)}
+.invencible-feature figcaption{padding-top:12px}
 .archive-layout .flyer-grid{grid-auto-rows:58vw}
 .archive-layout .video-feature{margin:30px 0 34px}
-.interview-archive{margin-top:38px;padding-top:26px;border-top:1px solid #999}
+.interview-archive{margin:32px 0 38px;padding-top:26px;border-top:1px solid #999}
 .interview-archive h4{margin:6px 0 20px;font-size:1.55rem;line-height:1.05;letter-spacing:-.6px}
 .interview-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
 .interview-card{min-width:0}
@@ -297,16 +301,8 @@ nav{display:block;padding:20px 5vw;border-bottom:1px solid #aaa;font-size:.875re
           </div>
           <figcaption><span>Selected press coverage · 2012—2013</span><span>Independent media impact · Click to enlarge</span></figcaption>
         </figure>
-        <figure class="video-feature">
-          <div class="video-frame"><iframe src="https://www.youtube.com/embed/5FyNnmZpv6I" title="Todos los Monstruos — video archive" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" loading="lazy" allowfullscreen></iframe></div>
-          <figcaption><span>Video clip oficial</span><span>Sencillo “Invencible”</span></figcaption>
-        </figure>
-        <p>The video below brings together a selection of this coverage and documents the live-event production developed through the Todos los Monstruos collective. For our most important shows, we expanded the concert format into a multidisciplinary showcase featuring artists from different disciplines.</p>
-        <figure class="video-feature">
-          <div class="video-frame"><iframe src="https://www.youtube.com/embed/2SGPw8NNtTg?start=1" title="Todos los Monstruos — press and live production retrospective" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" loading="lazy" allowfullscreen></iframe></div>
-          <figcaption><span>Press and live-production retrospective</span><span>Todos los Monstruos collective</span></figcaption>
-        </figure>
-              <section class="interview-archive" aria-labelledby="interview-archive-title">
+
+<section class="interview-archive" aria-labelledby="interview-archive-title">
           <div class="press-eyebrow">Selected interviews</div>
           <h4 id="interview-archive-title">Conversations in the media</h4>
           <div class="interview-grid">
@@ -328,8 +324,21 @@ nav{display:block;padding:20px 5vw;border-bottom:1px solid #aaa;font-size:.875re
             </figure>
           </div>
         </section>
+        
+        <p>The video below brings together a selection of this coverage and documents the live-event production developed through the Todos los Monstruos collective. For our most important shows, we expanded the concert format into a multidisciplinary showcase featuring artists from different disciplines.</p>
+        <figure class="video-feature">
+          <div class="video-frame"><iframe src="https://www.youtube.com/embed/2SGPw8NNtTg?start=1" title="Todos los Monstruos — press and live production retrospective" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" loading="lazy" allowfullscreen></iframe></div>
+          <figcaption><span>Press and live-production retrospective</span><span>Todos los Monstruos collective</span></figcaption>
+        </figure>
+              
       </section>
-    <figure class="archive-figure flyer-collection">
+    <div class="archive-right">
+<figure class="video-feature invencible-feature">
+          <div class="video-frame"><iframe src="https://www.youtube.com/embed/5FyNnmZpv6I" title="Todos los Monstruos — video archive" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" loading="lazy" allowfullscreen></iframe></div>
+          <figcaption><span>Video clip oficial</span><span>Sencillo “Invencible”</span></figcaption>
+        </figure>
+
+<figure class="archive-figure flyer-collection">
         <div class="flyer-grid" aria-label="Muestra de flyers de Todos los Monstruos">
           <button class="flyer-card flyer-card--feature" type="button" data-full="assets/tlm-flyer-flashback.webp" aria-label="Ampliar flyer del lanzamiento de Flashback">
             <img src="assets/tlm-flyer-flashback.webp" width="886" height="1476" alt="Flyer amarillo y azul del lanzamiento de Flashback" loading="lazy">
@@ -349,6 +358,7 @@ nav{display:block;padding:20px 5vw;border-bottom:1px solid #aaa;font-size:.875re
         </div>
         <figcaption><span>Muestra de material gráfico</span><span>Colaboración con Jean Piero Montilla · Clic para ampliar</span></figcaption>
       </figure>
+</div>
   </div>
   <div class="case-body case-body--continuation">
     <div class="case-rail" aria-hidden="true"></div>
