@@ -1,108 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Education — Alejandro</title>
-  <style>
-    *{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:Arial,Helvetica,sans-serif;background:#f5f3ee;color:#111;line-height:1.4}
-    nav{display:flex;justify-content:space-between;align-items:center;padding:28px 6%;font-size:14px}
-    nav .logo{font-weight:bold;letter-spacing:1px}
-    nav a{color:#111;text-decoration:none;margin-left:24px}
-    nav a:hover{opacity:.5}
-    .page-header{padding:90px 6% 70px;border-top:1px solid #ccc}
-    .eyebrow{font-size:13px;text-transform:uppercase;letter-spacing:2px;margin-bottom:28px}
-    h1{font-size:clamp(58px,8vw,120px);line-height:.9;letter-spacing:-4px}
-    .intro{margin-top:35px;max-width:760px;font-size:21px;line-height:1.5}
-    .education-columns{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid #bbb;border-bottom:1px solid #bbb;margin:0 6% 100px}
-    .education-column{padding:35px 38px 10px}
-    .education-column:first-child{border-right:1px solid #bbb}
-    .education-column-title{font-size:13px;text-transform:uppercase;letter-spacing:2px;margin-bottom:40px;opacity:.6}
-    .education-entry{padding:0 0 34px;margin-bottom:34px;border-bottom:1px solid #ccc}
-    .education-entry:last-child{border-bottom:none;margin-bottom:0}
-    .education-date{font-size:13px;text-transform:uppercase;letter-spacing:1px;opacity:.55;margin-bottom:12px}
-    .education-entry h2{font-size:clamp(22px,2.2vw,31px);line-height:1.08;letter-spacing:-1px;margin-bottom:8px}
-    .education-institution{font-size:15px;font-weight:700;margin-bottom:10px}
-    .education-entry p{font-size:15px;line-height:1.55;max-width:520px}
-    footer{padding:70px 6%;background:#111;color:#fff}
-    footer h2{font-size:clamp(40px,6vw,80px);letter-spacing:-2px;margin-bottom:25px}
-    @media(max-width:800px){nav .links{display:none}.page-header{padding-top:60px}.education-columns{grid-template-columns:1fr;margin-bottom:70px}.education-column{padding:30px 0 0}.education-column:first-child{border-right:none;border-bottom:1px solid #bbb;padding-bottom:15px}.education-column:last-child{padding-top:40px}.education-columns{margin-left:6%;margin-right:6%}}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Alejandro's education and professional development supporting a career in A&R, artist development and music business.">
+<title>Education for A&R & Music Business — Alejandro</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}body{font-family:Arial,Helvetica,sans-serif;background:#f5f3ee;color:#111;line-height:1.4}a{color:inherit}nav{display:flex;justify-content:space-between;align-items:center;padding:24px 6%;border-bottom:1px solid #bbb;font-size:14px}.logo{font-weight:700;letter-spacing:1px}.nav-right{display:flex;align-items:center;gap:24px}.links{display:flex;gap:24px}.links a,.lang-switch button{text-decoration:none;border:0;background:transparent;font:inherit;color:inherit;cursor:pointer}.links a:hover,.lang-switch button:hover{opacity:.5}.lang-switch{display:flex;gap:8px}.lang-switch button.active{font-weight:700;text-decoration:underline;text-underline-offset:4px}.page-header{padding:88px 6% 72px}.eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:1.8px;margin-bottom:24px}.page-header h1{font-size:clamp(56px,8vw,116px);line-height:.9;letter-spacing:-4px}.intro{margin-top:34px;max-width:820px;font-size:21px;line-height:1.55}.positioning{padding:0 6% 76px;max-width:1100px;font-size:18px;line-height:1.65}.education-columns{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid #bbb;border-bottom:1px solid #bbb;margin:0 6% 90px}.education-column{padding:34px 38px 10px}.education-column:first-child{border-right:1px solid #bbb}.education-column-title{font-size:12px;text-transform:uppercase;letter-spacing:1.8px;margin-bottom:38px;opacity:.6}.education-entry{padding:0 0 32px;margin-bottom:32px;border-bottom:1px solid #ccc}.education-entry:last-child{border-bottom:none;margin-bottom:0}.education-date{font-size:12px;text-transform:uppercase;letter-spacing:1px;opacity:.55;margin-bottom:11px}.education-entry h2{font-size:clamp(22px,2.2vw,30px);line-height:1.08;letter-spacing:-1px;margin-bottom:8px}.education-institution{font-size:15px;font-weight:700;margin-bottom:10px}.education-entry p{font-size:15px;line-height:1.58;max-width:520px}.aar-note{margin:0 6% 90px;padding:34px 0;border-top:2px solid #111;border-bottom:1px solid #bbb}.aar-note h2{font-size:clamp(34px,5vw,64px);line-height:1;letter-spacing:-2px;max-width:900px}.aar-note p{margin-top:20px;max-width:800px;font-size:17px;line-height:1.6}footer{padding:70px 6%;background:#111;color:#fff}footer h2{font-size:clamp(40px,6vw,78px);line-height:1;letter-spacing:-2px;margin-bottom:22px}footer p{max-width:760px;opacity:.76}
+@media(max-width:800px){nav .links{display:none}.page-header{padding:58px 5vw}.page-header h1{letter-spacing:-2px}.intro{font-size:18px}.positioning{padding:0 5vw 58px}.education-columns{grid-template-columns:1fr;margin:0 5vw 68px}.education-column{padding:28px 0 0}.education-column:first-child{border-right:none;border-bottom:1px solid #bbb;padding-bottom:12px}.education-column:last-child{padding-top:38px}.aar-note{margin:0 5vw 70px}}
+</style>
 </head>
 <body>
-  <nav>
-    <div class="logo">ALEJANDRO</div>
-    <div class="links">
-      <a href="index.html">Home</a>
-      <a href="index.html#work">Portfolio</a>
-      <a href="index.html#about">About</a>
-      <a href="index.html#contact">Contact</a>
-    </div>
-  </nav>
-  <main>
-    <section class="page-header">
-      <div class="eyebrow">Education</div>
-      <h1>Education &<br>Professional Development</h1>
-      <p class="intro">Academic education, professional training and the integration path that supports my work in Germany.</p>
-    </section>
-
-    <section class="education-columns">
-      <div class="education-column">
-        <div class="education-column-title">Education & Professional Development</div>
-
-        <div class="education-entry">
-          <div class="education-date">Oct. 2000 — Jul. 2006</div>
-          <h2>Communication Sciences</h2>
-          <div class="education-institution">Universidad Bicentenaria de Aragua · Venezuela</div>
-          <p>Completed university degree, 10 semesters. Focus: Corporate Communication.</p>
-        </div>
-
-        <div class="education-entry">
-          <div class="education-date">May 2018 — Dec. 2018</div>
-          <h2>Business Model Development</h2>
-          <div class="education-institution">NAVES Program — IAE Business School, Universidad Austral · Argentina</div>
-          <p>Training and competition focused on business-model development.</p>
-        </div>
-
-        <div class="education-entry">
-          <div class="education-date">Jul. 2017 — Dec. 2017</div>
-          <h2>Business Model Development & Pitch Presentations</h2>
-          <div class="education-institution">Vos Lo Hacés — Government of the City of Buenos Aires · Argentina</div>
-          <p>Entrepreneurship school focused on developing business models and presenting pitches.</p>
-        </div>
-
-        <div class="education-entry">
-          <div class="education-date">Dec. 2014 — Dec. 2015</div>
-          <h2>Creativity, Strategic Communication & Art Direction</h2>
-          <div class="education-institution">Brother Ad School Worldwide · Argentina</div>
-          <p>Professional training in creativity, strategic communication and art direction.</p>
-        </div>
-      </div>
-
-      <div class="education-column">
-        <div class="education-column-title">Professional Integration in Germany</div>
-
-        <div class="education-entry">
-          <div class="education-date">May 2022 — Jul. 2026</div>
-          <h2>German B1 Integration Course & Professional B2</h2>
-          <div class="education-institution">Job Konzept · Germany</div>
-          <p>German-language integration training and professionally oriented B2 German.</p>
-        </div>
-
-        <div class="education-entry">
-          <div class="education-date">Mar. 2025 — Sep. 2025</div>
-          <h2>Professional Integration & Education Counseling</h2>
-          <div class="education-institution">Beratung, Bildung und Beruf Berlin / GesBiT · Germany</div>
-          <p>Official counseling focused on professional integration and educational guidance.</p>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <h2>Let’s work together.</h2>
-    <p>Berlin, Germany</p>
-  </footer>
+<nav><div class="logo">ALEJANDRO</div><div class="nav-right"><div class="links"><a href="index.html" data-en="Home" data-de="Start">Home</a><a href="index.html#work" data-en="Portfolio" data-de="Portfolio">Portfolio</a><a href="index.html#contact" data-en="Contact" data-de="Kontakt">Contact</a></div><div class="lang-switch" aria-label="Language"><button type="button" data-lang="en" class="active">EN</button><span>/</span><button type="button" data-lang="de">DE</button></div></div></nav>
+<main>
+<section class="page-header"><div class="eyebrow" data-en="Education · Business · Integration" data-de="Ausbildung · Business · Integration">Education · Business · Integration</div><h1 data-i18n-html data-en="Education for<br>the A&amp;R Path" data-de="Ausbildung für<br>den A&amp;R-Weg">Education for<br>the A&amp;R Path</h1><p class="intro" data-en="My education combines communication, creativity, business-model development and professional integration in Germany — disciplines that strengthen the commercial, strategic and cultural side of my artist-development experience." data-de="Meine Ausbildung verbindet Kommunikation, Kreativität, Geschäftsmodellentwicklung und berufliche Integration in Deutschland – Bereiche, die die kommerzielle, strategische und kulturelle Seite meiner Erfahrung in der Künstlerentwicklung stärken.">My education combines communication, creativity, business-model development and professional integration in Germany — disciplines that strengthen the commercial, strategic and cultural side of my artist-development experience.</p></section>
+<section class="positioning" data-en="For A&R, I see education as a complement to instinct. Communication helps me read people and narratives. Creative training helps me shape positioning. Business education helps me evaluate sustainability. German-language and integration training help me operate more effectively in the market where I am building the next stage of my career." data-de="Für A&R sehe ich Ausbildung als Ergänzung zum Instinkt. Kommunikation hilft mir, Menschen und Narrative zu lesen. Kreativtraining stärkt meine Positionierungsarbeit. Business-Ausbildung hilft mir, Nachhaltigkeit zu bewerten. Deutsch- und Integrationskurse unterstützen mich dabei, im Markt, in dem ich meine nächste Karrierephase aufbaue, wirksamer zu arbeiten.">For A&R, I see education as a complement to instinct. Communication helps me read people and narratives. Creative training helps me shape positioning. Business education helps me evaluate sustainability. German-language and integration training help me operate more effectively in the market where I am building the next stage of my career.</section>
+<section class="education-columns">
+<div class="education-column"><div class="education-column-title" data-en="Education & Professional Development" data-de="Ausbildung & berufliche Entwicklung">Education & Professional Development</div>
+<div class="education-entry"><div class="education-date">Oct. 2000 — Jul. 2006</div><h2 data-en="Communication Sciences" data-de="Kommunikationswissenschaften">Communication Sciences</h2><div class="education-institution">Universidad Bicentenaria de Aragua · Venezuela</div><p data-en="University degree focused on communication, research, media and corporate communication — the academic foundation for my editorial judgement and audience understanding." data-de="Hochschulabschluss mit Schwerpunkt Kommunikation, Recherche, Medien und Unternehmenskommunikation – die akademische Grundlage für mein redaktionelles Urteilsvermögen und Zielgruppenverständnis.">University degree focused on communication, research, media and corporate communication — the academic foundation for my editorial judgement and audience understanding.</p></div>
+<div class="education-entry"><div class="education-date">May 2018 — Dec. 2018</div><h2 data-en="Business Model Development" data-de="Geschäftsmodellentwicklung">Business Model Development</h2><div class="education-institution">NAVES Program — IAE Business School, Universidad Austral · Argentina</div><p data-en="Training in business-model design, validation and commercial thinking — useful for evaluating how creative projects can become sustainable ventures." data-de="Training in Geschäftsmodell-Design, Validierung und kommerziellem Denken – relevant für die Frage, wie kreative Projekte nachhaltig aufgebaut werden können.">Training in business-model design, validation and commercial thinking — useful for evaluating how creative projects can become sustainable ventures.</p></div>
+<div class="education-entry"><div class="education-date">Jul. 2017 — Dec. 2017</div><h2 data-en="Business Model Development & Pitch Presentations" data-de="Geschäftsmodellentwicklung & Pitch-Präsentationen">Business Model Development & Pitch Presentations</h2><div class="education-institution">Vos Lo Hacés — Government of the City of Buenos Aires · Argentina</div><p data-en="Entrepreneurship training focused on structuring ideas, building viable models and communicating them clearly to decision-makers." data-de="Entrepreneurship-Training mit Fokus auf Strukturierung von Ideen, tragfähige Modelle und klare Präsentation gegenüber Entscheidungsträgern.">Entrepreneurship training focused on structuring ideas, building viable models and communicating them clearly to decision-makers.</p></div>
+<div class="education-entry"><div class="education-date">Dec. 2014 — Dec. 2015</div><h2 data-en="Creativity, Strategic Communication & Art Direction" data-de="Kreativität, strategische Kommunikation & Art Direction">Creativity, Strategic Communication & Art Direction</h2><div class="education-institution">Brother Ad School Worldwide · Argentina</div><p data-en="Professional training in concept development, positioning, creative strategy and communication — skills I now apply to artist identity and development." data-de="Professionelle Weiterbildung in Konzeptentwicklung, Positionierung, Kreativstrategie und Kommunikation – Fähigkeiten, die ich heute auf Künstleridentität und -entwicklung anwende.">Professional training in concept development, positioning, creative strategy and communication — skills I now apply to artist identity and development.</p></div>
+</div>
+<div class="education-column"><div class="education-column-title" data-en="Professional Integration in Germany" data-de="Berufliche Integration in Deutschland">Professional Integration in Germany</div>
+<div class="education-entry"><div class="education-date">May 2022 — Jul. 2026</div><h2 data-en="German B1 Integration Course & Professional B2" data-de="Deutsch B1 Integrationskurs & berufliches B2">German B1 Integration Course & Professional B2</h2><div class="education-institution">Job Konzept · Germany</div><p data-en="German-language training with a professional focus, supporting my integration into the German music and creative industries." data-de="Deutschtraining mit beruflichem Schwerpunkt zur Unterstützung meiner Integration in die deutsche Musik- und Kreativwirtschaft.">German-language training with a professional focus, supporting my integration into the German music and creative industries.</p></div>
+<div class="education-entry"><div class="education-date">Mar. 2025 — Sep. 2025</div><h2 data-en="Professional Integration & Education Counseling" data-de="Berufliche Integration & Bildungsberatung">Professional Integration & Education Counseling</h2><div class="education-institution">Beratung, Bildung und Beruf Berlin / GesBiT · Germany</div><p data-en="Official guidance focused on professional integration, education pathways and positioning my previous experience for the German market." data-de="Beratung mit Fokus auf berufliche Integration, Bildungswege und die Positionierung meiner bisherigen Erfahrung für den deutschen Markt.">Official guidance focused on professional integration, education pathways and positioning my previous experience for the German market.</p></div>
+</div>
+</section>
+<section class="aar-note"><h2 data-en="The objective is clear: move from artist-side development into professional A&R." data-de="Das Ziel ist klar: von Künstlerentwicklung auf Artist-Seite in professionelles A&R wechseln.">The objective is clear: move from artist-side development into professional A&R.</h2><p data-en="My education supports that transition by adding business structure, strategic communication and local-market integration to experience I already built through real music projects." data-de="Meine Ausbildung unterstützt diesen Übergang, indem sie Business-Struktur, strategische Kommunikation und lokale Marktintegration zu Erfahrungen ergänzt, die ich bereits durch reale Musikprojekte aufgebaut habe.">My education supports that transition by adding business structure, strategic communication and local-market integration to experience I already built through real music projects.</p></section>
+</main>
+<footer><h2 data-en="Creative instinct. Business structure." data-de="Kreativer Instinkt. Business-Struktur.">Creative instinct. Business structure.</h2><p data-en="Berlin, Germany · Building toward A&R and artist development roles in the music industry." data-de="Berlin, Deutschland · Fokus auf A&R- und Künstlerentwicklungsrollen in der Musikindustrie.">Berlin, Germany · Building toward A&R and artist development roles in the music industry.</p></footer>
+<script>(()=>{const b=[...document.querySelectorAll('[data-lang]')],n=[...document.querySelectorAll('[data-en][data-de]')];const a=l=>{document.documentElement.lang=l;localStorage.setItem('portfolioLang',l);n.forEach(e=>{const v=e.dataset[l];if(v==null)return;if(e.hasAttribute('data-i18n-html'))e.innerHTML=v;else e.textContent=v});b.forEach(x=>x.classList.toggle('active',x.dataset.lang===l))};b.forEach(x=>x.addEventListener('click',()=>a(x.dataset.lang)));a(localStorage.getItem('portfolioLang')==='de'?'de':'en')})();</script>
 </body>
 </html>
