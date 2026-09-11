@@ -3,180 +3,44 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Alejandro's journalism and broadcast production portfolio: national television reporting and radio production in Venezuela.">
-<title>Journalism & Broadcast Production — Alejandro</title>
+<meta name="description" content="Alejandro's journalism and broadcast production background, positioned as editorial and research experience relevant to A&R and artist development.">
+<title>Editorial Judgement & Media — Alejandro</title>
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{min-width:320px;overflow-x:hidden;font-family:Arial,Helvetica,sans-serif;background:#f5f3ee;color:#111;line-height:1.45}
-a{color:inherit}
-nav{display:flex;justify-content:space-between;align-items:center;padding:24px 6%;border-bottom:1px solid #aaa;font-size:14px}
-.logo{font-weight:700;letter-spacing:1px}
-.links{display:flex;gap:24px}
-nav a{text-decoration:none}
-nav a:hover,.back:hover{opacity:.5}
-.page-header{padding:78px 6% 82px}
-.eyebrow,.section-kicker,.piece-meta,.radio-meta{font-size:12px;text-transform:uppercase;letter-spacing:1.7px}
-.page-header h1{max-width:1180px;margin-top:22px;font-size:clamp(3.2rem,9vw,7.4rem);line-height:.88;letter-spacing:-4px}
-.page-header p{max-width:810px;margin-top:36px;font-size:clamp(1.15rem,2.2vw,1.5rem);line-height:1.55}
-.intro-grid{display:grid;grid-template-columns:minmax(0,.75fr) minmax(0,1.25fr);gap:70px;padding:0 6% 90px}
-.intro-side{font-size:14px;line-height:1.7}
-.intro-side strong{display:block;margin-bottom:8px;font-size:12px;text-transform:uppercase;letter-spacing:1.5px}
-.intro-copy{max-width:800px;font-size:18px;line-height:1.7}
-.intro-copy p+p{margin-top:22px}
-.section{padding:78px 6%;border-top:1px solid #999}
-.section-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,.75fr);gap:50px;align-items:end;margin-bottom:46px}
-.section h2{font-size:clamp(2.7rem,6vw,5.2rem);line-height:.92;letter-spacing:-2.7px}
-.section-head p{max-width:520px;font-size:16px;line-height:1.65}
-.tv-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:34px}
-.tv-piece{min-width:0}
-.video-frame{position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;background:#111}
-.video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-.piece-caption{display:grid;grid-template-columns:50px minmax(0,1fr);gap:18px;padding-top:14px;margin-top:12px;border-top:1px solid #aaa}
-.piece-number{font-size:12px;letter-spacing:1px;opacity:.45}
-.piece-caption h3{font-size:clamp(1.3rem,2.4vw,2rem);line-height:1.05;letter-spacing:-.8px}
-.piece-meta{margin-top:8px;opacity:.55}
-.radio-section{background:#111;color:#f5f3ee;border-top:0}
-.radio-section .section-head{border-bottom:1px solid #555;padding-bottom:34px}
-.radio-section .section-head p{opacity:.72}
-.radio-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid #444}
-.radio-card{min-height:300px;padding:34px 32px 36px;border-right:1px solid #444;border-bottom:1px solid #444}
-.radio-card:nth-child(2n){border-right:0}
-.radio-number{font-size:12px;letter-spacing:1px;opacity:.4;margin-bottom:54px}
-.radio-card h3{font-size:clamp(2rem,4vw,3.5rem);line-height:.95;letter-spacing:-2px;margin-bottom:18px}
-.radio-card p{max-width:520px;font-size:15px;line-height:1.65;opacity:.75}
-.radio-meta{margin-top:26px;opacity:.46}
-.archive-status{display:inline-block;margin-top:26px;padding:8px 10px;border:1px solid #666;font-size:11px;text-transform:uppercase;letter-spacing:1.3px;opacity:.68}
-.broadcast-video-placeholder{display:flex;align-items:center;justify-content:center;width:100%;aspect-ratio:16/9;margin-top:28px;border:1px solid #555;background:#0a0a0a;color:#f5f3ee;font-size:11px;text-transform:uppercase;letter-spacing:1.3px;opacity:.72;text-align:center;padding:18px}
-.skills{padding:76px 6% 82px;border-top:1px solid #999}
-.skills h2{font-size:clamp(2.6rem,6vw,5rem);line-height:.95;letter-spacing:-2.6px;margin-bottom:38px}
-.skills-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid #aaa}
-.skill{padding:18px 0;border-bottom:1px solid #bbb;font-size:14px;text-transform:uppercase;letter-spacing:1px}
-.skill:nth-child(odd){padding-right:26px;border-right:1px solid #bbb}
-.skill:nth-child(even){padding-left:26px}
-footer{padding:72px 6%;background:#111;color:#fff}
-footer h2{font-size:clamp(2.7rem,7vw,5.3rem);line-height:1;letter-spacing:-2.5px;margin-bottom:30px}
-.back{display:inline-block;margin-top:30px;text-decoration:none;font-size:12px;text-transform:uppercase;letter-spacing:1.4px}
-@media(max-width:800px){nav .links{display:none}.page-header{padding:58px 5vw 62px}.page-header h1{letter-spacing:-2.7px}.intro-grid,.section-head,.tv-grid,.radio-grid,.skills-grid{grid-template-columns:1fr}.intro-grid{gap:30px;padding:0 5vw 68px}.section,.skills{padding:58px 5vw 64px}.section-head{gap:18px;margin-bottom:34px}.radio-card{min-height:auto;padding:28px 0;border-right:0}.skill:nth-child(odd),.skill:nth-child(even){padding-left:0;padding-right:0;border-right:0}.piece-caption{grid-template-columns:38px 1fr}}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}body{min-width:320px;overflow-x:hidden;font-family:Arial,Helvetica,sans-serif;background:#f5f3ee;color:#111;line-height:1.45}a{color:inherit}nav{display:flex;justify-content:space-between;align-items:center;padding:24px 6%;border-bottom:1px solid #aaa;font-size:14px}.logo{font-weight:700;letter-spacing:1px}.nav-right{display:flex;align-items:center;gap:24px}.links{display:flex;gap:24px}.links a,.lang-switch button{text-decoration:none;border:0;background:transparent;color:inherit;font:inherit;cursor:pointer}.links a:hover,.back:hover,.lang-switch button:hover{opacity:.5}.lang-switch{display:flex;gap:8px;align-items:center}.lang-switch button.active{font-weight:700;text-decoration:underline;text-underline-offset:4px}.page-header{padding:78px 6% 82px}.eyebrow,.section-kicker,.piece-meta,.broadcast-meta{font-size:12px;text-transform:uppercase;letter-spacing:1.7px}.page-header h1{max-width:1180px;margin-top:22px;font-size:clamp(3.2rem,9vw,7.2rem);line-height:.88;letter-spacing:-4px}.page-header p{max-width:850px;margin-top:36px;font-size:clamp(1.15rem,2.2vw,1.5rem);line-height:1.55}.bridge{display:grid;grid-template-columns:minmax(0,.72fr) minmax(0,1.28fr);gap:70px;padding:0 6% 90px}.bridge-side{font-size:14px;line-height:1.75}.bridge-side strong{display:block;margin-bottom:8px;font-size:12px;text-transform:uppercase;letter-spacing:1.5px}.bridge-copy{max-width:820px;font-size:18px;line-height:1.7}.bridge-copy p+p{margin-top:22px}.section{padding:78px 6%;border-top:1px solid #999}.section-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,.75fr);gap:50px;align-items:end;margin-bottom:46px}.section h2{font-size:clamp(2.7rem,6vw,5.1rem);line-height:.92;letter-spacing:-2.7px}.section-head p{max-width:540px;font-size:16px;line-height:1.65}.tv-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:34px}.tv-piece{min-width:0}.video-frame{position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;background:#111}.video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}.piece-caption{display:grid;grid-template-columns:50px minmax(0,1fr);gap:18px;padding-top:14px;margin-top:12px;border-top:1px solid #aaa}.piece-number{font-size:12px;letter-spacing:1px;opacity:.45}.piece-caption h3{font-size:clamp(1.3rem,2.4vw,2rem);line-height:1.05;letter-spacing:-.8px}.piece-meta{margin-top:8px;opacity:.55}.broadcast-section{background:#111;color:#f5f3ee;border-top:0}.broadcast-section .section-head{border-bottom:1px solid #555;padding-bottom:34px}.broadcast-section .section-head p{opacity:.72}.broadcast-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid #444}.broadcast-card{min-height:320px;padding:34px 32px 36px;border-right:1px solid #444;border-bottom:1px solid #444}.broadcast-card:nth-child(2n){border-right:0}.broadcast-number{font-size:12px;letter-spacing:1px;opacity:.4;margin-bottom:54px}.broadcast-card h3{font-size:clamp(2rem,4vw,3.5rem);line-height:.95;letter-spacing:-2px;margin-bottom:18px}.broadcast-card p{max-width:530px;font-size:15px;line-height:1.65;opacity:.76}.broadcast-meta{margin-top:26px;opacity:.48}.archive-status,.broadcast-video-placeholder{margin-top:26px}.archive-status{display:inline-block;padding:8px 10px;border:1px solid #666;font-size:11px;text-transform:uppercase;letter-spacing:1.3px;opacity:.68}.broadcast-video-placeholder{display:flex;align-items:center;justify-content:center;width:100%;aspect-ratio:16/9;border:1px solid #555;background:#0a0a0a;color:#f5f3ee;font-size:11px;text-transform:uppercase;letter-spacing:1.3px;opacity:.72;text-align:center;padding:18px}.skills{padding:76px 6% 82px;border-top:1px solid #999}.skills h2{font-size:clamp(2.6rem,6vw,5rem);line-height:.95;letter-spacing:-2.6px;margin:18px 0 38px}.skills-intro{max-width:820px;font-size:18px;line-height:1.65;margin-bottom:34px}.skills-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid #aaa}.skill{padding:18px 0;border-bottom:1px solid #bbb;font-size:14px;text-transform:uppercase;letter-spacing:1px}.skill:nth-child(odd){padding-right:26px;border-right:1px solid #bbb}.skill:nth-child(even){padding-left:26px}footer{padding:72px 6%;background:#111;color:#fff}footer h2{font-size:clamp(2.7rem,7vw,5.2rem);line-height:1;letter-spacing:-2.5px;margin-bottom:24px}footer p{max-width:760px;opacity:.75}.back{display:inline-block;margin-top:30px;text-decoration:none;font-size:12px;text-transform:uppercase;letter-spacing:1.4px}
+@media(max-width:800px){nav .links{display:none}.page-header{padding:58px 5vw 62px}.page-header h1{letter-spacing:-2.7px}.bridge,.section-head,.tv-grid,.broadcast-grid,.skills-grid{grid-template-columns:1fr}.bridge{gap:30px;padding:0 5vw 68px}.section,.skills{padding:58px 5vw 64px}.section-head{gap:18px;margin-bottom:34px}.broadcast-card{min-height:auto;padding:28px 0;border-right:0}.skill:nth-child(odd),.skill:nth-child(even){padding-left:0;padding-right:0;border-right:0}.piece-caption{grid-template-columns:38px 1fr}}
 </style>
 </head>
 <body>
-<nav>
-  <div class="logo">ALEJANDRO</div>
-  <div class="links">
-    <a href="index.html">Home</a>
-    <a href="index.html#work">Portfolio</a>
-    <a href="index.html#education">Education</a>
-    <a href="index.html#contact">Contact</a>
-  </div>
-</nav>
+<nav><div class="logo">ALEJANDRO</div><div class="nav-right"><div class="links"><a href="index.html" data-en="Home" data-de="Start">Home</a><a href="index.html#work" data-en="Portfolio" data-de="Portfolio">Portfolio</a><a href="index.html#contact" data-en="Contact" data-de="Kontakt">Contact</a></div><div class="lang-switch" aria-label="Language"><button type="button" data-lang="en" class="active">EN</button><span>/</span><button type="button" data-lang="de">DE</button></div></div></nav>
 <main>
-  <section class="page-header">
-    <div class="eyebrow">Career & Portfolio · 2000 — 2008</div>
-    <h1>Journalism<br>& Broadcast<br>Production</h1>
-    <p>My professional path began in journalism in Caracas, Venezuela, working across national television reporting and radio production. That experience became the foundation for the way I research, structure stories, interview, edit ideas and build narratives today.</p>
-  </section>
-
-  <section class="intro-grid" aria-label="Journalism overview">
-    <div class="intro-side">
-      <strong>Fields</strong>
-      Television Reporting<br>
-      Radio Production<br>
-      Research<br>
-      Interviews<br>
-      Editorial Development
-    </div>
-    <div class="intro-copy">
-      <p>Before moving into advertising, creative direction and music project development, I worked in broadcast journalism. The work demanded speed, judgement and the ability to turn information into stories people could understand.</p>
-      <p>My experience included national television reporting and production work for radio programs led by well-known Venezuelan broadcasters. The archive is limited, but the work shaped the editorial instincts that later became central to my creative career.</p>
-    </div>
-  </section>
-
-  <section class="section" id="television">
-    <div class="section-head">
-      <div>
-        <div class="section-kicker">Selected archive · National television</div>
-        <h2>Television Reporting</h2>
-      </div>
-      <p>Two surviving pieces from my period working in Venezuelan television. They are presented here as part of the original broadcast archive.</p>
-    </div>
-
-    <div class="tv-grid">
-      <article class="tv-piece">
-        <div class="video-frame">
-          <iframe src="https://www.youtube.com/embed/1FYez86RshU" title="Venezuelan national television report — archive piece 01" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </div>
-        <div class="piece-caption">
-          <div class="piece-number">01</div>
-          <div>
-            <h3>National Television Report</h3>
-            <div class="piece-meta">Venezuela · Broadcast Journalism · Archive</div>
-          </div>
-        </div>
-      </article>
-
-      <article class="tv-piece">
-        <div class="video-frame">
-          <iframe src="https://www.youtube.com/embed/-NV8qre8mWU" title="Venezuelan national television report — archive piece 02" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </div>
-        <div class="piece-caption">
-          <div class="piece-number">02</div>
-          <div>
-            <h3>National Television Report</h3>
-            <div class="piece-meta">Venezuela · Broadcast Journalism · Archive</div>
-          </div>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <section class="section radio-section" id="radio">
-    <div class="section-head">
-      <div>
-        <div class="section-kicker">Broadcast production · Venezuela</div>
-        <h2>Behind the Broadcast</h2>
-      </div>
-      <p>Production experience supporting established voices in Venezuelan radio and television. Archive material can be incorporated here as it is recovered.</p>
-    </div>
-
-    <div class="radio-grid">
-      <article class="radio-card">
-        <div class="radio-number">01</div>
-        <h3>César Miguel Rondón</h3>
-        <p>Radio production experience connected to programs hosted by César Miguel Rondón, working within the editorial and production processes that support a professional broadcast.</p>
-        <div class="radio-meta">Radio · Editorial Production · Venezuela</div>
-        <span class="archive-status">Audio archive to be added</span>
-      </article>
-
-      <article class="radio-card">
-        <div class="radio-number">02</div>
-        <h3>Oscar Yanes</h3>
-        <p>Television production experience around programs hosted by Oscar Yanes, combining journalism, storytelling and the rhythms of broadcast production.</p>
-        <div class="radio-meta">Television · Storytelling · Venezuela</div>
-        <div class="broadcast-video-placeholder" aria-label="Oscar Yanes television archive video placeholder">TV archive video to be added</div>
-      </article>
-    </div>
-  </section>
-
-  <section class="skills">
-    <div class="section-kicker">Skills developed in journalism</div>
-    <h2>Editorial judgement became a creative tool.</h2>
-    <div class="skills-grid">
-      <div class="skill">Research & Fact Finding</div>
-      <div class="skill">Interviewing</div>
-      <div class="skill">Story Structure</div>
-      <div class="skill">Broadcast Production</div>
-      <div class="skill">Editorial Development</div>
-      <div class="skill">Audience Understanding</div>
-      <div class="skill">Script & Narrative Development</div>
-      <div class="skill">Audiovisual Storytelling</div>
-    </div>
-  </section>
+<section class="page-header">
+  <div class="eyebrow" data-en="Editorial judgement · Research · Media" data-de="Redaktionelles Urteil · Recherche · Medien">Editorial judgement · Research · Media</div>
+  <h1 data-i18n-html data-en="Journalism<br>as an A&amp;R<br>Advantage" data-de="Journalismus<br>als A&amp;R-<br>Vorteil">Journalism<br>as an A&amp;R<br>Advantage</h1>
+  <p data-en="Before creative direction and artist development, I trained and worked as a journalist and broadcast producer in Venezuela. That background sharpened the skills I now consider central to A&R: research, interviewing, pattern recognition, editorial judgement, audience awareness and the ability to identify the story that makes a person or project worth paying attention to." data-de="Bevor ich in Creative Direction und Künstlerentwicklung arbeitete, wurde ich in Venezuela zum Journalisten ausgebildet und war im Broadcast-Bereich tätig. Diese Erfahrung schärfte Fähigkeiten, die ich heute als zentral für A&R sehe: Recherche, Interviews, Mustererkennung, redaktionelles Urteilsvermögen, Zielgruppenverständnis und die Fähigkeit, die Geschichte zu erkennen, die eine Person oder ein Projekt relevant macht.">Before creative direction and artist development, I trained and worked as a journalist and broadcast producer in Venezuela. That background sharpened the skills I now consider central to A&R: research, interviewing, pattern recognition, editorial judgement, audience awareness and the ability to identify the story that makes a person or project worth paying attention to.</p>
+</section>
+<section class="bridge" aria-label="Journalism to A&R">
+  <div class="bridge-side"><strong data-en="What transfers to A&R" data-de="Was ich ins A&R übertrage">What transfers to A&R</strong><span data-i18n-html data-en="Research<br>Interviewing<br>Story judgement<br>Audience reading<br>Editorial development" data-de="Recherche<br>Interviews<br>Story-Urteil<br>Zielgruppenverständnis<br>Redaktionelle Entwicklung">Research<br>Interviewing<br>Story judgement<br>Audience reading<br>Editorial development</span></div>
+  <div class="bridge-copy"><p data-en="Journalism taught me to ask better questions before forming an opinion. In A&R, that matters: Who is this artist? What is genuinely distinctive here? What is signal and what is noise? Why could this connect now?" data-de="Journalismus hat mich gelehrt, bessere Fragen zu stellen, bevor ich mir ein Urteil bilde. Im A&R ist das entscheidend: Wer ist dieser Künstler? Was ist hier wirklich eigenständig? Was ist Signal und was nur Rauschen? Warum könnte das gerade jetzt Resonanz erzeugen?">Journalism taught me to ask better questions before forming an opinion. In A&R, that matters: Who is this artist? What is genuinely distinctive here? What is signal and what is noise? Why could this connect now?</p><p data-en="Broadcast production also trained me to work under pressure, structure information quickly and collaborate across editorial and production teams — experience that translates directly into artist development environments where creative and business decisions need to move together." data-de="Broadcast-Produktion hat mich außerdem darin trainiert, unter Druck zu arbeiten, Informationen schnell zu strukturieren und redaktionelle sowie Produktionsteams zu koordinieren – Erfahrungen, die sich direkt auf Künstlerentwicklung übertragen lassen, wo kreative und geschäftliche Entscheidungen zusammenlaufen müssen.">Broadcast production also trained me to work under pressure, structure information quickly and collaborate across editorial and production teams — experience that translates directly into artist development environments where creative and business decisions need to move together.</p></div>
+</section>
+<section class="section" id="television">
+  <div class="section-head"><div><div class="section-kicker" data-en="Selected archive · National television" data-de="Ausgewähltes Archiv · Nationales Fernsehen">Selected archive · National television</div><h2 data-en="Television Reporting" data-de="TV-Reportagen">Television Reporting</h2></div><p data-en="Two surviving pieces from my work in Venezuelan television. They document the reporting, research and narrative discipline that formed the editorial side of my profile." data-de="Zwei erhaltene Beiträge aus meiner Arbeit im venezolanischen Fernsehen. Sie dokumentieren Recherche, Reporting und narrative Disziplin – die redaktionelle Basis meines Profils.">Two surviving pieces from my work in Venezuelan television. They document the reporting, research and narrative discipline that formed the editorial side of my profile.</p></div>
+  <div class="tv-grid">
+    <article class="tv-piece"><div class="video-frame"><iframe src="https://www.youtube.com/embed/1FYez86RshU" title="Venezuelan national television report — archive piece 01" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div><div class="piece-caption"><div class="piece-number">01</div><div><h3 data-en="National Television Report" data-de="TV-Reportage">National Television Report</h3><div class="piece-meta" data-en="Venezuela · Reporting · Research · Archive" data-de="Venezuela · Reporting · Recherche · Archiv">Venezuela · Reporting · Research · Archive</div></div></div></article>
+    <article class="tv-piece"><div class="video-frame"><iframe src="https://www.youtube.com/embed/-NV8qre8mWU" title="Venezuelan national television report — archive piece 02" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div><div class="piece-caption"><div class="piece-number">02</div><div><h3 data-en="National Television Report" data-de="TV-Reportage">National Television Report</h3><div class="piece-meta" data-en="Venezuela · Reporting · Research · Archive" data-de="Venezuela · Reporting · Recherche · Archiv">Venezuela · Reporting · Research · Archive</div></div></div></article>
+  </div>
+</section>
+<section class="section broadcast-section" id="broadcast">
+  <div class="section-head"><div><div class="section-kicker" data-en="Broadcast production · Venezuela" data-de="Broadcast-Produktion · Venezuela">Broadcast production · Venezuela</div><h2 data-en="Behind the Broadcast" data-de="Hinter der Sendung">Behind the Broadcast</h2></div><p data-en="Production experience around established Venezuelan media figures strengthened my understanding of preparation, editorial structure, pacing, talent and audience attention." data-de="Die Produktionsarbeit im Umfeld etablierter venezolanischer Medienpersönlichkeiten vertiefte mein Verständnis für Vorbereitung, redaktionelle Struktur, Rhythmus, Talent und Publikumsaufmerksamkeit.">Production experience around established Venezuelan media figures strengthened my understanding of preparation, editorial structure, pacing, talent and audience attention.</p></div>
+  <div class="broadcast-grid">
+    <article class="broadcast-card"><div class="broadcast-number">01</div><h3>César Miguel Rondón</h3><p data-en="Radio production experience connected to programs hosted by César Miguel Rondón. Working around a high-level daily broadcast sharpened my sense of editorial preparation, topic selection, timing and the production systems that support strong on-air talent." data-de="Radio-Produktion im Umfeld von Sendungen mit César Miguel Rondón. Die Arbeit an einem professionellen täglichen Broadcast schärfte mein Verständnis für redaktionelle Vorbereitung, Themenauswahl, Timing und die Produktionssysteme hinter starken On-Air-Persönlichkeiten.">Radio production experience connected to programs hosted by César Miguel Rondón. Working around a high-level daily broadcast sharpened my sense of editorial preparation, topic selection, timing and the production systems that support strong on-air talent.</p><div class="broadcast-meta" data-en="Radio · Editorial Production · Venezuela" data-de="Radio · Redaktionelle Produktion · Venezuela">Radio · Editorial Production · Venezuela</div><span class="archive-status" data-en="Audio archive to be added" data-de="Audioarchiv folgt">Audio archive to be added</span></article>
+    <article class="broadcast-card"><div class="broadcast-number">02</div><h3>Oscar Yanes</h3><p data-en="Television production experience around Oscar Yanes, one of Venezuela's most recognised journalistic voices. The work reinforced how personality, storytelling and editorial framing can turn information into memorable television." data-de="TV-Produktion im Umfeld von Oscar Yanes, einer der bekanntesten journalistischen Stimmen Venezuelas. Die Arbeit zeigte mir, wie Persönlichkeit, Storytelling und redaktionelles Framing Informationen in erinnerungswürdiges Fernsehen verwandeln können.">Television production experience around Oscar Yanes, one of Venezuela's most recognised journalistic voices. The work reinforced how personality, storytelling and editorial framing can turn information into memorable television.</p><div class="broadcast-meta" data-en="Television · Storytelling · Venezuela" data-de="Fernsehen · Storytelling · Venezuela">Television · Storytelling · Venezuela</div><div class="broadcast-video-placeholder" data-en="TV archive video to be added" data-de="TV-Archivvideo folgt">TV archive video to be added</div></article>
+  </div>
+</section>
+<section class="skills"><div class="section-kicker" data-en="A&R-relevant strengths developed in journalism" data-de="A&R-relevante Stärken aus dem Journalismus">A&R-relevant strengths developed in journalism</div><h2 data-en="Listen. Investigate. Decide what matters." data-de="Zuhören. Recherchieren. Entscheiden, was zählt.">Listen. Investigate. Decide what matters.</h2><p class="skills-intro" data-en="The core value of this chapter is not that I once worked in journalism. It is that it trained the way I assess people, stories, context and relevance — exactly the mental discipline I now bring to artist scouting and development." data-de="Der Wert dieses Kapitels liegt nicht einfach darin, dass ich im Journalismus gearbeitet habe. Entscheidend ist, dass diese Erfahrung geprägt hat, wie ich Menschen, Geschichten, Kontext und Relevanz bewerte – genau diese Denkweise bringe ich heute in Artist Scouting und Künstlerentwicklung ein.">The core value of this chapter is not that I once worked in journalism. It is that it trained the way I assess people, stories, context and relevance — exactly the mental discipline I now bring to artist scouting and development.</p><div class="skills-grid"><div class="skill" data-en="Research & Fact Finding" data-de="Recherche & Faktenprüfung">Research & Fact Finding</div><div class="skill" data-en="Interviewing" data-de="Interviewführung">Interviewing</div><div class="skill" data-en="Editorial Judgement" data-de="Redaktionelles Urteilsvermögen">Editorial Judgement</div><div class="skill" data-en="Audience Understanding" data-de="Zielgruppenverständnis">Audience Understanding</div><div class="skill" data-en="Story Structure" data-de="Story-Struktur">Story Structure</div><div class="skill" data-en="Broadcast Production" data-de="Broadcast-Produktion">Broadcast Production</div><div class="skill" data-en="Pattern Recognition" data-de="Mustererkennung">Pattern Recognition</div><div class="skill" data-en="Narrative Development" data-de="Narrative Entwicklung">Narrative Development</div></div></section>
 </main>
-<footer>
-  <h2>Stories first.<br>Medium second.</h2>
-  <p>Berlin, Germany</p>
-  <a class="back" href="index.html#work">← Back to portfolio</a>
-</footer>
+<footer><h2 data-en="Editorial instinct, now applied to artists." data-de="Redaktioneller Instinkt – heute auf Künstler angewendet.">Editorial instinct, now applied to artists.</h2><p data-en="This experience is part of the foundation I bring to A&R: curiosity, context, judgement and the ability to recognise what deserves attention." data-de="Diese Erfahrung ist Teil meiner A&R-Basis: Neugier, Kontext, Urteilsvermögen und die Fähigkeit zu erkennen, was Aufmerksamkeit verdient.">This experience is part of the foundation I bring to A&R: curiosity, context, judgement and the ability to recognise what deserves attention.</p><a class="back" href="index.html#work" data-en="← Back to portfolio" data-de="← Zurück zum Portfolio">← Back to portfolio</a></footer>
+<script>
+(()=>{const buttons=[...document.querySelectorAll('[data-lang]')],nodes=[...document.querySelectorAll('[data-en][data-de]')];const apply=lang=>{document.documentElement.lang=lang;localStorage.setItem('portfolioLang',lang);nodes.forEach(el=>{const v=el.dataset[lang];if(v==null)return;if(el.hasAttribute('data-i18n-html'))el.innerHTML=v;else el.textContent=v});buttons.forEach(b=>b.classList.toggle('active',b.dataset.lang===lang))};buttons.forEach(b=>b.addEventListener('click',()=>apply(b.dataset.lang)));apply(localStorage.getItem('portfolioLang')==='de'?'de':'en')})();
+</script>
 </body>
 </html>
