@@ -1,0 +1,31 @@
+name: Update journalism TV copy
+on:
+  push:
+    paths:
+      - '.github/workflows/update-journalism-tv.yml'
+permissions:
+  contents: write
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Update journalism television copy
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('journalism.html')
+          s=p.read_text()
+          old='<div class="section-head"><div><div class="section-kicker" data-en="Selected archive · National television" data-de="Ausgewähltes Archiv · Nationales Fernsehen">Selected archive · National television</div><h2 data-en="Television Reporting" data-de="TV-Reportagen">Television Reporting</h2></div><p data-en="Two surviving pieces from my work in Venezuelan television. They document the reporting, research and narrative discipline that formed the editorial side of my profile." data-de="Zwei erhaltene Beiträge aus meiner Arbeit im venezolanischen Fernsehen. Sie dokumentieren Recherche, Reporting und narrative Disziplin – die redaktionelle Basis meines Profils.">Two surviving pieces from my work in Venezuelan television. They document the reporting, research and narrative discipline that formed the editorial side of my profile.</p></div>'
+          new='<div class="section-head"><div><div class="section-kicker" data-en="Selected archive · National television" data-de="Ausgewähltes Archiv · Nationales Fernsehen">Selected archive · National television</div><h2 data-en="Television Reporting" data-de="TV-Reportagen">Television Reporting</h2></div><p data-en="At just 21, I was already working both in front of the camera and behind it, helping bring television reports and special programs on music and extreme sports to life. It was a formative experience that gave me a solid understanding of how media works — from research and production to editorial framing and on-camera communication. Today, that knowledge directly strengthens my A&amp;R perspective: I understand not only how to identify and develop an artist, but also how to shape a story and proposition that media outlets can recognise, program and bring to wider audiences." data-de="Mit nur 21 Jahren arbeitete ich bereits sowohl vor der Kamera als auch dahinter und half dabei, TV-Reportagen sowie Sondersendungen über Musik und Extremsport zum Leben zu erwecken. Diese prägende Erfahrung gab mir ein solides Verständnis dafür, wie Medien funktionieren – von Recherche und Produktion bis hin zu redaktionellem Framing und Kommunikation vor der Kamera. Heute stärkt dieses Wissen direkt meine A&amp;R-Perspektive: Ich verstehe nicht nur, wie man Künstler erkennt und entwickelt, sondern auch, wie man eine Geschichte und Positionierung so formt, dass Medien sie erkennen, programmieren und einem größeren Publikum zugänglich machen können.">At just 21, I was already working both in front of the camera and behind it, helping bring television reports and special programs on music and extreme sports to life. It was a formative experience that gave me a solid understanding of how media works — from research and production to editorial framing and on-camera communication. Today, that knowledge directly strengthens my A&amp;R perspective: I understand not only how to identify and develop an artist, but also how to shape a story and proposition that media outlets can recognise, program and bring to wider audiences.</p></div>'
+          if old not in s:
+              raise SystemExit('Target block not found')
+          p.write_text(s.replace(old,new,1))
+          PY
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add journalism.html
+          git commit -m "Strengthen journalism TV story for A&R positioning"
+          git push
