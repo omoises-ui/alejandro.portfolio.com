@@ -18,11 +18,8 @@ jobs:
           s=p.read_text()
           s=s.replace('under executive producer <strong>Laura Anzola</strong>.','under executive producer <strong>Laura Rodríguez</strong>.')
           s=s.replace('unter der ausführenden Produzentin <strong>Laura Anzola</strong>.','unter der ausführenden Produzentin <strong>Laura Rodríguez</strong>.')
-          anchor='Working inside that production environment sharpened my standards for research, editorial preparation, scripting, timing and the production systems required to support high-profile talent.'</n          add=anchor+' I also worked as a production assistant for <strong>Flor Alicia Anzola</strong> at <strong>Unión Radio</strong>, expanding my experience in daily radio production, editorial coordination and live-broadcast workflows.'
-          s=s.replace(anchor,add,1)
-          anchor_de='Die Arbeit in diesem Produktionsumfeld schärfte meine Standards für Recherche, redaktionelle Vorbereitung, Skripterstellung, Timing und die Produktionssysteme hinter hochkarätigem Talent.'
-          add_de=anchor_de+' Außerdem arbeitete ich als Produktionsassistent für <strong>Flor Alicia Anzola</strong> bei <strong>Unión Radio</strong> und vertiefte dort meine Erfahrung in täglicher Radioproduktion, redaktioneller Koordination und Live-Broadcast-Abläufen.'
-          s=s.replace(anchor_de,add_de,1)
+          s=s.replace('Working inside that production environment sharpened my standards for research, editorial preparation, scripting, timing and the production systems required to support high-profile talent.','Working inside that production environment sharpened my standards for research, editorial preparation, scripting, timing and the production systems required to support high-profile talent. I also worked as a production assistant for <strong>Flor Alicia Anzola</strong> at <strong>Unión Radio</strong>, expanding my experience in daily radio production, editorial coordination and live-broadcast workflows.',1)
+          s=s.replace('Die Arbeit in diesem Produktionsumfeld schärfte meine Standards für Recherche, redaktionelle Vorbereitung, Skripterstellung, Timing und die Produktionssysteme hinter hochkarätigem Talent.','Die Arbeit in diesem Produktionsumfeld schärfte meine Standards für Recherche, redaktionelle Vorbereitung, Skripterstellung, Timing und die Produktionssysteme hinter hochkarätigem Talent. Außerdem arbeitete ich als Produktionsassistent für <strong>Flor Alicia Anzola</strong> bei <strong>Unión Radio</strong> und vertiefte dort meine Erfahrung in täglicher Radioproduktion, redaktioneller Koordination und Live-Broadcast-Abläufen.',1)
           p.write_text(s)
           PY
       - name: Commit changes
