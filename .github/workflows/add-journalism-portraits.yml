@@ -1,0 +1,51 @@
+name: Add journalism portraits
+on:
+  push:
+    paths:
+      - '.github/workflows/add-journalism-portraits.yml'
+permissions:
+  contents: write
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Add portraits and strengthen profiles
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+          p=Path('journalism.html')
+          s=p.read_text(encoding='utf-8')
+          css='''.profile-portrait{width:100%;max-width:240px;aspect-ratio:1/1;object-fit:cover;display:block;margin:0 0 22px;border:1px solid #555}.profile-credit{font-size:10px;line-height:1.4;letter-spacing:.7px;opacity:.45;margin:-14px 0 20px!important}@media(max-width:800px){.profile-portrait{max-width:190px}}\n'''
+          if '.profile-portrait{' not in s:
+              s=s.replace('</style>',css+'</style>',1)
+
+          oscar_img='''<img class="profile-portrait" src="https://upload.wikimedia.org/wikipedia/commons/e/e6/Oscar_Yanes_photo.jpg" alt="Óscar Yanes" loading="lazy"><p class="profile-credit" data-en="Óscar Yanes · Venezuelan journalist, writer and chronicler" data-de="Óscar Yanes · Venezolanischer Journalist, Schriftsteller und Chronist">Óscar Yanes · Venezuelan journalist, writer and chronicler</p>'''
+          if 'Oscar_Yanes_photo.jpg' not in s:
+              m=re.search(r'(<h3[^>]*>[^<]*(?:Óscar|Oscar) Yanes[^<]*</h3>)',s,re.I)
+              if m:
+                  s=s[:m.end()]+oscar_img+s[m.end():]
+
+          cmr_img='''<img class="profile-portrait" src="https://lagranaldea.com/wp-content/uploads/2021/02/21-02-2021-CMR-585x500.jpg" alt="César Miguel Rondón" loading="lazy"><p class="profile-credit" data-en="César Miguel Rondón · Journalist, writer, broadcaster and author of El Libro de la Salsa" data-de="César Miguel Rondón · Journalist, Schriftsteller, Rundfunkmoderator und Autor von El Libro de la Salsa">César Miguel Rondón · Journalist, writer, broadcaster and author of El Libro de la Salsa</p>'''
+          if '21-02-2021-CMR-585x500.jpg' not in s:
+              m=re.search(r'(<h3[^>]*>[^<]*César Miguel Rondón[^<]*</h3>)',s,re.I)
+              if m:
+                  s=s[:m.end()]+cmr_img+s[m.end():]
+
+          en='''<p data-en="César Miguel Rondón is one of Venezuela’s most respected journalists and writers and a major reference in Latin American media. His professional career began in 1974 and has spanned more than five decades across radio, television, press, writing, production and cultural journalism. He is also the author of El Libro de la Salsa, a landmark chronicle of Caribbean urban music." data-de="César Miguel Rondón zählt zu den angesehensten Journalisten und Schriftstellern Venezuelas und ist eine wichtige Referenz in den lateinamerikanischen Medien. Seine professionelle Laufbahn begann 1974 und umfasst inzwischen mehr als fünf Jahrzehnte in Radio, Fernsehen, Presse, Literatur, Produktion und Kulturjournalismus. Er ist außerdem Autor von El Libro de la Salsa, einer wegweisenden Chronik der urbanen karibischen Musik.">César Miguel Rondón is one of Venezuela’s most respected journalists and writers and a major reference in Latin American media. His professional career began in 1974 and has spanned more than five decades across radio, television, press, writing, production and cultural journalism. He is also the author of El Libro de la Salsa, a landmark chronicle of Caribbean urban music.</p>'''
+          if 'more than five decades across radio' not in s:
+              m=re.search(r'(<h3[^>]*>[^<]*César Miguel Rondón[^<]*</h3>.*?</p>)',s,re.I|re.S)
+              if m:
+                  s=s[:m.end()]+en+s[m.end():]
+
+          p.write_text(s,encoding='utf-8')
+          PY
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add journalism.html
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Add Óscar Yanes and César Miguel Rondón portraits"
+          git push
