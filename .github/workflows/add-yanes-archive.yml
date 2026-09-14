@@ -1,0 +1,41 @@
+name: Add Oscar Yanes archive
+on:
+  push:
+    paths:
+      - '.github/workflows/add-yanes-archive.yml'
+permissions:
+  contents: write
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Update Oscar Yanes section
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+          p=Path('journalism.html')
+          s=p.read_text()
+          if 'yanes-archive-grid' in s:
+              raise SystemExit(0)
+
+          css='''.yanes-archive{margin-top:30px;padding-top:24px;border-top:1px solid #555}.yanes-archive-intro{margin-bottom:18px;font-size:13px;line-height:1.6;opacity:.68}.yanes-archive-grid{display:grid;grid-template-columns:1fr;gap:18px}.yanes-archive-item .video-frame{margin:0}.yanes-archive-item figcaption{margin-top:8px;font-size:11px;line-height:1.45;text-transform:uppercase;letter-spacing:1.15px;opacity:.6}@media(min-width:900px){.yanes-archive-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}\n'''
+          s=s.replace('</style>',css+'</style>')
+
+          new_article='''<article class="broadcast-card"><div class="broadcast-number">02</div><h3>Oscar Yanes</h3><p data-en="I worked in television production around Oscar Yanes, a legend of Venezuelan journalism and one of the country's great television storytellers. A pioneer of audiovisual journalism and a three-time winner of Venezuela's National Journalism Prize, Yanes turned the country's history, characters and collective memory into compelling television. The programs I produced in this period were especially connected to Venezuelan history — researching stories, verifying context, structuring material and helping transform historical information into accessible television." data-de="Ich arbeitete in der TV-Produktion im Umfeld von Oscar Yanes, einer Legende des venezolanischen Journalismus und einem der großen TV-Erzähler des Landes. Als Pionier des audiovisuellen Journalismus und dreifacher Gewinner des Nationalen Journalistenpreises verwandelte Yanes die Geschichte, Persönlichkeiten und kollektive Erinnerung Venezuelas in fesselndes Fernsehen. Die Sendungen, an denen ich in dieser Phase mitarbeitete, beschäftigten sich besonders mit der Geschichte Venezuelas – von Recherche und Kontextprüfung über die Strukturierung des Materials bis zur Umsetzung historischer Inhalte in zugängliches Fernsehen.">I worked in television production around Oscar Yanes, a legend of Venezuelan journalism and one of the country's great television storytellers. A pioneer of audiovisual journalism and a three-time winner of Venezuela's National Journalism Prize, Yanes turned the country's history, characters and collective memory into compelling television. The programs I produced in this period were especially connected to Venezuelan history — researching stories, verifying context, structuring material and helping transform historical information into accessible television.</p><div class="broadcast-meta" data-en="Television · Venezuelan History · Research · Production · 2007" data-de="Fernsehen · Venezolanische Geschichte · Recherche · Produktion · 2007">Television · Venezuelan History · Research · Production · 2007</div><div class="yanes-archive"><p class="yanes-archive-intro" data-en="Selected public archive examples from Así son las cosas. The available uploads preserve the program, but do not reliably document each episode's original broadcast date; 2007 refers to my production period on the project." data-de="Ausgewählte öffentliche Archivbeispiele aus Así son las cosas. Die verfügbaren Uploads bewahren das Programm, dokumentieren jedoch nicht zuverlässig das ursprüngliche Sendedatum jeder Folge; 2007 bezieht sich auf meine Produktionsphase bei dem Projekt.">Selected public archive examples from Así son las cosas. The available uploads preserve the program, but do not reliably document each episode's original broadcast date; 2007 refers to my production period on the project.</p><div class="yanes-archive-grid"><figure class="yanes-archive-item"><div class="video-frame"><iframe src="https://www.youtube.com/embed/g5-I0I8k_Ls" title="Así son las cosas con Oscar Yanes — Episodio 7" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div><figcaption>Así son las cosas · Archive episode 7</figcaption></figure><figure class="yanes-archive-item"><div class="video-frame"><iframe src="https://www.youtube.com/embed/xPHqRBR-CDQ" title="Así son las cosas con Oscar Yanes — Episodio 8" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div><figcaption>Así son las cosas · Archive episode 8</figcaption></figure><figure class="yanes-archive-item"><div class="video-frame"><iframe src="https://www.youtube.com/embed/StkiM_AfSxE" title="Así son las cosas con Oscar Yanes — Episodio 10" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div><figcaption>Así son las cosas · Archive episode 10</figcaption></figure></div></div></article>'''
+
+          pattern=r'<article class="broadcast-card"><div class="broadcast-number">02</div><h3>Oscar Yanes</h3>.*?</article>'
+          s2,n=re.subn(pattern,new_article,s,count=1,flags=re.S)
+          if n!=1:
+              raise SystemExit('Oscar Yanes article not found exactly once')
+          p.write_text(s2)
+          PY
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add journalism.html
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Add Oscar Yanes archive and strengthen journalism context"
+          git push
