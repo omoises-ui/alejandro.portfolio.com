@@ -1,0 +1,40 @@
+name: Enrich CMR section
+on:
+  push:
+    paths:
+      - '.github/workflows/enrich-cmr-section.yml'
+permissions:
+  contents: write
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Update César Miguel Rondón section
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+          p=Path('journalism.html')
+          s=p.read_text()
+
+          css='''.cmr-archive{margin-top:30px;padding-top:24px;border-top:1px solid #555}.cmr-archive-intro{margin-bottom:18px;font-size:13px;line-height:1.6;opacity:.72}.cmr-archive-grid{display:grid;grid-template-columns:1fr;gap:14px}.cmr-archive-link{display:block;padding:16px;border:1px solid #555;color:#f5f3ee;text-decoration:none;transition:background .18s ease,color .18s ease}.cmr-archive-link:hover{background:#f5f3ee;color:#111}.cmr-archive-link strong{display:block;font-size:15px;line-height:1.3;margin-bottom:7px}.cmr-archive-link span{display:block;font-size:11px;text-transform:uppercase;letter-spacing:1.15px;opacity:.62}.cmr-commercial{margin-top:28px;padding:22px;border:1px solid #555}.cmr-commercial strong{display:block;margin-bottom:10px;font-size:12px;text-transform:uppercase;letter-spacing:1.3px}.cmr-commercial p{margin:0!important}@media(min-width:900px){.cmr-archive-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}\n'''
+          if '.cmr-archive{' not in s:
+              s=s.replace('</style>',css+'</style>')
+
+          new_article='''<article class="broadcast-card"><div class="broadcast-number">01</div><h3>César Miguel Rondón</h3><p data-en="I worked for César Miguel Rondón at <strong>6J86 Producciones</strong>, his production company, under executive producer <strong>Laura Rodríguez</strong>. Rondón is one of the most influential voices in Venezuelan and Latin American journalism, radio and cultural broadcasting, and the author of <em>El Libro de la Salsa</em>, a landmark work on Caribbean urban music. Working inside that production environment sharpened my standards for research, editorial preparation, scripting, timing and the production systems required to support high-profile talent." data-de="Ich arbeitete für César Miguel Rondón bei <strong>6J86 Producciones</strong>, seiner Produktionsfirma, unter der ausführenden Produzentin <strong>Laura Rodríguez</strong>. Rondón zählt zu den einflussreichsten Stimmen des venezolanischen und lateinamerikanischen Journalismus, Radios und Kulturbroadcastings und ist Autor von <em>El Libro de la Salsa</em>, einem maßgeblichen Werk über urbane karibische Musik. Die Arbeit in diesem Produktionsumfeld schärfte meine Standards für Recherche, redaktionelle Vorbereitung, Skripterstellung, Timing und die Produktionssysteme hinter hochkarätigem Talent.">I worked for César Miguel Rondón at <strong>6J86 Producciones</strong>, his production company, under executive producer <strong>Laura Rodríguez</strong>. Rondón is one of the most influential voices in Venezuelan and Latin American journalism, radio and cultural broadcasting, and the author of <em>El Libro de la Salsa</em>, a landmark work on Caribbean urban music. Working inside that production environment sharpened my standards for research, editorial preparation, scripting, timing and the production systems required to support high-profile talent.</p><div class="broadcast-meta" data-en="6J86 Producciones · Editorial Production · Radio · Branded Content · Venezuela" data-de="6J86 Producciones · Redaktionelle Produktion · Radio · Branded Content · Venezuela">6J86 Producciones · Editorial Production · Radio · Branded Content · Venezuela</div><div class="cmr-archive"><p class="cmr-archive-intro" data-en="Selected official archive from <em>Micros de la Salsa</em>, a format built around the musical and cultural universe associated with <em>El Libro de la Salsa</em>. These surviving public examples show the type of research-led cultural storytelling developed around Rondón's work." data-de="Ausgewähltes offizielles Archiv aus <em>Micros de la Salsa</em>, einem Format rund um das musikalische und kulturelle Universum von <em>El Libro de la Salsa</em>. Diese öffentlich erhaltenen Beispiele zeigen die recherchierte kulturelle Erzählweise, die rund um Rondóns Arbeit entwickelt wurde.">Selected official archive from <em>Micros de la Salsa</em>, a format built around the musical and cultural universe associated with <em>El Libro de la Salsa</em>. These surviving public examples show the type of research-led cultural storytelling developed around Rondón's work.</p><div class="cmr-archive-grid"><a class="cmr-archive-link" href="https://cesarmiguelrondon.com/musica/micros-de-la-salsa/noche-de-ronda-de-guillermo-cabrera-infante/" target="_blank" rel="noopener noreferrer"><strong>Noche de Ronda de Guillermo Cabrera Infante</strong><span data-en="Official archive · 3:05 · Open ↗" data-de="Offizielles Archiv · 3:05 · Öffnen ↗">Official archive · 3:05 · Open ↗</span></a><a class="cmr-archive-link" href="https://cesarmiguelrondon.com/musica/micros-de-la-salsa/pedro-navaja-o-mackie-el-navaja/" target="_blank" rel="noopener noreferrer"><strong>Pedro Navaja o Mackie el Navaja</strong><span data-en="Official archive · 2:53 · Open ↗" data-de="Offizielles Archiv · 2:53 · Öffnen ↗">Official archive · 2:53 · Open ↗</span></a><a class="cmr-archive-link" href="https://cesarmiguelrondon.com/musica/micros-de-la-salsa/sierra-maestra-y-su-tributo-hector-lavoe/" target="_blank" rel="noopener noreferrer"><strong>Sierra Maestra y su tributo a Héctor Lavoe</strong><span data-en="Official archive · 2:52 · Open ↗" data-de="Offizielles Archiv · 2:52 · Öffnen ↗">Official archive · 2:52 · Open ↗</span></a></div></div><div class="cmr-commercial"><strong data-en="Vida Profesional · Sodexo Pass" data-de="Vida Profesional · Sodexo Pass">Vida Profesional · Sodexo Pass</strong><p data-en="I also worked on the <em>Vida Profesional</em> branded micro-series for Sodexo Pass. These pieces were especially demanding because they represented a direct commercial agreement with the brand: scripts, messages and production details were reviewed meticulously by the client and by César Miguel Rondón himself. That process taught me how to protect editorial quality while meeting commercial objectives, brand standards and the expectations attached to a highly recognised public figure." data-de="Ich arbeitete außerdem an der gebrandeten Micro-Serie <em>Vida Profesional</em> für Sodexo Pass. Diese Beiträge waren besonders anspruchsvoll, weil sie Teil einer direkten kommerziellen Vereinbarung mit der Marke waren: Skripte, Botschaften und Produktionsdetails wurden sowohl vom Kunden als auch von César Miguel Rondón selbst sehr genau geprüft. Dieser Prozess lehrte mich, redaktionelle Qualität zu sichern und gleichzeitig kommerzielle Ziele, Markenstandards und die Erwartungen an eine sehr bekannte Persönlichkeit zu erfüllen.">I also worked on the <em>Vida Profesional</em> branded micro-series for Sodexo Pass. These pieces were especially demanding because they represented a direct commercial agreement with the brand: scripts, messages and production details were reviewed meticulously by the client and by César Miguel Rondón himself. That process taught me how to protect editorial quality while meeting commercial objectives, brand standards and the expectations attached to a highly recognised public figure.</p></div></article>'''
+
+          pattern=r'<article class="broadcast-card"><div class="broadcast-number">01</div><h3>César Miguel Rondón</h3>.*?</article>'
+          s2,n=re.subn(pattern,new_article,s,count=1,flags=re.S)
+          if n!=1:
+              raise SystemExit('César Miguel Rondón article not found exactly once')
+          p.write_text(s2)
+          PY
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add journalism.html
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Expand César Miguel Rondón production experience"
+          git push
