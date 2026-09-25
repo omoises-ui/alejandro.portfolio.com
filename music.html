@@ -243,7 +243,7 @@ nav{padding:28px 6%}
 .azul-media-grid > :not(.azul-media-live) .azul-video-placeholder{padding:12px;gap:6px}
 @media(min-width:640px){.azul-media-grid{grid-template-columns:minmax(0,1fr) minmax(0,2fr)}.azul-media-live{grid-column:2;grid-row:1/span 2}.azul-media-live .azul-video-placeholder{aspect-ratio:auto}}
 @media(min-width:960px){.azul-media{margin-left:150px}}
-</style>
+.azul-live-video{position:relative;width:100%;aspect-ratio:16/9;background:#111;overflow:hidden}.azul-live-video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}@media(min-width:640px){.azul-media-live .azul-live-video{flex:1;min-height:100%}}</style>
 </head>
 <body>
 <nav data-site-lang="music"><a class="logo" href="index.html">ALEJANDRO</a><div class="nav-links"><a href="#azul-animal">Azul Animal</a><a href="#todos-los-monstruos">Todos los Monstruos</a><a href="#harakiri-robot">#HarakiriRobot</a><span class="lang-switch"><button type="button" data-lang="en" class="active">EN</button><span>/</span><button type="button" data-lang="de">DE</button></span></div></nav>
@@ -275,7 +275,7 @@ nav{padding:28px 6%}
 <div class="azul-media-grid">
 <figure class="video-feature"><div class="azul-video-placeholder"><span>Video 01</span><strong>Interview</strong><span>Coming soon</span></div><figcaption><span>Interview</span><span>Azul Animal</span></figcaption></figure>
 <figure class="video-feature"><div class="azul-video-placeholder"><span>Video 02</span><strong>Radio interview</strong><span>Coming soon</span></div><figcaption><span>Radio interview</span><span>Azul Animal</span></figcaption></figure>
-<figure class="video-feature azul-media-live"><div class="azul-video-placeholder"><span>Video 03</span><strong>Live performance</strong><span>Coming soon</span></div><figcaption><span>Live performance</span><span>Azul Animal</span></figcaption></figure>
+<figure class="video-feature azul-media-live"><div class="azul-live-video"><iframe src="https://www.youtube.com/embed/AkZ1pYa1gxA" title="Azul Animal — Live performance" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div><figcaption><span>Live performance</span><span>Azul Animal</span></figcaption></figure>
 </div>
 </section>
 </section>
