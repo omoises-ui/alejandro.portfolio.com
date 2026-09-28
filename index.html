@@ -63,6 +63,11 @@
 /* A&R-first framing: explain the scouting decision on every radar artist card */
 .techno-current-card::after{content:"WHY ON MY RADAR · Identity · scene relevance · audience signal";grid-column:1/-1;margin-top:6px;padding-top:8px;border-top:1px solid #b8ccb0;font-size:9px;line-height:1.35;letter-spacing:1.05px;text-transform:uppercase;color:#2e8425}
 html[lang="de"] .techno-current-card::after{content:"WARUM AUF MEINEM RADAR · Identität · Szenerelevanz · Audience-Signal"}
+
+/* Listening Mode · official Spotify embeds */
+.listen-entry{position:fixed;inset:0;z-index:9998;display:flex;align-items:center;justify-content:center;padding:24px;background:rgba(17,17,17,.48);backdrop-filter:blur(6px)}
+.listen-entry[hidden]{display:none}.listen-entry-card{width:min(92vw,460px);background:#f5f3ee;border:1px solid #111;padding:28px}.listen-entry-kicker{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#2e8425;margin-bottom:12px}.listen-entry-card h2{font-size:clamp(28px,5vw,44px);line-height:1;letter-spacing:-1.5px;margin:0 0 14px}.listen-entry-card p{font-size:14px;line-height:1.55;color:#505158;margin:0 0 22px}.listen-entry-actions{display:flex;gap:10px;flex-wrap:wrap}.listen-entry-actions button{min-height:44px;padding:0 16px;border:1px solid #111;background:#111;color:#fff;font:700 11px Arial,sans-serif;letter-spacing:1.2px;text-transform:uppercase;cursor:pointer}.listen-entry-actions .listen-silent{background:transparent;color:#111}
+.listening-dock{position:fixed;right:18px;bottom:18px;z-index:9997;width:min(390px,calc(100vw - 36px));background:#f5f3ee;border:1px solid #111;box-shadow:0 10px 28px rgba(0,0,0,.16)}.listening-dock[hidden]{display:none}.listening-dock-head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 14px;border-bottom:1px solid #aaa}.listening-dock-title{display:flex;flex-direction:column;gap:2px}.listening-dock-title strong{font-size:12px;text-transform:uppercase;letter-spacing:1.2px}.listening-dock-title span{font-size:10px;color:#2e8425;letter-spacing:.8px}.listening-dock-close{width:34px;height:34px;border:1px solid #111;background:transparent;font-size:18px;cursor:pointer}.listening-dock-body{padding:12px;max-height:430px;overflow:auto}.listening-dock-note{font-size:11px;line-height:1.45;color:#505158;margin:0 0 10px}.spotify-scout{display:block;width:100%;height:152px;border:0;border-radius:10px;margin:0 0 10px}.listening-reopen{position:fixed;right:18px;bottom:18px;z-index:9996;min-height:44px;padding:0 16px;border:1px solid #111;background:#111;color:#fff;font:700 11px Arial,sans-serif;letter-spacing:1.1px;text-transform:uppercase;cursor:pointer}.listening-reopen[hidden]{display:none}@media(max-width:560px){.listening-dock{right:10px;bottom:10px;width:calc(100vw - 20px)}.listen-entry-card{padding:22px}}
 </style>
 </head>
 <body>
@@ -206,5 +211,49 @@ document.addEventListener('click',function(e){
   const lang=document.documentElement.lang==='de'?'de':'en';
   btn.textContent=opening?(lang==='de'?'Analyse schließen':'Close analysis'):(lang==='de'?'Die vollständige Analyse lesen':'Read the full analysis');
 });
+</script>
+
+<div class="listen-entry" id="listen-entry" role="dialog" aria-modal="true" aria-labelledby="listen-entry-title">
+  <div class="listen-entry-card">
+    <div class="listen-entry-kicker">On My Radar · Listening Mode</div>
+    <h2 id="listen-entry-title">Listen while you explore.</h2>
+    <p>Open my scouting selection through official Spotify players, or continue through the portfolio in silence.</p>
+    <div class="listen-entry-actions">
+      <button type="button" id="listen-open">Open player</button>
+      <button type="button" class="listen-silent" id="listen-silent">Continue silent</button>
+    </div>
+  </div>
+</div>
+<div class="listening-dock" id="listening-dock" hidden aria-label="On My Radar Spotify selection">
+  <div class="listening-dock-head">
+    <div class="listening-dock-title"><strong>On My Radar</strong><span>Scouting selection · Spotify</span></div>
+    <button type="button" class="listening-dock-close" id="listening-close" aria-label="Close music player">×</button>
+  </div>
+  <div class="listening-dock-body">
+    <p class="listening-dock-note">Choose a player and press play. Audio is streamed by Spotify; no music files are hosted on this site.</p>
+    <iframe class="spotify-scout" src="https://open.spotify.com/embed/artist/33LkjoIJMBVbr5HfinauwK?utm_source=generator" title="slowraw on Spotify" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+    <iframe class="spotify-scout" src="https://open.spotify.com/embed/artist/23CvSuXDOiivzko30XE9Ea?utm_source=generator" title="Egon on Spotify" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+    <iframe class="spotify-scout" src="https://open.spotify.com/embed/artist/6LbVvXiWsQiRHph9bgTnHc?utm_source=generator" title="Messier Thirteen on Spotify" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+  </div>
+</div>
+<button type="button" class="listening-reopen" id="listening-reopen" hidden>Music</button>
+
+<script>
+(()=>{
+  const entry=document.getElementById('listen-entry');
+  const dock=document.getElementById('listening-dock');
+  const reopen=document.getElementById('listening-reopen');
+  const openBtn=document.getElementById('listen-open');
+  const silentBtn=document.getElementById('listen-silent');
+  const closeBtn=document.getElementById('listening-close');
+  if(!entry||!dock||!reopen||!openBtn||!silentBtn||!closeBtn)return;
+  const openDock=()=>{entry.hidden=true;dock.hidden=false;reopen.hidden=true;};
+  const goSilent=()=>{entry.hidden=true;dock.hidden=true;reopen.hidden=false;};
+  openBtn.addEventListener('click',openDock);
+  silentBtn.addEventListener('click',goSilent);
+  closeBtn.addEventListener('click',()=>{dock.hidden=true;reopen.hidden=false;});
+  reopen.addEventListener('click',()=>{dock.hidden=false;reopen.hidden=true;});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!entry.hidden)goSilent();});
+})();
 </script>
 </body></html>
