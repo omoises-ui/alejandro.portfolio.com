@@ -68,6 +68,8 @@ html[lang="de"] .techno-current-card::after{content:"WARUM AUF MEINEM RADAR · I
 .listen-entry{position:fixed;inset:0;z-index:9998;display:flex;align-items:center;justify-content:center;padding:24px;background:rgba(17,17,17,.48);backdrop-filter:blur(6px)}
 .listen-entry[hidden]{display:none}.listen-entry-card{width:min(92vw,460px);background:#f5f3ee;border:1px solid #111;padding:28px}.listen-entry-kicker{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#2e8425;margin-bottom:12px}.listen-entry-card h2{font-size:clamp(28px,5vw,44px);line-height:1;letter-spacing:-1.5px;margin:0 0 14px}.listen-entry-card p{font-size:14px;line-height:1.55;color:#505158;margin:0 0 22px}.listen-entry-actions{display:flex;gap:10px;flex-wrap:wrap}.listen-entry-actions button{min-height:44px;padding:0 16px;border:1px solid #111;background:#111;color:#fff;font:700 11px Arial,sans-serif;letter-spacing:1.2px;text-transform:uppercase;cursor:pointer}.listen-entry-actions .listen-silent{background:transparent;color:#111}
 .listening-dock{position:fixed;right:18px;bottom:18px;z-index:9997;width:min(390px,calc(100vw - 36px));background:#f5f3ee;border:1px solid #111;box-shadow:0 10px 28px rgba(0,0,0,.16)}.listening-dock[hidden]{display:none}.listening-dock-head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 14px;border-bottom:1px solid #aaa}.listening-dock-title{display:flex;flex-direction:column;gap:2px}.listening-dock-title strong{font-size:12px;text-transform:uppercase;letter-spacing:1.2px}.listening-dock-title span{font-size:10px;color:#2e8425;letter-spacing:.8px}.listening-dock-close{width:34px;height:34px;border:1px solid #111;background:transparent;font-size:18px;cursor:pointer}.listening-dock-body{padding:12px;max-height:430px;overflow:auto}.listening-dock-note{font-size:11px;line-height:1.45;color:#505158;margin:0 0 10px}.spotify-scout{display:block;width:100%;height:152px;border:0;border-radius:10px;margin:0 0 10px}.listening-reopen{position:fixed;right:18px;bottom:18px;z-index:9996;min-height:44px;padding:0 16px;border:1px solid #111;background:#111;color:#fff;font:700 11px Arial,sans-serif;letter-spacing:1.1px;text-transform:uppercase;cursor:pointer}.listening-reopen[hidden]{display:none}@media(max-width:560px){.listening-dock{right:10px;bottom:10px;width:calc(100vw - 20px)}.listen-entry-card{padding:22px}}
+
+.listening-group{margin-top:14px}.listening-group>strong{display:block;margin:0 0 8px;font-size:10px;letter-spacing:1.6px;text-transform:uppercase;color:#2e8425}
 </style>
 </head>
 <body>
@@ -230,11 +232,22 @@ document.addEventListener('click',function(e){
     <button type="button" class="listening-dock-close" id="listening-close" aria-label="Close music player">×</button>
   </div>
   <div class="listening-dock-body">
-    <p class="listening-dock-note">Choose a player and press play. Audio is streamed by Spotify; no music files are hosted on this site.</p>
-    <iframe class="spotify-scout" src="https://open.spotify.com/embed/artist/33LkjoIJMBVbr5HfinauwK?utm_source=generator" title="slowraw on Spotify" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-    <iframe class="spotify-scout" src="https://open.spotify.com/embed/artist/23CvSuXDOiivzko30XE9Ea?utm_source=generator" title="Egon on Spotify" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-    <iframe class="spotify-scout" src="https://open.spotify.com/embed/artist/6LbVvXiWsQiRHph9bgTnHc?utm_source=generator" title="Messier Thirteen on Spotify" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-  </div>
+    <p class="listening-dock-note">A balanced selection from the three On My Radar lists. Choose an artist and press play. Audio is streamed by Spotify; no music files are hosted on this site.</p>
+    <div class="listening-group"><strong>Shoegaze</strong>
+      <iframe class="spotify-scout" src="https://open.spotify.com/embed/artist/33LkjoIJMBVbr5HfinauwK?utm_source=generator" title="slowraw on Spotify" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+      <iframe class="spotify-scout" src="https://open.spotify.com/embed/artist/30YXKgS2AqOz4PQjihq0SB?utm_source=generator" title="DOGDAZE on Spotify" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+      <iframe class="spotify-scout" src="https://open.spotify.com/embed/artist/4Do10dPeBY8TY5g6Ty4HYY?utm_source=generator" title="Skyless on Spotify" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+    </div>
+    <div class="listening-group"><strong>New Grunge</strong>
+      <iframe class="spotify-scout" src="https://open.spotify.com/embed/artist/5znciuijMkrb2j6KRyigrS?utm_source=generator" title="echidain on Spotify" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+      <iframe class="spotify-scout" src="https://open.spotify.com/embed/artist/0ZUdMSGAbhRWkb6WJwuBeq?utm_source=generator" title="Maia and the Squires on Spotify" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+      <iframe class="spotify-scout" src="https://open.spotify.com/embed/artist/6LbVvXiWsQiRHph9bgTnHc?utm_source=generator" title="Messier Thirteen on Spotify" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+    </div>
+    <div class="listening-group"><strong>Berlin Clubs &amp; Techno</strong>
+      <iframe class="spotify-scout" src="https://open.spotify.com/embed/artist/472NR5RtUcH7A17M1GThHE?utm_source=generator" title="ATZENPUNK on Spotify" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+      <iframe class="spotify-scout" src="https://open.spotify.com/embed/artist/1R3ze0S5sCH3Hz9HXGxyk0?utm_source=generator" title="Güner Künier on Spotify" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+      <iframe class="spotify-scout" src="https://open.spotify.com/embed/artist/4V8AR3bBMhrLaWirYLKBEe?utm_source=generator" title="Kalte Liebe on Spotify" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+    </div></div>
 </div>
 <button type="button" class="listening-reopen" id="listening-reopen" hidden>Music</button>
 
