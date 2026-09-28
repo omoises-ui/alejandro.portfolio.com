@@ -327,7 +327,7 @@ nav{padding:28px 6%}
     <article class="harakiri-track-card" id="harakiri-ufo">
       <div class="harakiri-track-media" aria-label="UFO video player">
         <button class="video-poster" type="button" data-video-id="pUnwCsZWACw" data-video-title="UFO — Harakiri Robot" aria-label="Play UFO video">
-          <img src="https://i.ytimg.com/vi/pUnwCsZWACw/maxresdefault.jpg" alt="UFO — Harakiri Robot">
+          <img src="https://i.ytimg.com/vi/pUnwCsZWACw/maxresdefault.jpg" data-base64-src="assets/ufo-poster.b64" alt="UFO — Harakiri Robot">
           <span class="video-poster-play" aria-hidden="true">▶</span>
         </button>
       </div>
@@ -380,6 +380,18 @@ flyerLightbox.querySelector('.flyer-lightbox-close').addEventListener('click',()
 </script>
 <script>
 (()=>{const tracks=[['Sentidos','assets/audio/azul-sentidos.mp3','3:45'],['Agorafobia','assets/audio/azul-agorafobia.mp3','3:02']];const audio=document.getElementById('azul-audio');if(!audio)return;const play=document.getElementById('azul-play'),progress=document.getElementById('azul-progress'),current=document.getElementById('azul-current'),duration=document.getElementById('azul-duration'),number=document.querySelector('.azul-player .now-number'),title=document.querySelector('.azul-player .now-title'),rows=[...document.querySelectorAll('.azul-player .track-row')];let active=0;const format=s=>Number.isFinite(s)?Math.floor(s/60)+':'+String(Math.floor(s%60)).padStart(2,'0'):'0:00';const sync=()=>{const playing=!audio.paused;play.textContent=playing?'❚❚':'▶';play.setAttribute('aria-label',playing?'Pause album':'Play album')};const loadTrack=(index,autoplay=false)=>{active=(index+tracks.length)%tracks.length;const track=tracks[active];audio.src=track[1];number.textContent=String(active+1).padStart(2,'0');title.textContent=track[0];duration.textContent=track[2];current.textContent='0:00';progress.value=0;rows.forEach((row,i)=>{row.classList.toggle('is-active',i===active);if(i===active)row.setAttribute('aria-current','true');else row.removeAttribute('aria-current')});if(autoplay)audio.play().catch(sync);else sync()};play.addEventListener('click',()=>audio.paused?audio.play():audio.pause());document.getElementById('azul-prev').addEventListener('click',()=>loadTrack(active-1,true));document.getElementById('azul-next').addEventListener('click',()=>loadTrack(active+1,true));rows.forEach(row=>row.addEventListener('click',()=>loadTrack(Number(row.dataset.track),true)));audio.addEventListener('play',sync);audio.addEventListener('pause',sync);audio.addEventListener('ended',()=>loadTrack(active+1,true));audio.addEventListener('loadedmetadata',()=>duration.textContent=format(audio.duration));audio.addEventListener('timeupdate',()=>{current.textContent=format(audio.currentTime);progress.value=audio.duration?(audio.currentTime/audio.duration)*100:0});progress.addEventListener('input',()=>{if(audio.duration)audio.currentTime=(Number(progress.value)/100)*audio.duration});})();
+</script>
+<script>
+(async()=>{
+  const img=document.querySelector('#harakiri-ufo img[data-base64-src]');
+  if(!img)return;
+  try{
+    const response=await fetch(img.dataset.base64Src,{cache:'no-store'});
+    if(!response.ok)return;
+    const data=(await response.text()).trim();
+    if(data)img.src='data:image/webp;base64,'+data;
+  }catch(e){}
+})();
 </script>
 <script>
 document.addEventListener('click',e=>{const poster=e.target.closest('.video-poster');if(!poster)return;const id=poster.dataset.videoId;const title=poster.dataset.videoTitle||'Video';const wrapper=poster.parentElement;wrapper.innerHTML=`<iframe src="https://www.youtube.com/embed/${id}?autoplay=1&rel=0" title="${title}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;});
